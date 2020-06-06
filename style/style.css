@@ -79,6 +79,7 @@ header .title img {
     margin: 0;
     padding: 0 2rem 0 2rem;
     border: none;
+    height:100%;
 }
 
 .openbtn:hover {
