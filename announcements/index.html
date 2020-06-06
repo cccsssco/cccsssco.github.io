@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style/style.css" />
+    <link rel="stylesheet" href="../style/style.css" />
     <meta name="description" content="Cordova Catholic Cooperative School's Supreme Student Cooperative Officers">
     <meta name="google-site-verification" content="xbmqHXouM5WOZVNaR8m8V3MkM7dW3VKIfe-2CRv2a7k" />
     <title>SSCO</title>
@@ -14,14 +14,15 @@
     <header>
         <div class="row">
             <div class="title">
-                <h1>SSCO</h1><img src="./images/cccs.png" alt="CCCS Logo">
+                <h1>SSCO</h1><img src="../images/cccs.png" alt="CCCS Logo">
             </div>
             <div id="mySidebar" class="sidebar">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-                <a href="./announcements/index.html">Announcements</a>
+                <a href="../index.html">Home</a>
                 <a href="#">Events</a>
                 <a href="#">Resources</a>
             </div>
+            
             <button class="openbtn" onclick="myFunction()">☰</button>
         </div>
     </header>
@@ -35,21 +36,17 @@
                 </div>
             </div>
 
-            <h2><big>S</big>tay up to date</h1>
-                <p>We will update you with all of the announcements made by school <a href="./announcements/index.html">here</a></p>
-                <h2><big>S</big>tay active</h2>
-                <p><big>S</big>tay active an participates in every events happening in our school we will also host
-                    interactive activities <a href="#">here</a></p>
-                <h2><big>C</big>omprehend</h2>
-                <p>Stay accademic and keep up with your lessons with the learning materials we provided <a
-                        href="#">here</a>
-                </p>
-                <h2><big>O</big>bserve</h2>
-                <p>You can also follow our <a href="#">Facebook Page</a> and <a href="#">Youtube Channel</a></p>
+            <div id="announcements">
+                <h2 class="center">Announcements</h2>
+                <h3><a href="./enrollment/index.html">Online Enrollment Procedure</a></h3>
+                <p class="details">Procedure covered in details</p>
+                <h3><a href="#">Congratulations CCCS!</a></h3>
+                <p class="details">Our school passed the PEAC ESC Recertification S.Y. 2019-2020</p>
+            </div>
         </div>
     </main>
 
-    <script src="./script/script.js"></script>
+    <script src="../script/script.js"></script>
 </body>
 
 </html>

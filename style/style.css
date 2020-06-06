@@ -95,7 +95,21 @@ margin-bottom: 2em;
 a {
     color: #40916c;
 }
-
+a:hover{
+    text-decoration: none;
+}
+.center{
+    text-align: center;
+}
+.small-image{
+    display: block;
+    margin: auto;
+}
+.list-center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
     .sidebar {
