@@ -41,7 +41,7 @@ if(img4 != null){
 if(img5 != null){
   image(img5);
 }
-
+let b = 0;
 function image(img) {
   img.onclick = function () {
     var modal = document.getElementById("myModal");
@@ -53,7 +53,7 @@ function image(img) {
 
     function media(){
     modal.style.display = "flex";
-    modal.style.height = "max-content"
+    modal.style.height = "100vh"
     modal.style.overflow = "auto"
     modal.style.flexDirection = "column";
     modal.style.alignItems = "center";
@@ -66,13 +66,24 @@ function image(img) {
     modalImg.src = img.src;
     captionText.innerHTML = img.alt;
     var span = document.getElementsByClassName("close")[0];
-
+b++
     // When the user clicks on <span> (x), close the modal
     span.onclick = function () {
       modal.style.display = "none";
     }
+    var closeImg = document.getElementsByClassName("modal-content")[0];
+    var closeImg1 = document.getElementById("caption");
+    var closeImg2 = document.getElementsByClassName("modal")[0];
+      closeImg.onclick = function () {
+        modal.style.display = "none";
   }
+  closeImg1.onclick = function () {
+    modal.style.display = "none";
+}
+closeImg2.onclick = function () {
+  modal.style.display = "none";
+}
 }
   // Get the <span> element that closes the modal
-
+}
 
