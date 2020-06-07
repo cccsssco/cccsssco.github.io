@@ -49,9 +49,20 @@ function image(img) {
 
     var modalImg = document.getElementById("img01");
     var captionText = document.getElementById("caption");
+    var x = window.matchMedia("(max-width: 700px)")
+
+    function media(){
     modal.style.display = "flex";
+    modal.style.height = "max-content"
+    modal.style.overflow = "auto"
     modal.style.flexDirection = "column";
     modal.style.alignItems = "center";
+    }
+    if(x.matches){
+      media();
+    }else{
+      modal.style.display = "block";
+    }
     modalImg.src = img.src;
     captionText.innerHTML = img.alt;
     var span = document.getElementsByClassName("close")[0];
