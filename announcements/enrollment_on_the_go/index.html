@@ -23,9 +23,10 @@
         <nav>
             <div id="mySidebar" class="sidebar">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-                <a href="../index.html">Home</a>
+                <a href="../../index.html">Home</a>
+                <a href="../index.html">Announcements</a>
                 <a href="#">Events</a>
-                <a href="../resources/index.html">Resources</a>
+                <a href="../../resources/index.html">Resources</a>
                 <a href="http://www.cccseduc.tk/cccs/index1.php">Your Grades</a>
             </div>
             <button class="openbtn" onclick="myFunction()">☰</button>
@@ -48,8 +49,21 @@
             <article>
                 <div id="article">
                     <h1 class="center">Enrollment on the GO!</h1>
-                    <img src="../../images/enrollment_on_the_go.jpg" alt="Photo of enrollment details"
+                    <img id="profile-photo1" src="../../images/enrollment_on_the_go.jpg" alt="Photo of enrollment details"
                         class="small-image smalls">
+                        <!-- The Modal -->
+					<div id="myModal" class="modal">
+
+						<!-- The Close Button -->
+						<span class="close"><h1>&times;</h1></span>
+
+						<!-- Modal Content (The Image) -->
+						<img class="modal-content" id="img01">
+
+						<!-- Modal Caption (Image Text) -->
+                        <div id="caption"></div>
+                        </div>
+
 
                     <p class="center">Cordova Catholic Cooperative School(formerly Cordova Academy) is setting up
                         <b>Enrollment on the GO!</b></p>
