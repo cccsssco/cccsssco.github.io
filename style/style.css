@@ -44,7 +44,7 @@ h1{
     position: fixed;
     z-index: 1;
     top: 0;
-    left: 0;
+    right: 0;
     background-color: #0e3326;
     overflow-x: hidden;
     transition: 0.5s;
@@ -167,7 +167,7 @@ main img:hover{
 	display: none; /* Hidden by default */
 	position: fixed; /* Stay in place */
 	z-index: 1; /* Sit on top */
-	padding-top: 100px; /* Location of the box */
+	padding-top: 50px 0 1px 0; /* Location of the box */
 	left: 0;
 	top: 0;
 	width: 100%; /* Full width */
@@ -181,8 +181,10 @@ main img:hover{
   .modal-content {
 	margin: auto;
 	display: block;
-	width: 70%;
-	max-width: 500px;
+	width: max-content;
+    max-width: 500px;
+    height: max-content;
+    margin: 0.5em;
   }
   
   /* Caption of Modal Image (Image Text) - Same Width as the Image */
@@ -192,9 +194,11 @@ main img:hover{
 	width: 80%;
 	max-width: 700px;
 	text-align: center;
-	color: #ccc;
-	padding: 10px 0;
-	height: 150px;
+    color: #143601;
+    background-color: #ccffd4;
+	padding: 0;
+    margin:0;
+    overflow:scroll;
   }
   
   /* Add Animation - Zoom in the Modal */
@@ -225,10 +229,27 @@ main img:hover{
 	text-decoration: none;
 	cursor: pointer;
   }
-  
+  .gallery{
+    display: flex;
+    flex-wrap: wrap;
+}
+.image-container img{
+    width:200px;
+}
+li{
+    text-align: left;
+}
   /* 100% Image Width on Smaller Screens */
   @media only screen and (max-width: 700px){
 	.modal-content {
 	  width: 100%;
 	}
+  }
+ 
+  /* Gallery */
+ 
+  @media only screen and (max-width:400px){
+    .image-container img{
+        width:80px;
+    }
   }

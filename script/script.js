@@ -11,9 +11,9 @@ function closeNav() {
 var i = 0;
 function myFunction() {
   i++
-  var check = i % 2
+  var check = i % 1
   var x = document.getElementById("mySidebar");
-  if (check === 1) {
+  if (check === 0) {
     openNav();
   } else {
     closeNav();
@@ -54,14 +54,18 @@ function image(img) {
     function media(){
     modal.style.display = "flex";
     modal.style.height = "100vh"
-    modal.style.overflow = "auto"
+    modal.style.overflow = "scroll"
     modal.style.flexDirection = "column";
     modal.style.alignItems = "center";
     }
     if(x.matches){
       media();
     }else{
-      modal.style.display = "block";
+      modal.style.display = "flex";
+    modal.style.height = "100vh"
+    modal.style.alignItems = "center";
+      modal.style.flexDirection = "row";
+      modal.style.justifyContent = "center"
     }
     modalImg.src = img.src;
     captionText.innerHTML = img.alt;
