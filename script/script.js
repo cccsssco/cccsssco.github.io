@@ -49,7 +49,7 @@ function image(img) {
 
     var modalImg = document.getElementById("img01");
     var captionText = document.getElementById("caption");
-    var x = window.matchMedia("(max-width: 700px)")
+    var x = window.matchMedia("(max-width: 400px)")
 
     function media(){
     modal.style.display = "flex";
