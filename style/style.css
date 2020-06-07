@@ -198,7 +198,7 @@ main img:hover{
     color: #143601;
     background-color: #ccffd4;
 	padding: 0;
-    margin:0;
+    margin:0 0 20px 0;
     overflow:scroll;
   }
   
@@ -207,11 +207,12 @@ main img:hover{
 	animation-name: zoom;
 	animation-duration: 0.3s;
   }
-  
+ 
   @keyframes zoom {
 	from {transform:scale(0)}
 	to {transform:scale(1)}
   }
+ 
   
   /* The Close Button */
   .close {
