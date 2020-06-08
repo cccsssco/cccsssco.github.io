@@ -6,25 +6,26 @@
 
 body {
     font-family: "Raleway", sans-serif;
-    background-color: #ccffd4;
+    max-width: 100%;
+    background-color: #e4ffe8;
     margin: 0;
     padding: 0;
 }
 
-
-h1{
+h1 {
     font-size: 2em;
 }
+
 .title {
     padding: 0 20px 0 20px;
     display: flex;
 }
 
- .title h1 {
+.title h1 {
     color: #f3e9e3;
 }
 
- .title img {
+.title img {
     width: 50px;
     height: 50px;
     align-self: center;
@@ -45,23 +46,26 @@ h1{
     z-index: 1;
     top: 0;
     right: 0;
-    background-color: #0e3326;
+    background-color: #195f47;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
 }
 
 .sidebar a {
-    padding: 8px 8px 8px 32px;
+    padding: 8px 8px 8px 0px;
     text-decoration: none;
     font-size: 25px;
     color: #d8f3dc;
     display: block;
     transition: 0.3s;
+    border-left: 10px solid transparent;
 }
 
 .sidebar a:hover {
     color: #f1f1f1;
+    transition: 1s;
+    border-left: 10px solid #6ffbbc;
 }
 
 .sidebar .closebtn {
@@ -70,21 +74,26 @@ h1{
     right: 25px;
     font-size: 36px;
     margin-left: 50px;
+    border-left: 0px none transparent
+}
+
+body .sidebar .closebutton {
+    border-left: 0px none transparent;
 }
 
 .openbtn {
     font-size: 20px;
     cursor: pointer;
-    background-color: #1b4332;
+    background-color: #195f47;
     color: white;
     margin: 0;
     padding: 0 2rem 0 2rem;
     border: none;
-    height:100%;
+    height: 100%;
 }
 
 .openbtn:hover {
-    background-color: #0c2a20;
+    background-color: #164938;
 }
 
 #main {
@@ -100,6 +109,11 @@ h1{
 
 .message h1 {
     margin: 0.3em;
+}
+
+big {
+    color: #3b6e5c;
+    text-shadow: 1px 1px 3px rgba(26, 85, 35, 0.5);
 }
 
 .message p {
@@ -119,7 +133,7 @@ a:hover {
 
 .center {
     text-align: center;
-    background-color:inherit;
+    background-color: inherit;
 }
 
 .small-image {
@@ -132,14 +146,49 @@ a:hover {
     flex-direction: column;
     align-items: center;
 }
-.doubled-image{
+
+.doubled-image {
     display: block;
-    margin:auto;
+    margin: auto;
     width: 75%;
 }
-main img:hover{
+
+main img {
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 31px 11px rgba(0, 0, 0, 0.09);
+    -moz-box-shadow: 0px 0px 31px 11px rgba(0, 0, 0, 0.09);
+    box-shadow: 0px 0px 31px 11px rgba(0, 0, 0, 0.09);
+}
+
+main img:hover {
     cursor: pointer;
 }
+
+.bg {
+    background-color: rgba(166, 230, 187, 0.3);
+    border-radius: 10px;
+    display: inline-block;
+    margin: 0.2em;
+    padding: 1em;
+    -webkit-box-shadow: 0px 0px 3px 1px rgba(30, 47, 36, 0.2);
+    -moz-box-shadow: 0px 0px 3px 1px rgba(30, 47, 36, 0.2);
+    box-shadow: 0px 0px 3px 1px rgba(30, 47, 36, 0.2);
+    transition: 0.3s;
+}
+.bg:hover{
+   
+    margin:0.4em 0.4em 0.4em 0.4em;
+}
+
+.cr-wrap {
+    display: flex;
+    flex-flow: column-reverse wrap;
+}
+
+#resources ul {
+    padding: 0;
+}
+
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 
 @media screen and (max-height: 450px) {
@@ -156,102 +205,123 @@ main img:hover{
         display: flex;
         flex-direction: column;
     }
-    
 }
-@media screen and (max-width: 620px){
-    .smalls{
-        width:95%;
+
+@media screen and (max-width: 620px) {
+    .smalls {
+        width: 95%;
     }
 }
+
 .modal {
-	display: none; /* Hidden by default */
-	position: fixed; /* Stay in place */
-	z-index: 1; /* Sit on top */
-	padding-top: 10px; /* Location of the box */
-	left: 0;
-	top: 0;
-	width: 100%; /* Full width */
-	
-	overflow: auto; /* Enable scroll if needed */
-	background-color: rgb(0,0,0); /* Fallback color */
-	background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
-  }
-  
-  /* Modal Content (Image) */
-  .modal-content {
-	margin: auto;
-	display: block;
-	width: max-content;
-    max-width: 500px;
-    height: max-content;
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 10px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.9);
+    /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: max-content;
     margin: 0.5em;
-  }
-  
-  /* Caption of Modal Image (Image Text) - Same Width as the Image */
-  #caption {
-    
-	margin: auto;
-	display: block;
-	width: 80%;
-	max-width: 700px;
-	text-align: center;
+}
+
+#caption:hover {
+    cursor: pointer;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+
+#caption {
+    margin: auto;
+    display: block;
+    width: 95%;
+    max-width: 700px;
+    text-align: center;
     color: #143601;
     background-color: #ccffd4;
-	padding: 0;
-    margin:0 0 20px 0;
-    overflow:scroll;
-  }
-  
-  /* Add Animation - Zoom in the Modal */
-  .modal-content, #caption {
-	animation-name: zoom;
-	animation-duration: 0.3s;
-  }
- 
-  @keyframes zoom {
-	from {transform:scale(0)}
-	to {transform:scale(1)}
-  }
- 
-  
-  /* The Close Button */
-  .close {
-	position: absolute;
-	top: -80px;
-	right: 20px;
-	color: #f1f1f1;
-	font-size: 40px;
-	font-weight: bold;
-	transition: 0.3s;
-  }
-  
-  .close:hover,
-  .close:focus {
-	color: #bbb;
-	text-decoration: none;
-	cursor: pointer;
-  }
-  .gallery{
+    padding: 0;
+    margin: 0 0 20px 0;
+    overflow: scroll;
+    border-radius: 10px;
+}
+
+/* Add Animation - Zoom in the Modal */
+
+.modal-content, #caption {
+    animation-name: zoom;
+    animation-duration: 0.3s;
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0)
+    }
+    to {
+        transform: scale(1)
+    }
+}
+
+/* The Close Button */
+
+.close {
+    position: absolute;
+    top: -80px;
+    right: 20px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover, .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.gallery {
     display: flex;
     flex-wrap: wrap;
 }
-.image-container img{
-    width:200px;
+
+.image-container img {
+    width: 200px;
 }
-li{
+
+li {
     text-align: left;
 }
-  /* 100% Image Width on Smaller Screens */
-  @media only screen and (max-width: 700px){
-	.modal-content {
-	  width: 100%;
-	}
-  }
- 
-  /* Gallery */
- 
-  @media only screen and (max-width:400px){
-    .image-container img{
-        width:80px;
+
+/* 100% Image Width on Smaller Screens */
+
+@media only screen and (max-width: 700px) {
+    .modal-content {
+        width: 95%;
     }
-  }
+}
+
+/* Gallery */
+
+@media only screen and (max-width:400px) {
+    .image-container img {
+        width: 80px;
+    }
+}

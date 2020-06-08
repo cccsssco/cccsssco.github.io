@@ -49,25 +49,13 @@ function image(img) {
 
     var modalImg = document.getElementById("img01");
     var captionText = document.getElementById("caption");
-    var x = window.matchMedia("(max-width: 400px)")
-
-    function media() {
       modal.style.display = "flex";
       modal.style.height = "100vh"
       modal.style.overflow = "scroll"
-      modal.style.flexDirection = "column";
       modal.style.alignItems = "center";
-    }
-    if (x.matches) {
-      media();
-    } else {
-      modal.style.display = "flex";
-      modal.style.height = "100vh"
-      modal.style.alignItems = "center";
-      modal.style.flexDirection = "row";
-      modal.style.justifyContent = "center"
-    }
-    modalImg.style.display = "block";
+      modal.style.justifyContent = "space-evenly"
+      modal.style.flexWrap = "wrap"
+   
     modalImg.src = img.src;
     captionText.innerHTML = img.alt;
     var span = document.getElementsByClassName("close")[0];
@@ -81,6 +69,7 @@ function image(img) {
     
     closeImg.onclick = function () {
       modal.style.display = "none";
+     
     }
     closeImg1.onclick = function () {
       b++
