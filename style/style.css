@@ -7,7 +7,7 @@
 body {
     font-family: "Raleway", sans-serif;
     max-width: 100%;
-    background-color: #e4ffe8;
+    background-color: #ebfbf1;
     margin: 0;
     padding: 0;
 }
@@ -36,7 +36,7 @@ h1 {
 .row {
     display: flex;
     justify-content: space-between;
-    background-color: #2d6a4f;
+    background-color: #1e533b;
 }
 
 .sidebar {
@@ -46,40 +46,45 @@ h1 {
     z-index: 1;
     top: 0;
     right: 0;
-    background-color: #195f47;
+    background-color: #00aa80;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
 }
 
-.sidebar a {
-    padding: 8px 8px 8px 0px;
+.sidebar a  {
+    padding: 18px 0px 18px 0px;
     text-decoration: none;
     font-size: 25px;
-    color: #d8f3dc;
+    color: #fafafa;
     display: block;
     transition: 0.3s;
     border-left: 10px solid transparent;
+    border-bottom: 1px solid #a33030;
 }
 
 .sidebar a:hover {
-    color: #f1f1f1;
-    transition: 1s;
-    border-left: 10px solid #6ffbbc;
+    border-left: 5px solid #ff0505;
+}
+.sidebar .closebtn:hover{
+    border: 0px solid transparent !important;
+    font-size:3em;
 }
 
 .sidebar .closebtn {
+    display:block;
     position: absolute;
     top: 0;
+    padding-bottom: 0;
     right: 25px;
     font-size: 36px;
     margin-left: 50px;
-    border-left: 0px none transparent
+    margin-right:10px;
+    text-align: center;
+    border: 0px none transparent
 }
 
-body .sidebar .closebutton {
-    border-left: 0px none transparent;
-}
+
 
 .openbtn {
     font-size: 20px;
@@ -175,9 +180,9 @@ main img:hover {
     box-shadow: 0px 0px 3px 1px rgba(30, 47, 36, 0.2);
     transition: 0.3s;
 }
-.bg:hover{
-   
-    margin:0.4em 0.4em 0.4em 0.4em;
+
+.bg:hover {
+    margin: 0.4em 0.4em 0.4em 0.4em;
 }
 
 .cr-wrap {
@@ -252,7 +257,7 @@ main img:hover {
 #caption {
     margin: auto;
     display: block;
-    width: 95%;
+    width: 44%;
     max-width: 700px;
     text-align: center;
     color: #143601;
@@ -261,6 +266,11 @@ main img:hover {
     margin: 0 0 20px 0;
     overflow: scroll;
     border-radius: 10px;
+    transition: 0.5s;
+}
+
+#caption:hover {
+    width: 45%;
 }
 
 /* Add Animation - Zoom in the Modal */
@@ -324,4 +334,17 @@ li {
     .image-container img {
         width: 80px;
     }
+    #caption {
+        width: 95%;
+        transition: 2s;
+    }
+   
+    #caption:hover {
+
+        width: 95%;
+    }
+    #caption:active {
+        width: 30%;
+}
+   
 }
