@@ -69,6 +69,7 @@ h1 {
 .sidebar .closebtn:hover{
     border: 0px solid transparent !important;
     font-size:3em;
+    color: #ff0505;
 }
 
 .sidebar .closebtn {
