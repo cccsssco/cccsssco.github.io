@@ -23,6 +23,8 @@ h1 {
 
 .title h1 {
     color: #f3e9e3;
+    font-size: 2.2em;
+    letter-spacing: 0.1em;
 }
 
 .title img {
@@ -91,7 +93,7 @@ h1 {
     font-size: 20px;
     cursor: pointer;
     background-color: #195f47;
-    color: white;
+    color: #74fff6;
     margin: 0;
     padding: 0 2rem 0 2rem;
     border: none;
@@ -112,6 +114,16 @@ h1 {
     width: 100%;
     justify-content: center;
 }
+.ssco-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#main .bg{
+    max-width: 500px;
+    vertical-align: middle;
+    border-bottom: 1px solid #a33030;
+}
 
 .message h1 {
     margin: 0.3em;
@@ -130,7 +142,8 @@ big {
 }
 
 a {
-    color: #2a644a;
+    color: #a33030;
+    text-decoration-color: #a33030;
 }
 
 a:hover {
@@ -195,29 +208,6 @@ main img:hover {
     padding: 0;
 }
 
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-
-@media screen and (max-height: 450px) {
-    .sidebar {
-        padding-top: 15px;
-    }
-    .sidebar a {
-        font-size: 18px;
-    }
-}
-
-@media screen and (max-width: 450px) {
-    .message h1 {
-        display: flex;
-        flex-direction: column;
-    }
-}
-
-@media screen and (max-width: 620px) {
-    .smalls {
-        width: 95%;
-    }
-}
 
 .modal {
     display: none;
@@ -348,4 +338,27 @@ li {
         width: 30%;
 }
    
+}
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+
+@media screen and (max-height: 450px) {
+    .sidebar {
+        padding-top: 15px;
+    }
+    .sidebar a {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .message h1 {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .smalls {
+        width: 95%;
+    }
 }
