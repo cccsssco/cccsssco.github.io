@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../style/style.css" />
+    <meta name="description"
+        content="Cordova Catholic Cooperative School's Supreme Student Cooperative Officers. We, the SSCO, are always ready to serve the whole CCCS Family. Stay updated, Socially active, Competes academically, Open for more. Everything gets better with ssco">
+    <script src="../../script/script.js" defer></script>
+    <script src="./script.js"></script>
+    <meta name="google-site-verification" content="xbmqHXouM5WOZVNaR8m8V3MkM7dW3VKIfe-2CRv2a7k" />
+    <title>SSCO</title>
+</head>
+
+<body>
+
+    <div class="row">
+        <div class="title">
+            <header>
+                <h1>SSCO</h1>
+            </header><img src="../../images/cccs.png" alt="CCCS Logo">
+        </div>
+        <nav>
+            <div id="mySidebar" class="sidebar">
+                <a href="javascript:void(0)" class="closebtn closebutton" onclick="closeNav()"><b>×</b></a>
+                <a href="../../">Home</a>
+                <a href="../">Events</a>
+                <a href="../../announcements/">Announcements</a>
+                <a href="../">Resources</a>
+                <a href="http://www.cccseduc.tk/cccs/index1.php">Your Grades</a>
+            </div>
+            <button class="openbtn" onclick="openNav()">☰</button>
+        </nav>
+
+    </div>
+
+
+    <main>
+        <div id="main">
+            <div class="message-container">
+                <div class="message">
+                    <h1><span><big>S</big>upreme </span> <span><big>S</big>tudent </span>
+                        <span><big>C</big>ooperative </span> <span><big>O</big>fficers </span> </h1>
+                    <p>We, the SSCO, are always ready to serve the whole CCCS Family.</p>
+
+                    <p></p>
+                </div>
+            </div>
+
+
+        </div>
+        <section>
+            <header>
+                <h2 class="center">Math</h2>
+            </header>
+            <main>
+                <section id="geometry">
+                    <header>
+                        <h3 class="center">Geometry</h3>
+                    </header>
+                    <main>
+                        <div class="row"
+                            >
+                            <div>
+                                <section>
+                                    <h4>Area of a Square</h4>
+                                    <input type="text" id="aoas-input" name="side"
+                                        placeholder="Enter the value of the side" required>
+                                    <button onclick="areaSquare()">Submit</button>
+                                    <input id="aoas-output" type="text" placeholder="Answer will be shown here">
+                                </section>
+                            </div>
+                            <div>
+                                <section>
+                                    <h4>Perimeter of a Square</h4>
+                                    <input type="text" id="poas-input" name="side"
+                                        placeholder="Enter the value of the side" required>
+                                    <button onclick="perimeterSquare()">Submit</button>
+                                    <input id="poas-output" type="text" placeholder="Answer will be shown here">
+                                </section>
+                            </div>
+                            <div>
+                                <section>
+                                    <h4>Area of a Circle</h4>
+                                    <input type="text" id="aoac-input" name="side"
+                                        placeholder="Enter the value of the radius" required>
+                                    <button onclick="areaCircle()">Submit</button>
+                                    <input id="aoac-output" type="text" placeholder="Answer will be shown here">
+                                </section>
+                            </div>
+                            <div>
+                                <section>
+                                    <h4>Perimeter of a Circle</h4>
+                                    <input type="text" id="poac-input" name="side"
+                                        placeholder="Enter the value of the radius" required>
+                                    <button onclick="perimeterCircle()">Submit</button>
+                                    <input id="poac-output" type="text" placeholder="Answer will be shown here">
+                                </section>
+                            </div>
+                            <div>
+                                <section>
+                                    <h4>Area of a Rectangle</h4>
+                                    <input type="text" id="aoar-input-x" name="side"
+                                        placeholder="Enter the value of the length" required>
+                                    <input type="text" id="aoar-input-y" name="side"
+                                        placeholder="Enter the value of the width" required>
+                                    <button onclick="areaRectangle()">Submit</button>
+                                    <input id="aoar-output" type="text" placeholder="Answer will be shown here">
+                                </section>
+                            </div>
+
+                            <div>
+                                <section>
+                                    <h4>Perimeter of a Rectangle</h4>
+                                    <input type="text" id="poar-input-x" name="side"
+                                        placeholder="Enter the value of the length" required>
+                                    <input type="text" id="poar-input-y" name="side"
+                                        placeholder="Enter the value of the width" required>
+                                    <button onclick="perimeterRectangle()">Submit</button>
+                                    <input id="poar-output" type="text" placeholder="Answer will be shown here">
+                                </section>
+                            </div>
+                            
+                        </div>
+                    </main>
+                </section>
+            </main>
+        </section>
+    </main>
+    <footer>
+        <p>Everything gets better with SSCO</p>
+        <p>&copy;SSCO 2020 </p>
+    </footer>
+
+
+</body>
+
+</html>
