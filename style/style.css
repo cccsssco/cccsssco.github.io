@@ -4,10 +4,10 @@
     font-display: swap;
 }
 
-body,html {
+body, html {
     font: 1em/1.5em "Raleway", sans-serif;
     max-width: 100vw;
-    min-width:220px;
+    min-width: 220px;
     background-color: #ebfbf1;
     margin: 0;
     padding: 0;
@@ -42,11 +42,11 @@ h1 {
     background-color: #1e533b;
 }
 
- .sidebar {
+.sidebar {
     width: max-content;
     display: flex;
     align-items: center;
-    width:auto ;
+    width: auto;
     height: 100%;
 }
 
@@ -62,10 +62,11 @@ h1 {
     display: flex;
     align-items: center;
     transition: 0.3s;
-    height:100%;
+    height: 100%;
     box-sizing: border-box;
 }
-.sidebar a:hover{
+
+.sidebar a:hover {
     border-bottom: 10px solid #ff0000;
 }
 
@@ -90,23 +91,26 @@ h1 {
 .fbcon {
     display: flex;
     flex-wrap: wrap;
-    width:100%;
-    box-sizing:border-box;
-}
-.fb{
-  box-sizing:border-box;
-  min-width:50px;
-  flex-shrink:1;
-  flex-basis:50px;
-}
-#apps ul{
-  margin:0;
-  padding:0;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-#resources .bg{
-  min-width:200px;
+.fb {
+    box-sizing: border-box;
+    min-width: 50px;
+    flex-shrink: 1;
+    flex-basis: 50px;
 }
+
+#apps ul {
+    margin: 0;
+    padding: 0;
+}
+
+#resources .bg {
+    min-width: 200px;
+}
+
 #main .bg {
     max-width: 500px;
     border-bottom: 1px solid #a33030;
@@ -178,7 +182,7 @@ main img:hover {
     min-width: 300px;
     max-width: 500px;
     padding: 1em;
-    margin:2em;
+    margin: 2em;
     transition: 0.4s;
     border-bottom: 1px solid rgb(212, 56, 56);
     border-radius: 10px;
@@ -190,7 +194,7 @@ main img:hover {
 }
 
 .bg:hover {
-    padding:1.5em;
+    padding: 1.5em;
 }
 
 .cr-wrap {
@@ -308,64 +312,76 @@ li {
 footer {
     text-align: center
 }
-#math{
-  background-color: rgb(75, 126, 94) ;
-  color:white;
-  padding-top:1em ;
-  max-width:90%;
-  min-width:290px;
-  margin:auto;
-  border-radius:20px;
-}
-#math .row div button+input::placeholder{
-  color:red;
+
+#math {
+    background-color: rgb(75, 126, 94);
+    color: white;
+    padding-top: 1em;
+    max-width: 90%;
+    min-width: 290px;
+    margin: auto;
+    border-radius: 20px;
 }
 
-#math .bg{
+#math .row div button+input::placeholder {
+    color: red;
+}
+#math .bg section{
+    display: flex;
+    flex-direction: column;
+}
+
+#math .bg {
     background-color: rgb(68, 179, 122);
-display: inline-block;
-width: 80%;
-min-width: 200px;
-max-width: 500px;
-padding: 1em;
-margin:2em;
-transition: 1s;
-border-bottom: 1px solid rgb(212, 56, 56);
-border-radius: 10px;
-box-sizing: border-box;
-box-shadow:10px 10px 2px 2px rgba(221, 220, 220, 0.205);
+    display: inline-block;
+    width: min-content;
+    min-width: 200px;
+    max-width: 500px;
+    padding: 1em;
+    margin: 2em;
+    transition: 1s;
+    border-bottom: 1px solid rgb(212, 56, 56);
+    border-radius: 10px;
+    box-sizing: content-box;
+    box-shadow: 10px 10px 2px 2px rgba(221, 220, 220, 0.205);
 }
 
-#math .bg:hover{
-    box-shadow:10px 10px 2px 2px rgba(0, 255, 221, 0.507);
+
+
+#math .bg:hover {
+    box-shadow: 10px 10px 2px 2px rgba(0, 255, 221, 0.507);
     background-color: rgb(60, 170, 113);
 }
+
 #math .bg input:focus, #math .bg button:focus {
     outline: solid rgb(10, 238, 124) 3px;
 }
-#math .row{
-  flex-wrap: wrap;
-  color: white;
-  justify-content:flex-start;
-  padding: 1em;
+
+#math .row {
+    flex-wrap: wrap;
+    color: white;
+    justify-content: center;
+    padding: 1em;
 }
 
-#math .row div button,input{
-  border:none;
-  max-width: 80%;
-  min-width: 80%;
-  border-radius:5px;
-  padding:1em;
-  margin: 0.5em 1em 0.5em 1em;
-  
+#math .row div button, input {
+    border: none;
+    min-width: 80%;
+    max-width: 80%;
+    border-radius: 5px;
+    padding: 1em;
+    margin: 0.5em 1em 0.5em 1em;
 }
-#math .row div button{
-  color:white;
-  background-color:#038036;
-  cursor:pointer;
+
+#math .row .bg button {
+    color: white;
+    background-color: #038036;
+    cursor: pointer;
+    align-self: center;
 }
-@media only screen and (max-width: 819px) {
-    .openbtn, .closebtn{
+
+@media only screen and (max-width: 850px) {
+    .openbtn, .closebtn {
         display: block;
     }
     .openbtn {
@@ -394,13 +410,12 @@ box-shadow:10px 10px 2px 2px rgba(221, 220, 220, 0.205);
         padding-top: 60px;
         display: block;
     }
-    .sidebar a{
+    .sidebar a {
         padding: 15px 30px 15px 15px;
-        height:min-content;
+        height: min-content;
         box-sizing: content-box;
-        color:white;
+        color: white;
     }
-    
     .sidebar a:hover {
         border-left: 5px solid #ff0505;
         border-bottom: none;
@@ -461,10 +476,9 @@ box-shadow:10px 10px 2px 2px rgba(221, 220, 220, 0.205);
     .sidebar a {
         font-size: 18px;
     }
-    .modal{
-      min-height:220px;
+    .modal {
+        min-height: 220px;
     }
-    
 }
 
 @media only screen and (max-width: 620px) {
@@ -477,6 +491,6 @@ box-shadow:10px 10px 2px 2px rgba(221, 220, 220, 0.205);
     .message h1 {
         display: flex;
         flex-direction: column;
-        margin:auto;
+        margin: auto;
     }
 }

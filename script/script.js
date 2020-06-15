@@ -3,7 +3,7 @@ function openNav() {
   document.getElementById("mySidebar").style.width = "250px";
   document.getElementById("main").style.marginLeft = "0";
 }
-var mql = window.matchMedia('(min-width: 819px)');
+var mql = window.matchMedia('(min-width: 851px)');
 
 setInterval(function(){
   if(mql.matches){
