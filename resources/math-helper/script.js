@@ -63,3 +63,9 @@ function volumeCone(){
   let output = (area * height) / 3;
   document.getElementById("voacn-output").placeholder = output;
 }
+function averageSpeed(){
+  let distance = document.getElementById("as-input-x").value;
+  let time = document.getElementById("as-input-y").value;
+  let output = distance/time;
+  document.getElementById("as-output").placeholder = output;
+}

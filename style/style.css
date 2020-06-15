@@ -308,7 +308,7 @@ li {
 footer {
     text-align: center
 }
-#geometry{
+#math{
   background-color: rgb(75, 126, 94) ;
   color:white;
   padding-top:1em ;
@@ -317,42 +317,49 @@ footer {
   margin:auto;
   border-radius:20px;
 }
-#geometry .row div button+input::placeholder{
+#math .row div button+input::placeholder{
   color:red;
 }
 
-#geometry .bg{
+#math .bg{
     background-color: rgb(68, 179, 122);
 display: inline-block;
 width: 80%;
-min-width: 300px;
+min-width: 200px;
 max-width: 500px;
 padding: 1em;
 margin:2em;
 transition: 1s;
 border-bottom: 1px solid rgb(212, 56, 56);
 border-radius: 10px;
+box-sizing: border-box;
 box-shadow:10px 10px 2px 2px rgba(221, 220, 220, 0.205);
 }
-#geometry .bg:hover{
-    box-shadow:10px 10px 2px 2px rgba(0, 255, 221, 0.507);
 
+#math .bg:hover{
+    box-shadow:10px 10px 2px 2px rgba(0, 255, 221, 0.507);
+    background-color: rgb(60, 170, 113);
 }
-#geometry .row{
+#math .bg input:focus, #math .bg button:focus {
+    outline: solid rgb(10, 238, 124) 3px;
+}
+#math .row{
   flex-wrap: wrap;
   color: white;
   justify-content:flex-start;
   padding: 1em;
 }
 
-#geometry .row div button,input{
+#math .row div button,input{
   border:none;
+  max-width: 80%;
+  min-width: 80%;
   border-radius:5px;
   padding:1em;
   margin: 0.5em 1em 0.5em 1em;
   
 }
-#geometry .row div button{
+#math .row div button{
   color:white;
   background-color:#038036;
   cursor:pointer;
