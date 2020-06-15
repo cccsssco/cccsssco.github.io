@@ -27,25 +27,29 @@ function perimeterRectangle(){
     
 }
 function areaTriangle(){
-  let base;
-  let height;
+  let base = document.getElementById("aoat-input-x").value;
+  let height = document.getElementById("aoat-input-y").value;
   let output = (base * height) / 2;
+  document.getElementById("aoat-output").placeholder  = output;
 }
 function perimeterTriangle(){
-  let side1;
-  let side2;
-  let side3;
-  let output = side1 + side2 + side3;
+  let side1 = document.getElementById("poat-input-x").value;
+  let side2 = document.getElementById("poat-input-y").value;
+  let side3 = document.getElementById("poat-input-z").value;
+  let output = parseInt(side1) + parseInt(side2) + parseInt(side3);
+  document.getElementById("poat-output").placeholder = output;
 }
 function volume3DRectangle(){
-  let length;
-  let width;
-  let height;
+  let length = document.getElementById("voa3dr-input-x").value;
+  let width = document.getElementById("voa3dr-input-y").value;
+  let height = document.getElementById("voa3dr-input-z").value;
   let output = length * width * height;
+  document.getElementById("voa3dr-output").placeholder = output;
 }
 function volumeCube(){
-  let side;
+  let side = document.getElementById("voacb-input").value;
   let output = side ** 3;
+  document.getElementById("voacb-output").placeholder = output;
 }
 function volumeCylinder(){
   let area = document.getElementById("voac-input-x").value;
