@@ -9,10 +9,10 @@ function perimeterSquare(){
 }
 function areaCircle(){
      let radius = document.getElementById("aoac-input").value;
-   document.getElementById("aoac-output").placeholder = (Math.PI * (radius ** 2)) + " |or| " + Math.round(((Math.PI * (radius ** 2)) + Number.EPSILON)*100)/100;
+   document.getElementById("aoac-output").placeholder = (Math.PI * (radius ** 2)) + " |or| " + Math.round(( (Math.PI * (radius ** 2)) + Number.EPSILON)*100)/100;
 }function perimeterCircle(){
      let radius = document.getElementById("poac-input").value;
-   document.getElementById("poac-output").placeholder = (Math.PI * (radius * 2)) + " |or| " + Math.round(((Math.PI * (radius * 2)) + Number.EPSILON)*100)/100;
+   document.getElementById("poac-output").placeholder = (Math.PI * (radius * 2)) + " |or| " + Math.round(( (Math.PI * (radius * 2)) + Number.EPSILON)*100)/100;
 }
 function areaRectangle(){
     let length = document.getElementById("aoar-input-x").value;
