@@ -216,8 +216,8 @@
                                     <h4>Newton's Second Law</h4>
                                     <input type="text" id="nsl-input-x" name="side" placeholder="Mass of the body"
                                         required>
-                                    <input type="text" id="nsl-input-y" name="side" placeholder="Acceleration in velocity"
-                                        required>
+                                    <input type="text" id="nsl-input-y" name="side"
+                                        placeholder="Acceleration in velocity" required>
                                     <button onclick="newtonsSecondLaw()">Submit</button>
                                     <input id="nsl-output" type="text" placeholder="Answer will be shown here">
                                 </section>
@@ -225,10 +225,8 @@
                             <div class="bg">
                                 <section>
                                     <h4>Power</h4>
-                                    <input type="text" id="p-input-x" name="side" placeholder="Work done"
-                                        required>
-                                    <input type="text" id="p-input-y" name="side" placeholder="Time taken"
-                                        required>
+                                    <input type="text" id="p-input-x" name="side" placeholder="Work done" required>
+                                    <input type="text" id="p-input-y" name="side" placeholder="Time taken" required>
                                     <button onclick="power()">Submit</button>
                                     <input id="p-output" type="text" placeholder="Answer will be shown here">
                                 </section>
@@ -249,8 +247,8 @@
                                     <h4>Pressure</h4>
                                     <input type="text" id="psr-input-x" name="side" placeholder="Force Applied"
                                         required>
-                                    <input type="text" id="psr-input-y" name="side" placeholder="Total area of the object"
-                                        required>
+                                    <input type="text" id="psr-input-y" name="side"
+                                        placeholder="Total area of the object" required>
                                     <button onclick="pressure()">Submit</button>
                                     <input id="psr-output" type="text" placeholder="Answer will be shown here">
                                 </section>
@@ -271,8 +269,7 @@
                                     <h4>Ohms Law</h4>
                                     <input type="text" id="ol-input-x" name="side" placeholder="Electric current"
                                         required>
-                                    <input type="text" id="ol-input-y" name="side" placeholder="Resistance"
-                                        required>
+                                    <input type="text" id="ol-input-y" name="side" placeholder="Resistance" required>
                                     <button onclick="ohmsLaw()">Submit</button>
                                     <input id="ol-output" type="text" placeholder="Answer will be shown here">
                                 </section>
@@ -282,12 +279,69 @@
                                     <h4>Frequency</h4>
                                     <input type="text" id="f-input-x" name="side" placeholder="Velocity or wave speed"
                                         required>
-                                    <input type="text" id="f-input-y" name="side" placeholder="Wavelength"
-                                        required>
+                                    <input type="text" id="f-input-y" name="side" placeholder="Wavelength" required>
                                     <button onclick="frequency()">Submit</button>
                                     <input id="f-output" type="text" placeholder="Answer will be shown here">
                                 </section>
                             </div>
+                            <div class="bg">
+                                <section>
+                                    <h4>Boyles Law, The Pressure-Volume Law</h4>
+                                    <input type="text" id="bl-input-w" name="side" placeholder="P1" required>
+                                    <input type="text" id="bl-input-x" name="side" placeholder="V1" required>
+                                    <input type="text" id="bl-input-y" name="side" placeholder="P2" required><input
+                                        type="text" id="bl-input-z" name="side" placeholder="V2" required>
+                                    <button onclick="boylesLaw()">Submit</button>
+
+                                </section>
+                            </div>
+                            <div class="bg">
+                                <section>
+                                    <h4>Charles' Law: The Temperature-Volume Law</h4>
+                                    <input type="text" id="cl-input-w" name="side" placeholder="V1" required>
+                                    <input type="text" id="cl-input-x" name="side" placeholder="T1" required>
+                                    <input type="text" id="cl-input-y" name="side" placeholder="V2" required><input
+                                        type="text" id="cl-input-z" name="side" placeholder="T2" required>
+                                    <button onclick="charlesLaw()">Submit</button>
+
+                                </section>
+                            </div>
+                            <div class="bg">
+                                <section>
+                                    <h4>Gay-Lussac's Law: The Pressure Temperature Law</h4>
+                                    <input type="text" id="gl-input-w" name="side" placeholder="P1" required>
+                                    <input type="text" id="gl-input-x" name="side" placeholder="T1" required>
+                                    <input type="text" id="gl-input-y" name="side" placeholder="P2" required><input
+                                        type="text" id="gl-input-z" name="side" placeholder="T2" required>
+                                    <button onclick="gayLussacsLaw()">Submit</button>
+
+                                </section>
+                            </div>
+                            <div class="bg">
+                                <section>
+                                    <h4>Avogadro's Law: The Volume Amount Law</h4>
+                                    <input type="text" id="al-input-w" name="side" placeholder="V1" required>
+                                    <input type="text" id="al-input-x" name="side" placeholder="N1" required>
+                                    <input type="text" id="al-input-y" name="side" placeholder="V2" required>
+                                    <input type="text" id="al-input-z" name="side" placeholder="N2" required>
+                                    <button onclick="avogadrosLaw()">Submit</button>
+
+                                </section>
+                            </div>
+                            <div class="bg">
+                                <section>
+                                    <h4>The Combined Gas Law</h4>
+                                    <input type="text" id="cg-input-u" name="side" placeholder="P1" required>
+                                    <input type="text" id="cg-input-v" name="side" placeholder="V1" required>
+                                    <input type="text" id="cg-input-w" name="side" placeholder="T1" required>
+                                    <input type="text" id="cg-input-x" name="side" placeholder="P2" required>
+                                    <input type="text" id="cg-input-y" name="side" placeholder="V2" required>
+                                    <input type="text" id="cg-input-z" name="side" placeholder="T2" required>
+                                    <button onclick="combinedGasLaw()">Submit</button>
+
+                                </section>
+                            </div>
+                        </div>
                         </div>
                     </main>
                 </section>
