@@ -69,3 +69,59 @@ function averageSpeed(){
   let output = distance/time;
   document.getElementById("as-output").placeholder = output;
 }
+function acceleration(){
+  let finalVelocity = document.getElementById("a-input-x").value;
+  let initialVelocity = document.getElementById("a-input-y").value;
+  let time = document.getElementById("a-input-z").value;
+  let output = (finalVelocity - initialVelocity)/time;
+  document.getElementById("a-output").placeholder = output;
+}
+function density(){
+  let mass = document.getElementById("d-input-x").value;
+  let volume = document.getElementById("d-input-y").value;
+  let output = mass/volume;
+  document.getElementById("d-output").placeholder = output;
+}
+function newtonsSecondLaw(){
+  let mass = document.getElementById("nsl-input-x").value;
+  let acceleration = document.getElementById("nsl-input-y").value;
+  let output = mass * acceleration;
+  document.getElementById("nsl-output").placeholder = output;
+}
+function power(){
+  let work = document.getElementById("p-input-x").value;
+  let time = document.getElementById("p-input-y").value;
+  let output = work / time;
+  console.log(output, work , time);
+  document.getElementById("p-output").placeholder = output;
+}
+function weight(){
+  let mass = document.getElementById("w-input-x").value;
+  let acceleration = document.getElementById("w-input-y").value;
+  let output = mass * acceleration;
+  document.getElementById("w-output").placeholder = output;
+}
+function pressure(){
+ let force = document.getElementById("psr-input-x").value;
+ let area = document.getElementById("psr-input-y").value;
+ let output = force / area;
+ document.getElementById("psr-output").placeholder = output;
+}
+function kineticEnergy(){
+  let mass = document.getElementById("ke-input-x").value;
+  let velocity = document.getElementById("ke-input-y").value;
+  let output  = (mass * (velocity ** 2))/2
+  document.getElementById("ke-output").placeholder = output;
+}
+function ohmsLaw(){
+  let current = document.getElementById("ol-input-x").value;
+  let resistance = document.getElementById("ol-input-y").value;
+  let output = current * resistance;
+  document.getElementById("ol-output").placeholder = output;
+}
+function frequency(){
+  let velocity = document.getElementById("f-input-x").value;
+  let wavelength = document.getElementById("f-input-y").value;
+  let output = velocity / wavelength;
+  document.getElementById("f-output").placeholder = output;
+}
