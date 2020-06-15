@@ -255,3 +255,91 @@ function combinedGasLaw() {
   }
 
 }
+function gdpExpenditureApproach(){
+  let c = document.getElementById("gdpcginx-input-w").value;
+  let g = document.getElementById("gdpcginx-input-x").value;
+  let i = document.getElementById("gdpcginx-input-y").value;
+  let nx = document.getElementById("gdpcginx-input-z").value;
+  let gdp = document.getElementById("gdpcginx-output").value; 
+  if(gdp == ''){
+    let output = parseInt(c) + parseInt(g) + parseInt(i) + parseInt(nx);
+    document.getElementById("gdpcginx-output").value = output;
+  }
+  if(c == ''){
+    let output = parseInt(gdp) - ( parseInt(g) + parseInt(i) + parseInt(nx));
+    document.getElementById("gdpcginx-input-w").value = output;
+  }
+  if(g == ''){
+    let output = parseInt(gdp) - ( parseInt(c) + parseInt(i) + parseInt(nx));
+    document.getElementById("gdpcginx-input-x").value = output;
+  }
+  if(i == ''){
+    let output = parseInt(gdp) - ( parseInt(g) + parseInt(c) + parseInt(nx));
+    document.getElementById("gdpcginx-input-y").value = output;
+  }
+  if(nx == ''){
+    let output = parseInt(gdp) - ( parseInt(g) + parseInt(i) + parseInt(c));
+    document.getElementById("gdpcginx-input-z").value = output;
+  }
+
+}
+function gdpIncomeApproach(){
+  let w = document.getElementById("gdpwirp-input-w").value;
+  let i = document.getElementById("gdpwirp-input-x").value;
+  let r = document.getElementById("gdpwirp-input-y").value;
+  let p = document.getElementById("gdpwirp-input-z").value;
+  let gdp = document.getElementById("gdpwirp-output").value; 
+  if(gdp == ''){
+    let output = parseInt(w) + parseInt(i) + parseInt(r) + parseInt(p);
+    document.getElementById("gdpwirp-output").value = output;
+  }
+  if(w == ''){
+    let output = parseInt(gdp) - ( parseInt(i) + parseInt(r) + parseInt(p));
+    document.getElementById("gdpwirp-input-w").value = output;
+  }
+  if(i == ''){
+    let output = parseInt(gdp) - ( parseInt(w) + parseInt(r) + parseInt(p));
+    document.getElementById("gdpwirp-input-x").value = output;
+  }
+  if(r == ''){
+    let output = parseInt(gdp) - ( parseInt(w) + parseInt(i) + parseInt(p));
+    document.getElementById("gdpwirp-input-y").value = output;
+  }
+  if(p == ''){
+    let output = parseInt(gdp) - ( parseInt(w) + parseInt(i) + parseInt(r));
+    document.getElementById("gdpwirp-input-z").value = output;
+  }
+ur=u/e
+ure=u
+e = u/ur
+}
+function unemploymentRate(){
+ let unemployed = document.getElementById("ur-input-x").value;
+ let employed = document.getElementById("ur-input-y").value;
+ let unemploymentRate = document.getElementById("ur-output").value;
+ if(unemploymentRate == ''){
+   let output = (unemployed/employed) * 100;
+   document.getElementById("ur-output").value = output;
+ }
+ if(unemployed == ''){
+   let output = (unemploymentRate / 100) * employed;
+   document.getElementById("ur-input-x").value = output;
+ }
+ if(employed == ''){
+   let output = unemployed / (unemploymentRate / 100);
+   document.getElementById("ur-input-y").value = output;
+ }
+}
+function moneyMultiplierRate(){
+ let reservedRatio = document.getElementById("mmr-input-x").value;
+ let moneyMultiplierRatio = document.getElementById("mmr-output").value;
+ if(moneyMultiplierRatio  == ''){
+   let output = (1/reservedRatio);
+   document.getElementById("mmr-output").value = output;
+ }
+ if(reservedRatio == ''){
+   let output = 1 / moneyMultiplierRatio;
+   document.getElementById("mmr-input-x").value = output;
+ }
+ 
+}

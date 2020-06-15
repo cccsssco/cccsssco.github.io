@@ -1,359 +1,943 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../../style/style.css" />
-    <meta name="description"
-        content="Cordova Catholic Cooperative School's Supreme Student Cooperative Officers. We, the SSCO, are always ready to serve the whole CCCS Family. Stay updated, Socially active, Competes academically, Open for more. Everything gets better with ssco">
+    <meta
+      name="description"
+      content="Cordova Catholic Cooperative School's Supreme Student Cooperative Officers. We, the SSCO, are always ready to serve the whole CCCS Family. Stay updated, Socially active, Competes academically, Open for more. Everything gets better with ssco"
+    />
     <script src="../../script/script.js" defer></script>
     <script src="./script.js" defer></script>
-    <meta name="google-site-verification" content="xbmqHXouM5WOZVNaR8m8V3MkM7dW3VKIfe-2CRv2a7k" />
+    <meta
+      name="google-site-verification"
+      content="xbmqHXouM5WOZVNaR8m8V3MkM7dW3VKIfe-2CRv2a7k"
+    />
     <title>SSCO</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <div class="row">
-        <div class="title">
-            <header>
-                <h1>SSCO</h1>
-            </header><img src="../../images/cccs.png" alt="CCCS Logo">
+      <div class="title">
+        <header>
+          <h1>SSCO</h1>
+        </header>
+        <img src="../../images/cccs.png" alt="CCCS Logo" />
+      </div>
+      <nav>
+        <div id="mySidebar" class="sidebar">
+          <a
+            href="javascript:void(0)"
+            class="closebtn closebutton"
+            onclick="closeNav()"
+            ><b>×</b></a
+          >
+          <a href="../../">Home</a>
+          <a href="../">Events</a>
+          <a href="../../announcements/">Announcements</a>
+          <a href="../">Resources</a>
+          <a href="http://www.cccseduc.tk/cccs/index1.php">Your Grades</a>
         </div>
-        <nav>
-            <div id="mySidebar" class="sidebar">
-                <a href="javascript:void(0)" class="closebtn closebutton" onclick="closeNav()"><b>×</b></a>
-                <a href="../../">Home</a>
-                <a href="../">Events</a>
-                <a href="../../announcements/">Announcements</a>
-                <a href="../">Resources</a>
-                <a href="http://www.cccseduc.tk/cccs/index1.php">Your Grades</a>
-            </div>
-            <button class="openbtn" onclick="openNav()">☰</button>
-        </nav>
-
+        <button class="openbtn" onclick="openNav()">☰</button>
+      </nav>
     </div>
 
-
     <main>
-        <div id="main">
-            <div class="message-container">
-                <div class="message">
-                    <h1><span><big>S</big>upreme </span> <span><big>S</big>tudent </span>
-                        <span><big>C</big>ooperative </span> <span><big>O</big>fficers </span> </h1>
-                    <p>We, the SSCO, are always ready to serve the whole CCCS Family.</p>
+      <div id="main">
+        <div class="message-container">
+          <div class="message">
+            <h1>
+              <span><big>S</big>upreme </span> <span><big>S</big>tudent </span>
+              <span><big>C</big>ooperative </span>
+              <span><big>O</big>fficers </span>
+            </h1>
+            <p>
+              We, the SSCO, are always ready to serve the whole CCCS Family.
+            </p>
 
-                    <p></p>
-                </div>
-            </div>
-
-
+            <p></p>
+          </div>
         </div>
-        <section id="math">
+      </div>
+      <section id="math">
+        <header>
+          <h2 class="center">Math</h2>
+        </header>
+        <main>
+          <section id="geometry">
             <header>
-                <h2 class="center">Math</h2>
+              <h3 class="center">Geometry</h3>
             </header>
             <main>
-                <section id="geometry">
-                    <header>
-                        <h3 class="center">Geometry</h3>
-                    </header>
-                    <main>
-                        <div class="row">
-                            <div class="bg">
-                                <section>
-                                    <h4>Area of a Square</h4>
-                                    <input type="text" id="aoas-input" name="side" placeholder="Side" required>
-                                    <button onclick="areaSquare()">Submit</button>
-                                    <input id="aoas-output" type="text" placeholder="Answer will be shown here">
-                                </section>
-                            </div>
-                            <div class="bg">
-                                <section>
-                                    <h4>Perimeter of a Square</h4>
-                                    <input type="text" id="poas-input" name="side" placeholder="Side" required>
-                                    <button onclick="perimeterSquare()">Submit</button>
-                                    <input id="poas-output" type="text" placeholder="Answer will be shown here">
-                                </section>
-                            </div>
-                            <div class="bg">
-                                <section>
-                                    <h4>Volume of a Cube</h4>
-                                    <input type="text" id="voacb-input" name="side" placeholder="Side" required>
-                                    <button onclick="volumeCube()">Submit</button>
-                                    <input id="voacb-output" type="text" placeholder="Answer will be shown here">
-                                </section>
-                            </div>
-                            <div class="bg">
-                                <section>
-                                    <h4>Area of a Circle</h4>
-                                    <input type="text" id="aoac-input" name="side" placeholder="Radius" required>
-                                    <button onclick="areaCircle()">Submit</button>
-                                    <input id="aoac-output" type="text" placeholder="Answer will be shown here">
-                                </section>
-                            </div>
-                            <div class="bg">
-                                <section>
-                                    <h4>Circumference of a Circle</h4>
-                                    <input type="text" id="poac-input" name="side" placeholder="Radius" required>
-                                    <button onclick="perimeterCircle()">Submit</button>
-                                    <input id="poac-output" type="text" placeholder="Answer will be shown here">
-                                </section>
-                            </div>
-                            <div class="bg">
-                                <section>
-                                    <h4>Area of a Rectangle</h4>
-                                    <input type="text" id="aoar-input-x" name="side" placeholder="Length" required>
-                                    <input type="text" id="aoar-input-y" name="side" placeholder="Width" required>
-                                    <button onclick="areaRectangle()">Submit</button>
-                                    <input id="aoar-output" type="text" placeholder="Answer will be shown here">
-                                </section>
-                            </div>
-                            <div class="bg">
-                                <section>
-                                    <h4>Perimeter of a Rectangle</h4>
-                                    <input type="text" id="poar-input-x" name="side" placeholder="Length" required>
-                                    <input type="text" id="poar-input-y" name="side" placeholder="Width" required>
-                                    <button onclick="perimeterRectangle()">Submit</button>
-                                    <input id="poar-output" type="text" placeholder="Answer will be shown here">
-                                </section>
-                            </div>
-                            <div class="bg">
-                                <section>
-                                    <h4>Volume of a 3D Rectangle</h4>
-                                    <input type="text" id="voa3dr-input-x" name="side" placeholder="Width" required>
-                                    <input type="text" id="voa3dr-input-y" name="side" placeholder="Length" required>
-                                    <input type="text" id="voa3dr-input-z" name="side" placeholder="Height" required>
-                                    <button onclick="volume3DRectangle()">Submit</button>
-                                    <input id="voa3dr-output" type="text" placeholder="Answer will be shown here">
-                                </section>
-                            </div>
-                            <div class="bg">
-                                <section>
-                                    <h4>Area of a Triangle</h4>
-                                    <input type="text" id="aoat-input-x" name="side" placeholder="Base/length" required>
-                                    <input type="text" id="aoat-input-y" name="side" placeholder="Height" required>
-                                    <button onclick="areaTriangle()">Submit</button>
-                                    <input id="aoat-output" type="text" placeholder="Answer will be shown here">
-                                </section>
-                            </div>
-                            <div class="bg">
-                                <section>
-                                    <h4>Perimeter of a Triangle</h4>
-                                    <input type="text" id="poat-input-x" name="side" placeholder="First side" required>
-                                    <input type="text" id="poat-input-y" name="side" placeholder="Second side" required>
-                                    <input type="text" id="poat-input-z" name="side" placeholder="Third side" required>
-                                    <button onclick="perimeterTriangle()">Submit</button>
-                                    <input id="poat-output" type="text" placeholder="Answer will be shown here">
-                                </section>
-                            </div>
+              <div class="row">
+                <div class="bg">
+                  <section>
+                    <h4>Area of a Square</h4>
+                    <input
+                      type="text"
+                      id="aoas-input"
+                      name="side"
+                      placeholder="Side"
+                      required
+                    />
+                    <button onclick="areaSquare()">Submit</button>
+                    <input
+                      id="aoas-output"
+                      type="text"
+                      placeholder="Answer will be shown here"
+                    />
+                  </section>
+                </div>
+                <div class="bg">
+                  <section>
+                    <h4>Perimeter of a Square</h4>
+                    <input
+                      type="text"
+                      id="poas-input"
+                      name="side"
+                      placeholder="Side"
+                      required
+                    />
+                    <button onclick="perimeterSquare()">Submit</button>
+                    <input
+                      id="poas-output"
+                      type="text"
+                      placeholder="Answer will be shown here"
+                    />
+                  </section>
+                </div>
+                <div class="bg">
+                  <section>
+                    <h4>Volume of a Cube</h4>
+                    <input
+                      type="text"
+                      id="voacb-input"
+                      name="side"
+                      placeholder="Side"
+                      required
+                    />
+                    <button onclick="volumeCube()">Submit</button>
+                    <input
+                      id="voacb-output"
+                      type="text"
+                      placeholder="Answer will be shown here"
+                    />
+                  </section>
+                </div>
+                <div class="bg">
+                  <section>
+                    <h4>Area of a Circle</h4>
+                    <input
+                      type="text"
+                      id="aoac-input"
+                      name="side"
+                      placeholder="Radius"
+                      required
+                    />
+                    <button onclick="areaCircle()">Submit</button>
+                    <input
+                      id="aoac-output"
+                      type="text"
+                      placeholder="Answer will be shown here"
+                    />
+                  </section>
+                </div>
+                <div class="bg">
+                  <section>
+                    <h4>Circumference of a Circle</h4>
+                    <input
+                      type="text"
+                      id="poac-input"
+                      name="side"
+                      placeholder="Radius"
+                      required
+                    />
+                    <button onclick="perimeterCircle()">Submit</button>
+                    <input
+                      id="poac-output"
+                      type="text"
+                      placeholder="Answer will be shown here"
+                    />
+                  </section>
+                </div>
+                <div class="bg">
+                  <section>
+                    <h4>Area of a Rectangle</h4>
+                    <input
+                      type="text"
+                      id="aoar-input-x"
+                      name="side"
+                      placeholder="Length"
+                      required
+                    />
+                    <input
+                      type="text"
+                      id="aoar-input-y"
+                      name="side"
+                      placeholder="Width"
+                      required
+                    />
+                    <button onclick="areaRectangle()">Submit</button>
+                    <input
+                      id="aoar-output"
+                      type="text"
+                      placeholder="Answer will be shown here"
+                    />
+                  </section>
+                </div>
+                <div class="bg">
+                  <section>
+                    <h4>Perimeter of a Rectangle</h4>
+                    <input
+                      type="text"
+                      id="poar-input-x"
+                      name="side"
+                      placeholder="Length"
+                      required
+                    />
+                    <input
+                      type="text"
+                      id="poar-input-y"
+                      name="side"
+                      placeholder="Width"
+                      required
+                    />
+                    <button onclick="perimeterRectangle()">Submit</button>
+                    <input
+                      id="poar-output"
+                      type="text"
+                      placeholder="Answer will be shown here"
+                    />
+                  </section>
+                </div>
+                <div class="bg">
+                  <section>
+                    <h4>Volume of a 3D Rectangle</h4>
+                    <input
+                      type="text"
+                      id="voa3dr-input-x"
+                      name="side"
+                      placeholder="Width"
+                      required
+                    />
+                    <input
+                      type="text"
+                      id="voa3dr-input-y"
+                      name="side"
+                      placeholder="Length"
+                      required
+                    />
+                    <input
+                      type="text"
+                      id="voa3dr-input-z"
+                      name="side"
+                      placeholder="Height"
+                      required
+                    />
+                    <button onclick="volume3DRectangle()">Submit</button>
+                    <input
+                      id="voa3dr-output"
+                      type="text"
+                      placeholder="Answer will be shown here"
+                    />
+                  </section>
+                </div>
+                <div class="bg">
+                  <section>
+                    <h4>Area of a Triangle</h4>
+                    <input
+                      type="text"
+                      id="aoat-input-x"
+                      name="side"
+                      placeholder="Base/length"
+                      required
+                    />
+                    <input
+                      type="text"
+                      id="aoat-input-y"
+                      name="side"
+                      placeholder="Height"
+                      required
+                    />
+                    <button onclick="areaTriangle()">Submit</button>
+                    <input
+                      id="aoat-output"
+                      type="text"
+                      placeholder="Answer will be shown here"
+                    />
+                  </section>
+                </div>
+                <div class="bg">
+                  <section>
+                    <h4>Perimeter of a Triangle</h4>
+                    <input
+                      type="text"
+                      id="poat-input-x"
+                      name="side"
+                      placeholder="First side"
+                      required
+                    />
+                    <input
+                      type="text"
+                      id="poat-input-y"
+                      name="side"
+                      placeholder="Second side"
+                      required
+                    />
+                    <input
+                      type="text"
+                      id="poat-input-z"
+                      name="side"
+                      placeholder="Third side"
+                      required
+                    />
+                    <button onclick="perimeterTriangle()">Submit</button>
+                    <input
+                      id="poat-output"
+                      type="text"
+                      placeholder="Answer will be shown here"
+                    />
+                  </section>
+                </div>
 
-                            <div class="bg">
-                                <section>
-                                    <h4>Volume of a Cylinder</h4>
-                                    <input type="text" id="voac-input-x" name="side" placeholder="Height" required>
-                                    <input type="text" id="voac-input-y" name="side" placeholder="Base" required>
-                                    <button onclick="volumeCylinder()">Submit</button>
-                                    <input id="voac-output" type="text" placeholder="Answer will be shown here">
-                                </section>
-                            </div>
-                            <div class="bg">
-                                <section>
-                                    <h4>Volume of a Cone</h4>
-                                    <input type="text" id="voacn-input-x" name="side" placeholder="Base" required>
-                                    <input type="text" id="voacn-input-y" name="side" placeholder=Height" required>
-                                    <button onclick="volumeCone()">Submit</button>
-                                    <input id="voacn-output" type="text" placeholder="Answer will be shown here">
-                                </section>
-                            </div>
-
-                        </div>
-                    </main>
-                </section>
-                <section id="physics">
-                    <header>
-                        <h3 class="center">Physics</h3>
-                    </header>
-                    <main>
-                        <div class="row">
-                            <div class="bg">
-                                <section>
-                                    <h4>Average Speed</h4>
-                                    <input type="text" id="as-input-x" name="side" placeholder="Distance traveled"
-                                        required>
-                                    <input type="text" id="as-input-y" name="side" placeholder="Total time taken"
-                                        required>
-                                    <button onclick="averageSpeed()">Submit</button>
-                                    <input id="as-output" type="text" placeholder="Answer will be shown here">
-                                </section>
-                            </div>
-                            <div class="bg">
-                                <section>
-                                    <h4>Acceleration</h4>
-                                    <input type="text" id="a-input-x" name="side" placeholder="Final velocity" required>
-                                    <input type="text" id="a-input-y" name="side" placeholder="Initial velocity"
-                                        required>
-                                    <input type="text" id="a-input-z" name="side" placeholder="Total time taken"
-                                        required>
-                                    <button onclick="acceleration()">Submit</button>
-                                    <input id="a-output" type="text" placeholder="Answer will be shown here">
-                                </section>
-                            </div>
-                            <div class="bg">
-                                <section>
-                                    <h4>Density</h4>
-                                    <input type="text" id="d-input-x" name="side" placeholder="Mass of the body"
-                                        required>
-                                    <input type="text" id="d-input-y" name="side" placeholder="Volume of the body"
-                                        required>
-                                    <button onclick="density()">Submit</button>
-                                    <input id="d-output" type="text" placeholder="Answer will be shown here">
-                                </section>
-                            </div>
-                            <div class="bg">
-                                <section>
-                                    <h4>Newton's Second Law</h4>
-                                    <input type="text" id="nsl-input-x" name="side" placeholder="Mass of the body"
-                                        required>
-                                    <input type="text" id="nsl-input-y" name="side"
-                                        placeholder="Acceleration in velocity" required>
-                                    <button onclick="newtonsSecondLaw()">Submit</button>
-                                    <input id="nsl-output" type="text" placeholder="Answer will be shown here">
-                                </section>
-                            </div>
-                            <div class="bg">
-                                <section>
-                                    <h4>Power</h4>
-                                    <input type="text" id="p-input-x" name="side" placeholder="Work done" required>
-                                    <input type="text" id="p-input-y" name="side" placeholder="Time taken" required>
-                                    <button onclick="power()">Submit</button>
-                                    <input id="p-output" type="text" placeholder="Answer will be shown here">
-                                </section>
-                            </div>
-                            <div class="bg">
-                                <section>
-                                    <h4>Weight</h4>
-                                    <input type="text" id="w-input-x" name="side" placeholder="Mass of the body"
-                                        required>
-                                    <input type="text" id="w-input-y" name="side" placeholder="Gravity(9.8 for Earth)"
-                                        required>
-                                    <button onclick="weight()">Submit</button>
-                                    <input id="w-output" type="text" placeholder="Answer will be shown here">
-                                </section>
-                            </div>
-                            <div class="bg">
-                                <section>
-                                    <h4>Pressure</h4>
-                                    <input type="text" id="psr-input-x" name="side" placeholder="Force Applied"
-                                        required>
-                                    <input type="text" id="psr-input-y" name="side"
-                                        placeholder="Total area of the object" required>
-                                    <button onclick="pressure()">Submit</button>
-                                    <input id="psr-output" type="text" placeholder="Answer will be shown here">
-                                </section>
-                            </div>
-                            <div class="bg">
-                                <section>
-                                    <h4>Kinetic Energy</h4>
-                                    <input type="text" id="ke-input-x" name="side" placeholder="Mass of the body"
-                                        required>
-                                    <input type="text" id="ke-input-y" name="side" placeholder="Velocity of the object"
-                                        required>
-                                    <button onclick="kineticEnergy()">Submit</button>
-                                    <input id="ke-output" type="text" placeholder="Answer will be shown here">
-                                </section>
-                            </div>
-                            <div class="bg">
-                                <section>
-                                    <h4>Ohms Law</h4>
-                                    <input type="text" id="ol-input-x" name="side" placeholder="Electric current"
-                                        required>
-                                    <input type="text" id="ol-input-y" name="side" placeholder="Resistance" required>
-                                    <button onclick="ohmsLaw()">Submit</button>
-                                    <input id="ol-output" type="text" placeholder="Answer will be shown here">
-                                </section>
-                            </div>
-                            <div class="bg">
-                                <section>
-                                    <h4>Frequency</h4>
-                                    <input type="text" id="f-input-x" name="side" placeholder="Velocity or wave speed"
-                                        required>
-                                    <input type="text" id="f-input-y" name="side" placeholder="Wavelength" required>
-                                    <button onclick="frequency()">Submit</button>
-                                    <input id="f-output" type="text" placeholder="Answer will be shown here">
-                                </section>
-                            </div>
-                            <div class="bg">
-                                <section>
-                                    <h4>Boyles Law, The Pressure-Volume Law</h4>
-                                    <input type="text" id="bl-input-w" name="side" placeholder="P1" required>
-                                    <input type="text" id="bl-input-x" name="side" placeholder="V1" required>
-                                    <input type="text" id="bl-input-y" name="side" placeholder="P2" required><input
-                                        type="text" id="bl-input-z" name="side" placeholder="V2" required>
-                                    <button onclick="boylesLaw()">Submit</button>
-
-                                </section>
-                            </div>
-                            <div class="bg">
-                                <section>
-                                    <h4>Charles' Law: The Temperature-Volume Law</h4>
-                                    <input type="text" id="cl-input-w" name="side" placeholder="V1" required>
-                                    <input type="text" id="cl-input-x" name="side" placeholder="T1" required>
-                                    <input type="text" id="cl-input-y" name="side" placeholder="V2" required><input
-                                        type="text" id="cl-input-z" name="side" placeholder="T2" required>
-                                    <button onclick="charlesLaw()">Submit</button>
-
-                                </section>
-                            </div>
-                            <div class="bg">
-                                <section>
-                                    <h4>Gay-Lussac's Law: The Pressure Temperature Law</h4>
-                                    <input type="text" id="gl-input-w" name="side" placeholder="P1" required>
-                                    <input type="text" id="gl-input-x" name="side" placeholder="T1" required>
-                                    <input type="text" id="gl-input-y" name="side" placeholder="P2" required><input
-                                        type="text" id="gl-input-z" name="side" placeholder="T2" required>
-                                    <button onclick="gayLussacsLaw()">Submit</button>
-
-                                </section>
-                            </div>
-                            <div class="bg">
-                                <section>
-                                    <h4>Avogadro's Law: The Volume Amount Law</h4>
-                                    <input type="text" id="al-input-w" name="side" placeholder="V1" required>
-                                    <input type="text" id="al-input-x" name="side" placeholder="N1" required>
-                                    <input type="text" id="al-input-y" name="side" placeholder="V2" required>
-                                    <input type="text" id="al-input-z" name="side" placeholder="N2" required>
-                                    <button onclick="avogadrosLaw()">Submit</button>
-
-                                </section>
-                            </div>
-                            <div class="bg">
-                                <section>
-                                    <h4>The Combined Gas Law</h4>
-                                    <input type="text" id="cg-input-u" name="side" placeholder="P1" required>
-                                    <input type="text" id="cg-input-v" name="side" placeholder="V1" required>
-                                    <input type="text" id="cg-input-w" name="side" placeholder="T1" required>
-                                    <input type="text" id="cg-input-x" name="side" placeholder="P2" required>
-                                    <input type="text" id="cg-input-y" name="side" placeholder="V2" required>
-                                    <input type="text" id="cg-input-z" name="side" placeholder="T2" required>
-                                    <button onclick="combinedGasLaw()">Submit</button>
-
-                                </section>
-                            </div>
-                        </div>
-                        </div>
-                    </main>
-                </section>
+                <div class="bg">
+                  <section>
+                    <h4>Volume of a Cylinder</h4>
+                    <input
+                      type="text"
+                      id="voac-input-x"
+                      name="side"
+                      placeholder="Height"
+                      required
+                    />
+                    <input
+                      type="text"
+                      id="voac-input-y"
+                      name="side"
+                      placeholder="Base"
+                      required
+                    />
+                    <button onclick="volumeCylinder()">Submit</button>
+                    <input
+                      id="voac-output"
+                      type="text"
+                      placeholder="Answer will be shown here"
+                    />
+                  </section>
+                </div>
+                <div class="bg">
+                  <section>
+                    <h4>Volume of a Cone</h4>
+                    <input
+                      type="text"
+                      id="voacn-input-x"
+                      name="side"
+                      placeholder="Base"
+                      required
+                    />
+                    <input type="text" id="voacn-input-y" name="side"
+                    placeholder=Height" required>
+                    <button onclick="volumeCone()">Submit</button>
+                    <input
+                      id="voacn-output"
+                      type="text"
+                      placeholder="Answer will be shown here"
+                    />
+                  </section>
+                </div>
+              </div>
             </main>
-        </section>
+          </section>
+          <section id="physics">
+            <header>
+              <h3 class="center">Physics</h3>
+            </header>
+            <main>
+              <div class="row">
+                <div class="bg">
+                  <section>
+                    <h4>Average Speed</h4>
+                    <input
+                      type="text"
+                      id="as-input-x"
+                      name="side"
+                      placeholder="Distance traveled"
+                      required
+                    />
+                    <input
+                      type="text"
+                      id="as-input-y"
+                      name="side"
+                      placeholder="Total time taken"
+                      required
+                    />
+                    <button onclick="averageSpeed()">Submit</button>
+                    <input
+                      id="as-output"
+                      type="text"
+                      placeholder="Answer will be shown here"
+                    />
+                  </section>
+                </div>
+                <div class="bg">
+                  <section>
+                    <h4>Acceleration</h4>
+                    <input
+                      type="text"
+                      id="a-input-x"
+                      name="side"
+                      placeholder="Final velocity"
+                      required
+                    />
+                    <input
+                      type="text"
+                      id="a-input-y"
+                      name="side"
+                      placeholder="Initial velocity"
+                      required
+                    />
+                    <input
+                      type="text"
+                      id="a-input-z"
+                      name="side"
+                      placeholder="Total time taken"
+                      required
+                    />
+                    <button onclick="acceleration()">Submit</button>
+                    <input
+                      id="a-output"
+                      type="text"
+                      placeholder="Answer will be shown here"
+                    />
+                  </section>
+                </div>
+                <div class="bg">
+                  <section>
+                    <h4>Density</h4>
+                    <input
+                      type="text"
+                      id="d-input-x"
+                      name="side"
+                      placeholder="Mass of the body"
+                      required
+                    />
+                    <input
+                      type="text"
+                      id="d-input-y"
+                      name="side"
+                      placeholder="Volume of the body"
+                      required
+                    />
+                    <button onclick="density()">Submit</button>
+                    <input
+                      id="d-output"
+                      type="text"
+                      placeholder="Answer will be shown here"
+                    />
+                  </section>
+                </div>
+                <div class="bg">
+                  <section>
+                    <h4>Newton's Second Law</h4>
+                    <input
+                      type="text"
+                      id="nsl-input-x"
+                      name="side"
+                      placeholder="Mass of the body"
+                      required
+                    />
+                    <input
+                      type="text"
+                      id="nsl-input-y"
+                      name="side"
+                      placeholder="Acceleration in velocity"
+                      required
+                    />
+                    <button onclick="newtonsSecondLaw()">Submit</button>
+                    <input
+                      id="nsl-output"
+                      type="text"
+                      placeholder="Answer will be shown here"
+                    />
+                  </section>
+                </div>
+                <div class="bg">
+                  <section>
+                    <h4>Power</h4>
+                    <input
+                      type="text"
+                      id="p-input-x"
+                      name="side"
+                      placeholder="Work done"
+                      required
+                    />
+                    <input
+                      type="text"
+                      id="p-input-y"
+                      name="side"
+                      placeholder="Time taken"
+                      required
+                    />
+                    <button onclick="power()">Submit</button>
+                    <input
+                      id="p-output"
+                      type="text"
+                      placeholder="Answer will be shown here"
+                    />
+                  </section>
+                </div>
+                <div class="bg">
+                  <section>
+                    <h4>Weight</h4>
+                    <input
+                      type="text"
+                      id="w-input-x"
+                      name="side"
+                      placeholder="Mass of the body"
+                      required
+                    />
+                    <input
+                      type="text"
+                      id="w-input-y"
+                      name="side"
+                      placeholder="Gravity(9.8 for Earth)"
+                      required
+                    />
+                    <button onclick="weight()">Submit</button>
+                    <input
+                      id="w-output"
+                      type="text"
+                      placeholder="Answer will be shown here"
+                    />
+                  </section>
+                </div>
+                <div class="bg">
+                  <section>
+                    <h4>Pressure</h4>
+                    <input
+                      type="text"
+                      id="psr-input-x"
+                      name="side"
+                      placeholder="Force Applied"
+                      required
+                    />
+                    <input
+                      type="text"
+                      id="psr-input-y"
+                      name="side"
+                      placeholder="Total area of the object"
+                      required
+                    />
+                    <button onclick="pressure()">Submit</button>
+                    <input
+                      id="psr-output"
+                      type="text"
+                      placeholder="Answer will be shown here"
+                    />
+                  </section>
+                </div>
+                <div class="bg">
+                  <section>
+                    <h4>Kinetic Energy</h4>
+                    <input
+                      type="text"
+                      id="ke-input-x"
+                      name="side"
+                      placeholder="Mass of the body"
+                      required
+                    />
+                    <input
+                      type="text"
+                      id="ke-input-y"
+                      name="side"
+                      placeholder="Velocity of the object"
+                      required
+                    />
+                    <button onclick="kineticEnergy()">Submit</button>
+                    <input
+                      id="ke-output"
+                      type="text"
+                      placeholder="Answer will be shown here"
+                    />
+                  </section>
+                </div>
+                <div class="bg">
+                  <section>
+                    <h4>Ohms Law</h4>
+                    <input
+                      type="text"
+                      id="ol-input-x"
+                      name="side"
+                      placeholder="Electric current"
+                      required
+                    />
+                    <input
+                      type="text"
+                      id="ol-input-y"
+                      name="side"
+                      placeholder="Resistance"
+                      required
+                    />
+                    <button onclick="ohmsLaw()">Submit</button>
+                    <input
+                      id="ol-output"
+                      type="text"
+                      placeholder="Answer will be shown here"
+                    />
+                  </section>
+                </div>
+                <div class="bg">
+                  <section>
+                    <h4>Frequency</h4>
+                    <input
+                      type="text"
+                      id="f-input-x"
+                      name="side"
+                      placeholder="Velocity or wave speed"
+                      required
+                    />
+                    <input
+                      type="text"
+                      id="f-input-y"
+                      name="side"
+                      placeholder="Wavelength"
+                      required
+                    />
+                    <button onclick="frequency()">Submit</button>
+                    <input
+                      id="f-output"
+                      type="text"
+                      placeholder="Answer will be shown here"
+                    />
+                  </section>
+                </div>
+                <div class="bg">
+                  <section>
+                    <h4>Boyles Law, The Pressure-Volume Law</h4>
+                    <input
+                      type="text"
+                      id="bl-input-w"
+                      name="side"
+                      placeholder="P1"
+                      required
+                    />
+                    <input
+                      type="text"
+                      id="bl-input-x"
+                      name="side"
+                      placeholder="V1"
+                      required
+                    />
+                    <input
+                      type="text"
+                      id="bl-input-y"
+                      name="side"
+                      placeholder="P2"
+                      required
+                    /><input
+                      type="text"
+                      id="bl-input-z"
+                      name="side"
+                      placeholder="V2"
+                      required
+                    />
+                    <button onclick="boylesLaw()">Submit</button>
+                  </section>
+                </div>
+                <div class="bg">
+                  <section>
+                    <h4>Charles' Law: The Temperature-Volume Law</h4>
+                    <input
+                      type="text"
+                      id="cl-input-w"
+                      name="side"
+                      placeholder="V1"
+                      required
+                    />
+                    <input
+                      type="text"
+                      id="cl-input-x"
+                      name="side"
+                      placeholder="T1"
+                      required
+                    />
+                    <input
+                      type="text"
+                      id="cl-input-y"
+                      name="side"
+                      placeholder="V2"
+                      required
+                    /><input
+                      type="text"
+                      id="cl-input-z"
+                      name="side"
+                      placeholder="T2"
+                      required
+                    />
+                    <button onclick="charlesLaw()">Submit</button>
+                  </section>
+                </div>
+                <div class="bg">
+                  <section>
+                    <h4>Gay-Lussac's Law: The Pressure Temperature Law</h4>
+                    <input
+                      type="text"
+                      id="gl-input-w"
+                      name="side"
+                      placeholder="P1"
+                      required
+                    />
+                    <input
+                      type="text"
+                      id="gl-input-x"
+                      name="side"
+                      placeholder="T1"
+                      required
+                    />
+                    <input
+                      type="text"
+                      id="gl-input-y"
+                      name="side"
+                      placeholder="P2"
+                      required
+                    /><input
+                      type="text"
+                      id="gl-input-z"
+                      name="side"
+                      placeholder="T2"
+                      required
+                    />
+                    <button onclick="gayLussacsLaw()">Submit</button>
+                  </section>
+                </div>
+                <div class="bg">
+                  <section>
+                    <h4>Avogadro's Law: The Volume Amount Law</h4>
+                    <input
+                      type="text"
+                      id="al-input-w"
+                      name="side"
+                      placeholder="V1"
+                      required
+                    />
+                    <input
+                      type="text"
+                      id="al-input-x"
+                      name="side"
+                      placeholder="N1"
+                      required
+                    />
+                    <input
+                      type="text"
+                      id="al-input-y"
+                      name="side"
+                      placeholder="V2"
+                      required
+                    />
+                    <input
+                      type="text"
+                      id="al-input-z"
+                      name="side"
+                      placeholder="N2"
+                      required
+                    />
+                    <button onclick="avogadrosLaw()">Submit</button>
+                  </section>
+                </div>
+                <div class="bg">
+                  <section>
+                    <h4>The Combined Gas Law</h4>
+                    <input
+                      type="text"
+                      id="cg-input-u"
+                      name="side"
+                      placeholder="P1"
+                      required
+                    />
+                    <input
+                      type="text"
+                      id="cg-input-v"
+                      name="side"
+                      placeholder="V1"
+                      required
+                    />
+                    <input
+                      type="text"
+                      id="cg-input-w"
+                      name="side"
+                      placeholder="T1"
+                      required
+                    />
+                    <input
+                      type="text"
+                      id="cg-input-x"
+                      name="side"
+                      placeholder="P2"
+                      required
+                    />
+                    <input
+                      type="text"
+                      id="cg-input-y"
+                      name="side"
+                      placeholder="V2"
+                      required
+                    />
+                    <input
+                      type="text"
+                      id="cg-input-z"
+                      name="side"
+                      placeholder="T2"
+                      required
+                    />
+                    <button onclick="combinedGasLaw()">Submit</button>
+                  </section>
+                </div>
+              </div>
+            </main>
+          </section>
+          <section id="economics">
+            <header>
+              <h3 class="center">Economics</h3>
+            </header>
+            <main>
+              <div class="row">
+                <div class="bg">
+                  <section>
+                    <h4>
+                      Gross Domestic Product<br />( Expenditure Approach )
+                    </h4>
+                    <input
+                      type="text"
+                      id="gdpcginx-input-w"
+                      name="side"
+                      placeholder="Consumption"
+                      required
+                    />
+                    <input
+                      type="text"
+                      id="gdpcginx-input-x"
+                      name="side"
+                      placeholder="Government Expendintures"
+                      required
+                    />
+                    <input
+                      type="text"
+                      id="gdpcginx-input-y"
+                      name="side"
+                      placeholder="Investment"
+                      required
+                    />
+                    <input
+                      type="text"
+                      id="gdpcginx-input-z"
+                      name="side"
+                      placeholder="Net Exports"
+                      required
+                    />
+                    <input
+                      id="gdpcginx-output"
+                      type="text"
+                      placeholder="Gross Domestic Product"
+                    />
+                    <button onclick="gdpExpenditureApproach()">Submit</button>
+                  </section>
+                </div>
+                <div class="bg">
+                  <section>
+                    <h4>Gross Domestic Product<br />( Income Approach )</h4>
+                    <input
+                      type="text"
+                      id="gdpwirp-input-w"
+                      name="side"
+                      placeholder="Labor"
+                      required
+                    />
+                    <input
+                      type="text"
+                      id="gdpwirp-input-x"
+                      name="side"
+                      placeholder="Interest"
+                      required
+                    />
+                    <input
+                      type="text"
+                      id="gdpwirp-input-y"
+                      name="side"
+                      placeholder="Rent"
+                      required
+                    />
+                    <input
+                      type="text"
+                      id="gdpwirp-input-z"
+                      name="side"
+                      placeholder="Remaining Profits"
+                      required
+                    />
+                    <input
+                      id="gdpwirp-output"
+                      type="text"
+                      placeholder="Gross Domestic Product"
+                    />
+                    <button onclick="gdpIncomeApproach()">Submit</button>
+                  </section>
+                </div>
+                <div class="bg">
+                  <section>
+                    <h4>Unemployment Rate</h4>
+                    <input
+                      type="text"
+                      id="ur-input-x"
+                      name="side"
+                      placeholder="Unemployed"
+                      required
+                    />
+                    <input
+                      type="text"
+                      id="ur-input-y"
+                      name="side"
+                      placeholder="Employed"
+                      required
+                    />
+                    <input
+                      type="text"
+                      id="ur-output"
+                      name="side"
+                      placeholder="Unemployment Rate"
+                      required
+                    />
+                    <button onclick="unemploymentRate()">Submit</button>
+                  </section>
+                </div>
+                <div class="bg">
+                    <section>
+                      <h4>Money Multiplier Rate</h4>
+                      <input
+                        type="text"
+                        id="mmr-input-x"
+                        name="side"
+                        placeholder="Reserve Ratio(use decimal)"
+                        required
+                      />
+                      <input
+                        type="text"
+                        id="mmr-output"
+                        name="side"
+                        placeholder="Money Multiplier Metric"
+                        required
+                      />
+                      <button onclick="moneyMultiplierRate()">Submit</button>
+                    </section>
+                  </div>
+              </div>
+            </main>
+          </section>
+        </main>
+      </section>
     </main>
     <footer>
-        <p>Everything gets better with SSCO</p>
-        <p>&copy;SSCO 2020 </p>
+      <p>Everything gets better with SSCO</p>
+      <p>&copy;SSCO 2020</p>
     </footer>
-
-
-</body>
-
+  </body>
 </html>
