@@ -103,9 +103,7 @@ h1 {
   margin:0;
   padding:0;
 }
-li,.bg,.fb{
-  :border-box;
-}
+
 #resources .bg{
   min-width:200px;
 }
@@ -174,15 +172,17 @@ main img:hover {
 }
 
 .bg {
-    background-color: rgba(166, 230, 187, 0.3);
-    border-radius: 10px;
+    background-color: rgb(160, 233, 196);
     display: inline-block;
-    margin: 0.2em;
-    padding: 1.3em;
-    -webkit-box-shadow: 0px 0px 3px 1px rgba(30, 47, 36, 0.2);
-    -moz-box-shadow: 0px 0px 3px 1px rgba(30, 47, 36, 0.2);
-    box-shadow: 0px 0px 3px 1px rgba(30, 47, 36, 0.2);
-    transition: 0.3s;
+    width: 80%;
+    min-width: 300px;
+    max-width: 500px;
+    padding: 1em;
+    margin:2em;
+    transition: 0.4s;
+    border-bottom: 1px solid rgb(212, 56, 56);
+    border-radius: 10px;
+    box-shadow: 10px 10px 2px 2px rgb(221, 220, 220);
 }
 
 .bg p {
@@ -190,7 +190,7 @@ main img:hover {
 }
 
 .bg:hover {
-    margin: 1em 1em 0.4em 0.4em;
+    padding:1.5em;
 }
 
 .cr-wrap {

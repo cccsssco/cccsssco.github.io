@@ -47,13 +47,15 @@ function volumeCube(){
   let side;
   let output = side ** 3;
 }
-function columeCylinder(){
-  let area;
-  let height;
+function volumeCylinder(){
+  let area = document.getElementById("voac-input-x").value;
+  let height = document.getElementById("voac-input-y").value;
   let output = area * height;
+  document.getElementById("voac-output").placeholder = output;
 }
 function volumeCone(){
-  let area;
-  let height;
+  let area = document.getElementById("voacn-input-x").value;
+  let height = document.getElementById("voacn-input-y").value;
   let output = (area * height) / 3;
+  document.getElementById("voacn-output").placeholder = output;
 }
