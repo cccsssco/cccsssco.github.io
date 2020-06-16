@@ -61,18 +61,51 @@
         </div>
       </div>
       <section id="math">
-        <header>
+        <header class="mathcon">
           <h2 class="center">Math</h2>
+          <div class="metanavcon">
+          <button class="metanavbtn" onclick="openMetaNav()">Navigate &darr;</button>
+          <div class="metanav" id="mathnav">
+              <nav>
+                  <ul>
+                      <li><a href="#geometry">Geometry</a></li>
+                      <li><a href="#physics">Physics</a></li>
+                      <li><a href="#economics">Economics</a></li>
+                  </ul>
+              </nav>
+          </div>
+          </div>
         </header>
         <main>
           <section id="geometry">
             <header>
               <h3 class="center">Geometry</h3>
+              <div class="metanavcon">
+                <button class="metanavbtn" onclick="openMetaNavgeometry()">Navigate &darr;</button>
+                <div class="metanav" id="geometrynav">
+                    <nav>
+                        <ul>
+                            <li><a href="#g1">Area of a Square</a></li>
+                            <li><a href="#g2">Perimeter of a Square</a></li>
+                            <li><a href="#g3">Volume of a Cube</a></li>
+                            <li><a href="#g4">Area of a Circle</a></li>
+                            <li><a href="#g5">Circumference of a Circle</a></li>
+                            <li><a href="#g6">Area of a Rectangle</a></li>
+                            <li><a href="#g7">Perimeter of a Rectangle</a></li>
+                            <li><a href="#g8">Volume of a 3D Rectangle</a></li>
+                            <li><a href="#g9">Area of a Triangle</a></li>
+                            <li><a href="#g10">Perimeter of a Triangle</a></li>
+                            <li><a href="#g11">Volume of a Cylinder</a></li>
+                            <li><a href="#g12">Volume of a Cone</a></li>
+                        </ul>
+                    </nav>
+                    </div>
+                    </div>
             </header>
             <main>
               <div class="row">
                 <div class="bg">
-                  <section>
+                  <section id="g1">
                     <h4>Area of a Square</h4>
                     <input
                       type="text"
@@ -90,7 +123,7 @@
                   </section>
                 </div>
                 <div class="bg">
-                  <section>
+                  <section id="g2">
                     <h4>Perimeter of a Square</h4>
                     <input
                       type="text"
@@ -108,7 +141,7 @@
                   </section>
                 </div>
                 <div class="bg">
-                  <section>
+                  <section id="g3">
                     <h4>Volume of a Cube</h4>
                     <input
                       type="text"
@@ -127,7 +160,7 @@
                 </div>
                 <div class="bg">
                   <section>
-                    <h4>Area of a Circle</h4>
+                    <h4 id="g4">Area of a Circle</h4>
                     <input
                       type="text"
                       id="aoac-input"
@@ -144,7 +177,7 @@
                   </section>
                 </div>
                 <div class="bg">
-                  <section>
+                  <section id="g5">
                     <h4>Circumference of a Circle</h4>
                     <input
                       type="text"
@@ -162,7 +195,7 @@
                   </section>
                 </div>
                 <div class="bg">
-                  <section>
+                  <section id="g6">
                     <h4>Area of a Rectangle</h4>
                     <input
                       type="text"
@@ -187,7 +220,7 @@
                   </section>
                 </div>
                 <div class="bg">
-                  <section>
+                  <section id="g7">
                     <h4>Perimeter of a Rectangle</h4>
                     <input
                       type="text"
@@ -212,7 +245,7 @@
                   </section>
                 </div>
                 <div class="bg">
-                  <section>
+                  <section id="g8">
                     <h4>Volume of a 3D Rectangle</h4>
                     <input
                       type="text"
@@ -244,7 +277,7 @@
                   </section>
                 </div>
                 <div class="bg">
-                  <section>
+                  <section id="g9">
                     <h4>Area of a Triangle</h4>
                     <input
                       type="text"
@@ -269,7 +302,7 @@
                   </section>
                 </div>
                 <div class="bg">
-                  <section>
+                  <section id="g10">
                     <h4>Perimeter of a Triangle</h4>
                     <input
                       type="text"
@@ -302,7 +335,7 @@
                 </div>
 
                 <div class="bg">
-                  <section>
+                  <section id="g11">
                     <h4>Volume of a Cylinder</h4>
                     <input
                       type="text"
@@ -327,7 +360,7 @@
                   </section>
                 </div>
                 <div class="bg">
-                  <section>
+                  <section id="g12">
                     <h4>Volume of a Cone</h4>
                     <input
                       type="text"
@@ -352,11 +385,35 @@
           <section id="physics">
             <header>
               <h3 class="center">Physics</h3>
+              <div class="metanavcon">
+                <button class="metanavbtn" onclick="openMetaNavphysics()">Navigate &darr;</button>
+                <div class="metanav" id="physicsnav">
+                    <nav>
+                        <ul>
+                            <li><a href="#p1">Average Speed</a></li>
+                            <li><a href="#p2">Acceleration</a></li>
+                            <li><a href="#p3">Density</a></li>
+                            <li><a href="#p4">Newton's Second Law</a></li>
+                            <li><a href="#p5">Power</a></li>
+                            <li><a href="#p6">Weight</a></li>
+                            <li><a href="#p7">Pressure</a></li>
+                            <li><a href="#p8">Kinetic Energy</a></li>
+                            <li><a href="#p9">Ohms Law</a></li>
+                            <li><a href="#p10">Frequency</a></li>
+                            <li><a href="#p11">Boyles Law, The Pressure-Volume Law</a></li>
+                            <li><a href="#p12">Charles' Law: The Temperature-Volume Law</a></li>
+                            <li><a href="#p13">Gay-Lussac's Law: The Pressure Temperature Law</a></li>
+                            <li><a href="#p14">Avogadro's Law: The Volume Amount Law</a></li>
+                            <li><a href="#p15">The Combined Gas Law</a></li>
+                        </ul>
+                    </nav>
+                    </div>
+                    </div>
             </header>
             <main>
               <div class="row">
                 <div class="bg">
-                  <section>
+                  <section id="p1">
                     <h4>Average Speed</h4>
                     <input
                       type="text"
@@ -381,7 +438,7 @@
                   </section>
                 </div>
                 <div class="bg">
-                  <section>
+                  <section id="p2">
                     <h4>Acceleration</h4>
                     <input
                       type="text"
@@ -413,7 +470,7 @@
                   </section>
                 </div>
                 <div class="bg">
-                  <section>
+                  <section id="p3">
                     <h4>Density</h4>
                     <input
                       type="text"
@@ -438,7 +495,7 @@
                   </section>
                 </div>
                 <div class="bg">
-                  <section>
+                  <section id="p4">
                     <h4>Newton's Second Law</h4>
                     <input
                       type="text"
@@ -463,7 +520,7 @@
                   </section>
                 </div>
                 <div class="bg">
-                  <section>
+                  <section id="p5">
                     <h4>Power</h4>
                     <input
                       type="text"
@@ -488,7 +545,7 @@
                   </section>
                 </div>
                 <div class="bg">
-                  <section>
+                  <section id="p6">
                     <h4>Weight</h4>
                     <input
                       type="text"
@@ -513,7 +570,7 @@
                   </section>
                 </div>
                 <div class="bg">
-                  <section>
+                  <section id="p7">
                     <h4>Pressure</h4>
                     <input
                       type="text"
@@ -538,7 +595,7 @@
                   </section>
                 </div>
                 <div class="bg">
-                  <section>
+                  <section id="p8">
                     <h4>Kinetic Energy</h4>
                     <input
                       type="text"
@@ -563,7 +620,7 @@
                   </section>
                 </div>
                 <div class="bg">
-                  <section>
+                  <section id="p9">
                     <h4>Ohms Law</h4>
                     <input
                       type="text"
@@ -588,7 +645,7 @@
                   </section>
                 </div>
                 <div class="bg">
-                  <section>
+                  <section id="p10">
                     <h4>Frequency</h4>
                     <input
                       type="text"
@@ -613,7 +670,7 @@
                   </section>
                 </div>
                 <div class="bg">
-                  <section>
+                  <section id="p11">
                     <h4>Boyles Law, The Pressure-Volume Law</h4>
                     <input
                       type="text"
@@ -646,7 +703,7 @@
                   </section>
                 </div>
                 <div class="bg">
-                  <section>
+                  <section id="p12">
                     <h4>Charles' Law: The Temperature-Volume Law</h4>
                     <input
                       type="text"
@@ -679,7 +736,7 @@
                   </section>
                 </div>
                 <div class="bg">
-                  <section>
+                  <section id="p13">
                     <h4>Gay-Lussac's Law: The Pressure Temperature Law</h4>
                     <input
                       type="text"
@@ -712,7 +769,7 @@
                   </section>
                 </div>
                 <div class="bg">
-                  <section>
+                  <section id="p14">
                     <h4>Avogadro's Law: The Volume Amount Law</h4>
                     <input
                       type="text"
@@ -746,7 +803,7 @@
                   </section>
                 </div>
                 <div class="bg">
-                  <section>
+                  <section id="p15">
                     <h4>The Combined Gas Law</h4>
                     <input
                       type="text"
@@ -799,11 +856,30 @@
           <section id="economics">
             <header>
               <h3 class="center">Economics</h3>
+              <div class="metanavcon">
+                <button class="metanavbtn" onclick="openMetaNaveconomics()">Navigate &darr;</button>
+                <div class="metanav" id="economicsnav">
+                    <nav>
+                        <ul>
+                            <li><a href="#e1">Gross Domestic Product
+                                ( Expenditure Approach )</a></li>
+                            <li><a href="#e2">Gross Domestic Product
+                                ( Income Approach )</a></li>
+                            <li><a href="#e3">Unemployment Rate</a></li>
+                            <li><a href="#e4">Money Multiplier Rate</a></li>
+                            <li><a href="#e5">Consumer Price Index</a></li>
+                            <li><a href="#e6">Inflation Rate</a></li>
+                            <li><a href="#e7">Real Interest Rate</a></li>
+                            <li><a href="#e8">Quantity Theory of Money</a></li>
+                        </ul>
+                    </nav>
+                    </div>
+                    </div>
             </header>
             <main>
               <div class="row">
                 <div class="bg">
-                  <section>
+                  <section id="e1">
                     <h4>
                       Gross Domestic Product<br />( Expenditure Approach )
                     </h4>
@@ -844,7 +920,7 @@
                   </section>
                 </div>
                 <div class="bg">
-                  <section>
+                  <section id="e2">
                     <h4>Gross Domestic Product<br />( Income Approach )</h4>
                     <input
                       type="text"
@@ -883,7 +959,7 @@
                   </section>
                 </div>
                 <div class="bg">
-                  <section>
+                  <section id="e3">
                     <h4>Unemployment Rate</h4>
                     <input
                       type="text"
@@ -910,7 +986,7 @@
                   </section>
                 </div>
                 <div class="bg">
-                    <section>
+                    <section id="e4">
                       <h4>Money Multiplier Rate</h4>
                       <input
                         type="text"
@@ -930,7 +1006,7 @@
                     </section>
                   </div>
                   <div class="bg">
-                    <section>
+                    <section id="e5">
                       <h4>Consumer Price Index</h4>
                       <input
                         type="text"
@@ -956,7 +1032,7 @@
                     </section>
                   </div>
                   <div class="bg">
-                    <section>
+                    <section id="e6">
                       <h4>Inflation Rate</h4>
                       <input
                         type="text"
@@ -982,7 +1058,7 @@
                     </section>
                   </div>
                   <div class="bg">
-                    <section>
+                    <section id="e7">
                       <h4>Real Interest Rate</h4>
                       <input
                         type="text"
@@ -1008,7 +1084,7 @@
                     </section>
                   </div>
                   <div class="bg">
-                    <section>
+                    <section id="e8">
                       <h4>Quantity Theory of Money</h4>
                       <input
                         type="text"

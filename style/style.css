@@ -10,6 +10,7 @@ body, html {
     min-width: 220px;
     background-color: #ebfbf1;
     margin: 0;
+    scroll-behavior: smooth;
     padding: 0;
 }
 
@@ -316,7 +317,6 @@ footer {
 #math {
     background-color: rgb(75, 126, 94);
     color: white;
-    padding-top: 1em;
     max-width: 90%;
     min-width: 290px;
     margin: auto;
@@ -334,7 +334,7 @@ footer {
 #math .bg {
     background-color: rgb(68, 179, 122);
     display: inline-block;
-    width: 200px;
+    width: min-content;
     min-width: 200px;
     max-width: 500px;
     padding: 1em;
@@ -362,6 +362,8 @@ footer {
     color: white;
     justify-content: space-evenly;
     padding: 1em;
+    border-radius: 20px;
+    overflow: hidden;
 }
 
 #math .row div button, input {
@@ -379,7 +381,43 @@ footer {
     cursor: pointer;
     align-self: center;
 }
-
+.mathcon{
+    background-color: #1E533B;
+    border-radius:20px;
+    overflow: hidden;
+}
+.metanavcon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-bottom:2em;
+}
+.metanavbtn{
+    color: rgb(194, 4, 4);
+    background-color: #ffffff;
+    cursor: pointer;
+    border:none;
+    padding:1.5em;
+    border-radius: 15px;
+}
+.metanav{
+    position: relative;
+    display: block;
+    top:0;
+    border-radius: 20px;
+    background-color: rgb(80, 226, 151);
+    overflow: auto;
+    height: 0px;
+    transition: 0.1s;
+}
+.metanav ul {
+    margin: 0;
+    padding: 0;
+}
+.metanav li{
+    list-style: none;
+}
 @media only screen and (max-width: 850px) {
     .openbtn, .closebtn {
         display: block;

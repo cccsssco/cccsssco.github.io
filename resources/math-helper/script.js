@@ -255,173 +255,222 @@ function combinedGasLaw() {
   }
 
 }
-function gdpExpenditureApproach(){
+function gdpExpenditureApproach() {
   let c = document.getElementById("gdpcginx-input-w").value;
   let g = document.getElementById("gdpcginx-input-x").value;
   let i = document.getElementById("gdpcginx-input-y").value;
   let nx = document.getElementById("gdpcginx-input-z").value;
-  let gdp = document.getElementById("gdpcginx-output").value; 
-  if(gdp == ''){
+  let gdp = document.getElementById("gdpcginx-output").value;
+  if (gdp == '') {
     let output = parseInt(c) + parseInt(g) + parseInt(i) + parseInt(nx);
     document.getElementById("gdpcginx-output").value = output;
   }
-  if(c == ''){
-    let output = parseInt(gdp) - ( parseInt(g) + parseInt(i) + parseInt(nx));
+  if (c == '') {
+    let output = parseInt(gdp) - (parseInt(g) + parseInt(i) + parseInt(nx));
     document.getElementById("gdpcginx-input-w").value = output;
   }
-  if(g == ''){
-    let output = parseInt(gdp) - ( parseInt(c) + parseInt(i) + parseInt(nx));
+  if (g == '') {
+    let output = parseInt(gdp) - (parseInt(c) + parseInt(i) + parseInt(nx));
     document.getElementById("gdpcginx-input-x").value = output;
   }
-  if(i == ''){
-    let output = parseInt(gdp) - ( parseInt(g) + parseInt(c) + parseInt(nx));
+  if (i == '') {
+    let output = parseInt(gdp) - (parseInt(g) + parseInt(c) + parseInt(nx));
     document.getElementById("gdpcginx-input-y").value = output;
   }
-  if(nx == ''){
-    let output = parseInt(gdp) - ( parseInt(g) + parseInt(i) + parseInt(c));
+  if (nx == '') {
+    let output = parseInt(gdp) - (parseInt(g) + parseInt(i) + parseInt(c));
     document.getElementById("gdpcginx-input-z").value = output;
   }
 
 }
-function gdpIncomeApproach(){
+function gdpIncomeApproach() {
   let w = document.getElementById("gdpwirp-input-w").value;
   let i = document.getElementById("gdpwirp-input-x").value;
   let r = document.getElementById("gdpwirp-input-y").value;
   let p = document.getElementById("gdpwirp-input-z").value;
-  let gdp = document.getElementById("gdpwirp-output").value; 
-  if(gdp == ''){
+  let gdp = document.getElementById("gdpwirp-output").value;
+  if (gdp == '') {
     let output = parseInt(w) + parseInt(i) + parseInt(r) + parseInt(p);
     document.getElementById("gdpwirp-output").value = output;
   }
-  if(w == ''){
-    let output = parseInt(gdp) - ( parseInt(i) + parseInt(r) + parseInt(p));
+  if (w == '') {
+    let output = parseInt(gdp) - (parseInt(i) + parseInt(r) + parseInt(p));
     document.getElementById("gdpwirp-input-w").value = output;
   }
-  if(i == ''){
-    let output = parseInt(gdp) - ( parseInt(w) + parseInt(r) + parseInt(p));
+  if (i == '') {
+    let output = parseInt(gdp) - (parseInt(w) + parseInt(r) + parseInt(p));
     document.getElementById("gdpwirp-input-x").value = output;
   }
-  if(r == ''){
-    let output = parseInt(gdp) - ( parseInt(w) + parseInt(i) + parseInt(p));
+  if (r == '') {
+    let output = parseInt(gdp) - (parseInt(w) + parseInt(i) + parseInt(p));
     document.getElementById("gdpwirp-input-y").value = output;
   }
-  if(p == ''){
-    let output = parseInt(gdp) - ( parseInt(w) + parseInt(i) + parseInt(r));
+  if (p == '') {
+    let output = parseInt(gdp) - (parseInt(w) + parseInt(i) + parseInt(r));
     document.getElementById("gdpwirp-input-z").value = output;
   }
-ur=u/e
-ure=u
-e = u/ur
+  ur = u / e
+  ure = u
+  e = u / ur
 }
-function unemploymentRate(){
- let unemployed = document.getElementById("ur-input-x").value;
- let employed = document.getElementById("ur-input-y").value;
- let unemploymentRate = document.getElementById("ur-output").value;
- if(unemploymentRate == ''){
-   let output = (unemployed/employed) * 100;
-   document.getElementById("ur-output").value = output;
- }
- if(unemployed == ''){
-   let output = (unemploymentRate / 100) * employed;
-   document.getElementById("ur-input-x").value = output;
- }
- if(employed == ''){
-   let output = unemployed / (unemploymentRate / 100);
-   document.getElementById("ur-input-y").value = output;
- }
+function unemploymentRate() {
+  let unemployed = document.getElementById("ur-input-x").value;
+  let employed = document.getElementById("ur-input-y").value;
+  let unemploymentRate = document.getElementById("ur-output").value;
+  if (unemploymentRate == '') {
+    let output = (unemployed / employed) * 100;
+    document.getElementById("ur-output").value = output;
+  }
+  if (unemployed == '') {
+    let output = (unemploymentRate / 100) * employed;
+    document.getElementById("ur-input-x").value = output;
+  }
+  if (employed == '') {
+    let output = unemployed / (unemploymentRate / 100);
+    document.getElementById("ur-input-y").value = output;
+  }
 }
-function moneyMultiplierRate(){
- let reservedRatio = document.getElementById("mmr-input-x").value;
- let moneyMultiplierRatio = document.getElementById("mmr-output").value;
- if(moneyMultiplierRatio  == ''){
-   let output = (1/reservedRatio);
-   document.getElementById("mmr-output").value = output;
- }
- if(reservedRatio == ''){
-   let output = 1 / moneyMultiplierRatio;
-   document.getElementById("mmr-input-x").value = output;
- }
- 
+function moneyMultiplierRate() {
+  let reservedRatio = document.getElementById("mmr-input-x").value;
+  let moneyMultiplierRatio = document.getElementById("mmr-output").value;
+  if (moneyMultiplierRatio == '') {
+    let output = (1 / reservedRatio);
+    document.getElementById("mmr-output").value = output;
+  }
+  if (reservedRatio == '') {
+    let output = 1 / moneyMultiplierRatio;
+    document.getElementById("mmr-input-x").value = output;
+  }
+
 }
-function consumerPriceIndex(){
+function consumerPriceIndex() {
   let givenYear = document.getElementById("cpi-input-x").value;
   let baseYear = document.getElementById("cpi-input-y").value;
   let cpi = document.getElementById("cpi-output").value;
-  
-  if(cpi == ''){
-    let output =  givenYear/baseYear;
+
+  if (cpi == '') {
+    let output = givenYear / baseYear;
     document.getElementById("cpi-output").value = output;
-   }
-   if(givenYear == ''){
-    let output =  cpi * baseYear;
+  }
+  if (givenYear == '') {
+    let output = cpi * baseYear;
     document.getElementById("cpi-input-x").value = output;
-   }
-   if(baseYear == ''){
-    let output =  givenYear / cpi;
+  }
+  if (baseYear == '') {
+    let output = givenYear / cpi;
     document.getElementById("cpi-input-y").value = output;
-   }
-   
+  }
+
 }
-function inflationRate(){
+function inflationRate() {
   let givenDate = document.getElementById("ir-input-x").value;
   let baseDate = document.getElementById("ir-input-y").value;
   let inflationRate = document.getElementById("ir-output").value;
 
-  if(inflationRate == ''){
-    let output =  (givenDate-baseDate)/baseDate;
+  if (inflationRate == '') {
+    let output = (givenDate - baseDate) / baseDate;
     document.getElementById("ir-output").value = output;
-   }
-   if(givenDate == ''){
-    let output =  (inflationRate * baseDate)+ parseInt(baseDate);
+  }
+  if (givenDate == '') {
+    let output = (inflationRate * baseDate) + parseInt(baseDate);
     document.getElementById("ir-input-x").value = output;
-   }
-   if(baseDate == ''){
-    let output =  givenDate - (givenDate * (inflationRate/100));
+  }
+  if (baseDate == '') {
+    let output = givenDate - (givenDate * (inflationRate / 100));
     document.getElementById("ir-input-y").value = output;
-   }
+  }
 
 }
-function realInterestRate(){
+function realInterestRate() {
   let nominalInterestRate = document.getElementById("rir-input-x").value;
   let inflationRate = document.getElementById("rir-input-y").value;
   let realInterestRate = document.getElementById("rir-output").value;
 
-  if(realInterestRate == ''){
-    let output =  (nominalInterestRate-inflationRate);
+  if (realInterestRate == '') {
+    let output = (nominalInterestRate - inflationRate);
     document.getElementById("rir-output").value = output;
-   }
-   if(nominalInterestRate == ''){
-    let output =  (parseInt(realInterestRate) + parseInt(inflationRate));
+  }
+  if (nominalInterestRate == '') {
+    let output = (parseInt(realInterestRate) + parseInt(inflationRate));
     document.getElementById("rir-input-x").value = output;
-   }
-   if(inflationRate == ''){
-    let output =  (-(realInterestRate)  + parseInt(nominalInterestRate));
+  }
+  if (inflationRate == '') {
+    let output = (-(realInterestRate) + parseInt(nominalInterestRate));
     document.getElementById("rir-input-y").value = output;
-   }
-   
+  }
+
 }
 
-function quantityTheoryOfMoney(){
+function quantityTheoryOfMoney() {
   let money = document.getElementById("qtm-input-w").value;
   let speed = document.getElementById("qtm-input-x").value;
   let price = document.getElementById("qtm-input-y").value;
   let transaction = document.getElementById("qtm-input-z").value;
 
-  if(money == ''){
+  if (money == '') {
     let output = (price * transaction) / speed;
     document.getElementById("qtm-input-w").value = output;
-   }
-   if(speed == ''){
+  }
+  if (speed == '') {
     let output = (price * transaction) / money;
     document.getElementById("qtm-input-x").value = output;
-   }
-   if(price == ''){
-    let output = (money * speed) / transaction ;
+  }
+  if (price == '') {
+    let output = (money * speed) / transaction;
     document.getElementById("qtm-input-y").value = output;
-   }
-   if(transaction == ''){
-    let output = (money * speed) / price ;
+  }
+  if (transaction == '') {
+    let output = (money * speed) / price;
     document.getElementById("qtm-input-z").value = output;
-   }
-   
+  }
+
 }
+let i = 1;
+let g = 1;
+let p = 1;
+let e = 1;
+function openMetaNav() {
+  let mathnav = document.getElementById("mathnav");
+  if (i % 2 == 1) {
+    mathnav.style.height = "max-content";
+    mathnav.style.padding = "1em";
+  } else {
+    mathnav.style.padding = "0";
+    mathnav.style.height = "0px";
+  }
+  i++
+}
+function openMetaNavgeometry() {
+  let geometrynav = document.getElementById("geometrynav");
+  if (g % 2 == 1) {
+    geometrynav.style.height = "max-content";
+    geometrynav.style.padding = "1em";
+  } else {
+    geometrynav.style.padding = "0";
+    geometrynav.style.height = "0px";
+  }
+  g++
+}
+function openMetaNavphysics() {
+  let physicsnav = document.getElementById("physicsnav");
+  if (p % 2 == 1) {
+    physicsnav.style.height = "max-content";
+    physicsnav.style.padding = "1em";
+  } else {
+    physicsnav.style.padding = "0";
+    physicsnav.style.height = "0px";
+  }
+  p++
+}
+function openMetaNaveconomics() {
+  let economicsnav = document.getElementById("economicsnav");
+  if (e % 2 == 1) {
+    economicsnav.style.height = "max-content";
+    economicsnav.style.padding = "1em";
+  } else {
+    economicsnav.style.padding = "0";
+    economicsnav.style.height = "0px";
+  }
+  e++
+}
+
