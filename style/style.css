@@ -7,7 +7,7 @@
 body, html {
     font: 1em/1.5em "Raleway", sans-serif;
     min-width: 300px;
-    background-color: #ebfbf1;
+    background-color: #f6fffa;
     margin: 0;
     scroll-behavior: smooth;
     padding: 0;
@@ -418,17 +418,28 @@ footer {
     display: block;
     top:0;
     border-radius: 20px;
-    background-color: rgb(80, 226, 151);
+    background-color: white;
     overflow: auto;
     height: 0px;
     transition: 0.1s;
 }
 .metanav ul {
     margin: 0;
-    padding: 0;
 }
+ul li::before {
+    content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: darkgreen; /* Change the color */
+    font-weight: bold; /* If you want it to be bold */
+    display: inline-block; /* Needed to add space between the bullet and the text */
+    width: 1em; /* Also needed for space (tweak if needed) */
+    margin-left: -2em; /* Also needed for space (tweak if needed) */
+  }
 .metanav li{
-    list-style: none;
+    list-style:none;
+}
+.metanav a{
+    color:red;
+    text-decoration: underline darkgreen;
 }
 @media only screen and (max-width: 850px) {
     .openbtn, .closebtn {

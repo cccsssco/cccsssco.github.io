@@ -1130,7 +1130,7 @@
                     <nav>
                         <ul>
                             <li><a href="#a1">Quadratic Formula</a></li>
-                            
+                            <li><a href="#a2">Arithmetic Sequence</a></li>
                         </ul>
                     </nav>
                     </div>
@@ -1140,7 +1140,7 @@
               <div class="row">
                   <div class="bg">
                     <section id="a1">
-                      <h4>Quadratic Formula <br>( not suitable for irrational numbers/answers)</h4>
+                      <h4>Quadratic Formula <br>( not suitable for irrational numbers/answers)<br> ax<sup>2</sup> + bx + c = 0</h4>
                       <input
                         type="text"
                         id="qf-input-x"
@@ -1177,6 +1177,40 @@
                   />
                     </section>
                   </div>
+                  <div class="row">
+                    <div class="bg">
+                      <section id="a2">
+                        <h4>Arithmetic Sequence <br>a<sub>n</sub> = a<sub>1</sub> + (n-1)d</h4>
+                        <input
+                          type="text"
+                          id="art-input-w"
+                          name="side"
+                          placeholder="an"
+                          required
+                        /><input
+                        id="art-input-x"
+                        name="side"
+                        placeholder="a1"
+                        required
+                      />
+                      <input
+                        type="text"
+                        id="art-input-y"
+                        name="side"
+                        placeholder="n"
+                        required
+                      />
+                        <input
+                        type="text"
+                        id="art-input-z"
+                        name="side"
+                        placeholder="d"
+                        required
+                      />
+                      <button onclick="arithmetic()">Submit</button>
+                     
+                      </section>
+                    </div>
               </div>
             </main>
           </section>

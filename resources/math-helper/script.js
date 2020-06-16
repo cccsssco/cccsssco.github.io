@@ -438,3 +438,25 @@ function quadratic(){
   document.getElementById("qf-output1").value = output1;
   document.getElementById("qf-output2").value = output2;
 }
+function arithmetic(){
+  let an = parseInt(document.getElementById("art-input-w").value);
+  let a1 = parseInt(document.getElementById("art-input-x").value);
+  let n = parseInt(document.getElementById("art-input-y").value);
+  let d = parseInt(document.getElementById("art-input-z").value);
+  if (isNaN(an)) {
+      let outputan = a1 + ((n - 1) * d);
+      document.getElementById("art-input-w").value = outputan;
+  }
+  if (isNaN(a1)) {
+      let outputa1 = an - (( n - 1) * d);
+      document.getElementById("art-input-x").value = outputa1;
+  }
+  if (isNaN(n)) {
+  let outputn = ((an - a1) / d) + 1;
+  document.getElementById("art-input-y").value = outputn;
+  }
+  if (isNaN(d)) {
+  let outputd = (an - a1) / (n - 1);
+  document.getElementById("art-input-z").value = outputd;
+      }
+}
