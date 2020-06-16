@@ -929,6 +929,117 @@
                       <button onclick="moneyMultiplierRate()">Submit</button>
                     </section>
                   </div>
+                  <div class="bg">
+                    <section>
+                      <h4>Consumer Price Index</h4>
+                      <input
+                        type="text"
+                        id="cpi-input-x"
+                        name="side"
+                        placeholder="Cost for given year"
+                        required
+                      /><input
+                      type="text"
+                      id="cpi-input-y"
+                      name="side"
+                      placeholder="Cost for base year"
+                      required
+                    />
+                      <input
+                        type="text"
+                        id="cpi-output"
+                        name="side"
+                        placeholder="CPI(in decimal)"
+                        required
+                      />
+                      <button onclick="consumerPriceIndex()">Submit</button>
+                    </section>
+                  </div>
+                  <div class="bg">
+                    <section>
+                      <h4>Inflation Rate</h4>
+                      <input
+                        type="text"
+                        id="ir-input-x"
+                        name="side"
+                        placeholder="Current date CPI"
+                        required
+                      /><input
+                      type="text"
+                      id="ir-input-y"
+                      name="side"
+                      placeholder="Base date CPI"
+                      required
+                    />
+                      <input
+                        type="text"
+                        id="ir-output"
+                        name="side"
+                        placeholder="Inflation Rate(in decimal)"
+                        required
+                      />
+                      <button onclick="inflationRate()">Submit</button>
+                    </section>
+                  </div>
+                  <div class="bg">
+                    <section>
+                      <h4>Real Interest Rate</h4>
+                      <input
+                        type="text"
+                        id="rir-input-x"
+                        name="side"
+                        placeholder="Nominal Interest Rate"
+                        required
+                      /><input
+                      type="text"
+                      id="rir-input-y"
+                      name="side"
+                      placeholder="Rate of Inflation"
+                      required
+                    />
+                      <input
+                        type="text"
+                        id="rir-output"
+                        name="side"
+                        placeholder="Real Interest Rate"
+                        required
+                      />
+                      <button onclick="realInterestRate()">Submit</button>
+                    </section>
+                  </div>
+                  <div class="bg">
+                    <section>
+                      <h4>Quantity Theory of Money</h4>
+                      <input
+                        type="text"
+                        id="qtm-input-w"
+                        name="side"
+                        placeholder="Supply of Money"
+                        required
+                      /><input
+                      id="qtm-input-x"
+                      name="side"
+                      placeholder="Circulation/Speed of Money"
+                      required
+                    />
+                    <input
+                      type="text"
+                      id="qtm-input-y"
+                      name="side"
+                      placeholder="Level of Price"
+                      required
+                    />
+                    <input
+                      type="text"
+                      id="qtm-input-z"
+                      name="side"
+                      placeholder="Transaction volume"
+                      required
+                    />
+                      
+                      <button onclick="quantityTheoryOfMoney()">Submit</button>
+                    </section>
+                  </div>
               </div>
             </main>
           </section>

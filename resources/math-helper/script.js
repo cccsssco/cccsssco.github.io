@@ -343,3 +343,85 @@ function moneyMultiplierRate(){
  }
  
 }
+function consumerPriceIndex(){
+  let givenYear = document.getElementById("cpi-input-x").value;
+  let baseYear = document.getElementById("cpi-input-y").value;
+  let cpi = document.getElementById("cpi-output").value;
+  
+  if(cpi == ''){
+    let output =  givenYear/baseYear;
+    document.getElementById("cpi-output").value = output;
+   }
+   if(givenYear == ''){
+    let output =  cpi * baseYear;
+    document.getElementById("cpi-input-x").value = output;
+   }
+   if(baseYear == ''){
+    let output =  givenYear / cpi;
+    document.getElementById("cpi-input-y").value = output;
+   }
+   
+}
+function inflationRate(){
+  let givenDate = document.getElementById("ir-input-x").value;
+  let baseDate = document.getElementById("ir-input-y").value;
+  let inflationRate = document.getElementById("ir-output").value;
+
+  if(inflationRate == ''){
+    let output =  (givenDate-baseDate)/baseDate;
+    document.getElementById("ir-output").value = output;
+   }
+   if(givenDate == ''){
+    let output =  (inflationRate * baseDate)+ parseInt(baseDate);
+    document.getElementById("ir-input-x").value = output;
+   }
+   if(baseDate == ''){
+    let output =  givenDate - (givenDate * (inflationRate/100));
+    document.getElementById("ir-input-y").value = output;
+   }
+
+}
+function realInterestRate(){
+  let nominalInterestRate = document.getElementById("rir-input-x").value;
+  let inflationRate = document.getElementById("rir-input-y").value;
+  let realInterestRate = document.getElementById("rir-output").value;
+
+  if(realInterestRate == ''){
+    let output =  (nominalInterestRate-inflationRate);
+    document.getElementById("rir-output").value = output;
+   }
+   if(nominalInterestRate == ''){
+    let output =  (parseInt(realInterestRate) + parseInt(inflationRate));
+    document.getElementById("rir-input-x").value = output;
+   }
+   if(inflationRate == ''){
+    let output =  (-(realInterestRate)  + parseInt(nominalInterestRate));
+    document.getElementById("rir-input-y").value = output;
+   }
+   
+}
+
+function quantityTheoryOfMoney(){
+  let money = document.getElementById("qtm-input-w").value;
+  let speed = document.getElementById("qtm-input-x").value;
+  let price = document.getElementById("qtm-input-y").value;
+  let transaction = document.getElementById("qtm-input-z").value;
+
+  if(money == ''){
+    let output = (price * transaction) / speed;
+    document.getElementById("qtm-input-w").value = output;
+   }
+   if(speed == ''){
+    let output = (price * transaction) / money;
+    document.getElementById("qtm-input-x").value = output;
+   }
+   if(price == ''){
+    let output = (money * speed) / transaction ;
+    document.getElementById("qtm-input-y").value = output;
+   }
+   if(transaction == ''){
+    let output = (money * speed) / price ;
+    document.getElementById("qtm-input-z").value = output;
+   }
+   
+}
