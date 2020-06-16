@@ -425,52 +425,16 @@ function quantityTheoryOfMoney() {
   }
 
 }
-let i = 1;
-let g = 1;
-let p = 1;
-let e = 1;
-function openMetaNav() {
-  let mathnav = document.getElementById("mathnav");
-  if (i % 2 == 1) {
-    mathnav.style.height = "max-content";
-    mathnav.style.padding = "1em";
-  } else {
-    mathnav.style.padding = "0";
-    mathnav.style.height = "0px";
-  }
-  i++
-}
-function openMetaNavgeometry() {
-  let geometrynav = document.getElementById("geometrynav");
-  if (g % 2 == 1) {
-    geometrynav.style.height = "max-content";
-    geometrynav.style.padding = "1em";
-  } else {
-    geometrynav.style.padding = "0";
-    geometrynav.style.height = "0px";
-  }
-  g++
-}
-function openMetaNavphysics() {
-  let physicsnav = document.getElementById("physicsnav");
-  if (p % 2 == 1) {
-    physicsnav.style.height = "max-content";
-    physicsnav.style.padding = "1em";
-  } else {
-    physicsnav.style.padding = "0";
-    physicsnav.style.height = "0px";
-  }
-  p++
-}
-function openMetaNaveconomics() {
-  let economicsnav = document.getElementById("economicsnav");
-  if (e % 2 == 1) {
-    economicsnav.style.height = "max-content";
-    economicsnav.style.padding = "1em";
-  } else {
-    economicsnav.style.padding = "0";
-    economicsnav.style.height = "0px";
-  }
-  e++
-}
 
+
+function quadratic(){
+  let a = parseInt(document.getElementById("qf-input-x").value);
+  let b = parseInt(document.getElementById("qf-input-y").value);
+  let c = parseInt(document.getElementById("qf-input-z").value);
+  let outputx1 = ((-(b) + (Math.sqrt((b ** 2) - (4 * (a * c)))))/(2 * a));
+  let outputx2 = ((-(b) - (Math.sqrt((b ** 2) - (4 * (a * c)))))/(2 * a));
+  let output1 = "x = " + outputx1;
+  let output2 = "x = " + outputx2;
+  document.getElementById("qf-output1").value = output1;
+  document.getElementById("qf-output2").value = output2;
+}

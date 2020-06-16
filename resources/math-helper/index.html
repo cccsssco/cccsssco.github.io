@@ -10,6 +10,7 @@
     />
     <script src="../../script/script.js" defer></script>
     <script src="./script.js" defer></script>
+    <script src="./metanav.js" defer></script>
     <meta
       name="google-site-verification"
       content="xbmqHXouM5WOZVNaR8m8V3MkM7dW3VKIfe-2CRv2a7k"
@@ -71,6 +72,7 @@
                       <li><a href="#geometry">Geometry</a></li>
                       <li><a href="#physics">Physics</a></li>
                       <li><a href="#economics">Economics</a></li>
+                      <li><a href="#algebra">Algebra</a></li>
                   </ul>
               </nav>
           </div>
@@ -1114,6 +1116,65 @@
                     />
                       
                       <button onclick="quantityTheoryOfMoney()">Submit</button>
+                    </section>
+                  </div>
+              </div>
+            </main>
+          </section>
+          <section id="algebra">
+            <header>
+              <h3 class="center">Algebra</h3>
+              <div class="metanavcon">
+                <button class="metanavbtn" onclick="openMetaNavalgebra()">Navigate &darr;</button>
+                <div class="metanav" id="algebranav">
+                    <nav>
+                        <ul>
+                            <li><a href="#a1">Quadratic Formula</a></li>
+                            
+                        </ul>
+                    </nav>
+                    </div>
+                    </div>
+            </header>
+            <main>
+              <div class="row">
+                  <div class="bg">
+                    <section id="a1">
+                      <h4>Quadratic Formula <br>( not suitable for irrational numbers/answers)</h4>
+                      <input
+                        type="text"
+                        id="qf-input-x"
+                        name="side"
+                        placeholder="Coefficient of a"
+                        required
+                      /><input
+                      id="qf-input-y"
+                      name="side"
+                      placeholder="Coefficient of b"
+                      required
+                    />
+                    <input
+                      type="text"
+                      id="qf-input-z"
+                      name="side"
+                      placeholder="Coefficient of c"
+                      required
+                    />
+                      <button onclick="quadratic()">Submit</button>
+                      <input
+                      type="text"
+                      id="qf-output1"
+                      name="side"
+                      placeholder="Answer will be shown here"
+                      required
+                    />
+                    <input
+                    type="text"
+                    id="qf-output2"
+                    name="side"
+                    placeholder="Answer will be shown here"
+                    required
+                  />
                     </section>
                   </div>
               </div>

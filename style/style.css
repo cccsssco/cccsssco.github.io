@@ -335,6 +335,9 @@ footer {
 #math .row div button+input::placeholder {
     color: red;
 }
+#math .row div button+input+input::placeholder {
+    color: red;
+}
 #math .bg section{
     display: flex;
     flex-direction: column;
