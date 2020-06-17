@@ -1131,6 +1131,10 @@
                         <ul>
                             <li><a href="#a1">Quadratic Formula</a></li>
                             <li><a href="#a2">Arithmetic Sequence</a></li>
+                            <li><a href="#a3">Square Root Finder</a></li>
+                            <li><a href="#a4">Factors Finder</a></li>
+                            <li><a href="#a5">Odd Numbers Finder</a></li>
+                            <li><a href="#a6">Prime Numbers Finder</a></li>
                         </ul>
                     </nav>
                     </div>
@@ -1213,7 +1217,7 @@
                     </div>
                     <div class="bg">
                       <section id="a3">
-                        <h4>Square Root Finder<br></h4>
+                        <h4>Square Root Finder<br>( x √y )</h4>
                         <input
                           type="text"
                           id="srf-input"
@@ -1224,6 +1228,63 @@
                       <button onclick="squareRootFinder()">Submit</button>
                       <input
                       id="srf-output"
+                      name="side"
+                      placeholder="Answer will be shown here"
+                      required
+                    />
+                      </section>
+                    </div>
+                    <div class="bg">
+                      <section id="a4">
+                        <h4>Factors Finder<br>(up to 1 million only)</h4>
+                        <input
+                          type="text"
+                          id="ff-input"
+                          name="side"
+                          placeholder="Input number"
+                          required
+                        />
+                      <button id="ff" onclick="factorsFinder()">Submit</button>
+                      <input
+                      id="ff-output"
+                      name="side"
+                      placeholder="Answer will be shown here"
+                      required
+                    />
+                      </section>
+                    </div>
+                    <div class="bg">
+                      <section id="a5">
+                        <h4>Odd Numbers Finder<br>(up to 1 million only)</h4>
+                        <input
+                          type="text"
+                          id="of-input"
+                          name="side"
+                          placeholder="Input number"
+                          required
+                        />
+                      <button id="of" onclick="oddsFinder()">Submit</button>
+                      <input
+                      id="of-output"
+                      name="side"
+                      placeholder="Answer will be shown here"
+                      required
+                    />
+                      </section>
+                    </div>
+                    <div class="bg">
+                      <section id="a6">
+                        <h4>Prime Numbers Finder<br>(less than 1 million only)</h4>
+                        <input
+                          type="text"
+                          id="pnf-input"
+                          name="side"
+                          placeholder="Input number"
+                          required
+                        />
+                      <button id="pnf" onclick="primeNumbersFinder()">Submit</button>
+                      <input
+                      id="pnf-output"
                       name="side"
                       placeholder="Answer will be shown here"
                       required

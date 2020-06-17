@@ -462,7 +462,7 @@ function arithmetic() {
 }
 function squareRootFinder() {
   var sqrt = 0;
-   sqrt = document.getElementById("srf-input").value;
+  sqrt = document.getElementById("srf-input").value;
   var resqrt = sqrt;
   const perfectSquares = [];
   let b = 0;
@@ -475,15 +475,102 @@ function squareRootFinder() {
   var big = 1;
   for (let i = 0; i < perfectSquares.length;) {
     if (sqrt % perfectSquares[i] == 0) {
-     var outputsqrt = (Math.sqrt(perfectSquares[i])) * big + "√(" + (sqrt / perfectSquares[i]) + ")";
+      var outputsqrt = (Math.sqrt(perfectSquares[i])) * big + "√(" + (sqrt / perfectSquares[i]) + ")";
       sqrt = (sqrt / perfectSquares[i]);
       big = (Math.sqrt(perfectSquares[i])) * big;
     } else {
       i++;
     }
   }
-  if(outputsqrt === undefined){
+  if (outputsqrt === undefined) {
     document.getElementById("srf-output").placeholder = Math.sqrt(resqrt)
-  }else
-  document.getElementById("srf-output").placeholder = outputsqrt + " or " + Math.sqrt(resqrt);
+  } else
+    document.getElementById("srf-output").placeholder = outputsqrt + " or " + Math.sqrt(resqrt);
+}
+function factorsFinder() {
+  var num = document.getElementById("ff-input").value;
+  if (num > 1000000) {
+    alert("No more than 1 million!")
+  } else {
+    document.getElementById("ff").innerHTML = "";
+    document.getElementById("ff").classList.add("loader");
+    setTimeout(function () {
+      const factors = [];
+      const refactors = [];
+      for (let i = 0; i < num + 1; i++) {
+        factors.push(i);
+      }
+      for (let i = 0; i < num + 1; i++) {
+        if (num % factors[i] == 0) {
+          refactors.push(factors[i]);
+        }
+      }
+      document.getElementById("ff-output").value = refactors;
+      document.getElementById("ff").innerHTML = "Submit";
+      document.getElementById("ff").classList.remove("loader");
+    }, 1000)
+  }
+}
+function oddsFinder() {
+  var num = document.getElementById("of-input").value;
+  if (num > 1000000) {
+    alert("No more than 1 million!")
+  } else {
+    document.getElementById("of").classList.add("loader");
+    document.getElementById("of").innerHTML = "";
+
+    const odds = [];
+    setTimeout(function () {
+      for (let i = 0; i <= num; i++) {
+        if (i % 2 == 1) {
+          odds.push(i);
+        }
+      }
+      document.getElementById("of-output").value = odds;
+      document.getElementById("of").classList.remove("loader");
+      document.getElementById("of").innerHTML = "Submit";
+    }, 1000)
+  }
+
+}
+function primeNumbersFinder() {
+  var num = document.getElementById("pnf-input").value;
+  if (num >= 1000000) {
+    alert("No more than or equal to 1 million!")
+  } else {
+    document.getElementById("pnf").innerHTML = "";
+    document.getElementById("pnf").classList.add("loader");
+    setTimeout(function () {
+
+      const odds = [];
+      for (let i = 0; i <= num; i++) {
+        if (i % 2 == 1) {
+          odds.push(i);
+        }
+      }
+      var check = odds.length
+      let mod = 3;
+      for (let p = 0; p < check; p++) {
+        mod = odds[p + 1]
+        for (let i = 0; i < check; i++) {
+          if (mod ** 2 <= odds[i]) {
+            if (odds[i] % mod != 0 || odds[i] / mod == 1) {
+              odds.push(odds[i])
+            }
+          } else {
+            odds.push(odds[i])
+          }
+        }
+        for (let i = 0; i < check; i++) {
+          odds.shift()
+        }
+        check = odds.length
+      }
+      document.getElementById("pnf").classList.remove("loader");
+      document.getElementById("pnf").innerHTML = "Submit";
+      document.getElementById("pnf-output").value = odds;
+    }, 1000)
+
+  }
+
 }

@@ -35,17 +35,20 @@ h1 {
     margin-left: 10px;
     opacity: 0.9;
 }
-.flex{
+
+.flex {
     display: flex;
     justify-content: space-evenly;
     min-width: 100px;
-    padding:1em;
+    padding: 1em;
     box-sizing: content-box;
 }
-.flex .bg{
+
+.flex .bg {
     max-width: 500px;
     min-width: 200px;
 }
+
 .row {
     display: flex;
     justify-content: space-between;
@@ -335,10 +338,12 @@ footer {
 #math .row div button+input::placeholder {
     color: red;
 }
+
 #math .row div button+input+input::placeholder {
     color: red;
 }
-#math .bg section{
+
+#math .bg section {
     display: flex;
     flex-direction: column;
 }
@@ -357,8 +362,6 @@ footer {
     box-sizing: content-box;
     box-shadow: 10px 10px 2px 2px rgba(221, 220, 220, 0.205);
 }
-
-
 
 #math .bg:hover {
     box-shadow: 10px 10px 2px 2px rgba(0, 255, 221, 0.507);
@@ -393,54 +396,97 @@ footer {
     cursor: pointer;
     align-self: center;
 }
-.mathcon{
+
+.mathcon {
     background-color: #1E533B;
-    border-radius:20px;
+    border-radius: 20px;
     overflow: hidden;
 }
-.metanavcon{
+
+.metanavcon {
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
-    margin-bottom:2em;
+    margin-bottom: 2em;
 }
-.metanavbtn{
+
+.metanavbtn {
     color: rgb(194, 4, 4);
     background-color: #ffffff;
     cursor: pointer;
-    border:none;
-    padding:1.5em;
+    border: none;
+    padding: 1.5em;
     border-radius: 15px;
 }
-.metanav{
+
+.metanav {
     position: relative;
     display: block;
-    top:0;
+    top: 0;
     border-radius: 20px;
     background-color: white;
     overflow: auto;
     height: 0px;
     transition: 0.1s;
 }
+
 .metanav ul {
     margin: 0;
 }
+
 ul li::before {
-    content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
-    color: darkgreen; /* Change the color */
-    font-weight: bold; /* If you want it to be bold */
-    display: inline-block; /* Needed to add space between the bullet and the text */
-    width: 1em; /* Also needed for space (tweak if needed) */
-    margin-left: -2em; /* Also needed for space (tweak if needed) */
-  }
-.metanav li{
-    list-style:none;
+    content: "\2022";
+    /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: darkgreen;
+    /* Change the color */
+    font-weight: bold;
+    /* If you want it to be bold */
+    display: inline-block;
+    /* Needed to add space between the bullet and the text */
+    width: 1em;
+    /* Also needed for space (tweak if needed) */
+    margin-left: -2em;
+    /* Also needed for space (tweak if needed) */
 }
-.metanav a{
-    color:red;
+
+.metanav li {
+    list-style: none;
+}
+
+.metanav a {
+    color: red;
     text-decoration: underline darkgreen;
 }
+#ff:focus{
+    outline: none;
+}
+
+.loader {
+    border: 4px solid #f3f3f3 !important;
+    /* Light grey */
+    border-top: 4px solid #3498db !important;
+    border-right: 4px solid #3498db !important;
+    /* Blue */
+    border-radius: 50% !important;
+    width: 50px !important;
+    max-width: 50px !important;
+    min-width: 50px !important;
+    background-color: transparent !important;
+    outline: none !important;
+    height: 50px !important;
+    animation: spin .2s linear infinite !important;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 @media only screen and (max-width: 850px) {
     .openbtn, .closebtn {
         display: block;

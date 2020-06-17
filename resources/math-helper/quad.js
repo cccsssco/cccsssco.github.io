@@ -54,6 +54,7 @@ for(let i = 0; i < perfectSquares.length; ){
 }
 
 console.log(outputsqrt);
+
 const factors = [];
 const refactors = [];
 var num = 100000;
