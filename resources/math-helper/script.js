@@ -427,36 +427,63 @@ function quantityTheoryOfMoney() {
 }
 
 
-function quadratic(){
+function quadratic() {
   let a = parseInt(document.getElementById("qf-input-x").value);
   let b = parseInt(document.getElementById("qf-input-y").value);
   let c = parseInt(document.getElementById("qf-input-z").value);
-  let outputx1 = ((-(b) + (Math.sqrt((b ** 2) - (4 * (a * c)))))/(2 * a));
-  let outputx2 = ((-(b) - (Math.sqrt((b ** 2) - (4 * (a * c)))))/(2 * a));
+  let outputx1 = ((-(b) + (Math.sqrt((b ** 2) - (4 * (a * c))))) / (2 * a));
+  let outputx2 = ((-(b) - (Math.sqrt((b ** 2) - (4 * (a * c))))) / (2 * a));
   let output1 = "x = " + outputx1;
   let output2 = "x = " + outputx2;
   document.getElementById("qf-output1").value = output1;
   document.getElementById("qf-output2").value = output2;
 }
-function arithmetic(){
+function arithmetic() {
   let an = parseInt(document.getElementById("art-input-w").value);
   let a1 = parseInt(document.getElementById("art-input-x").value);
   let n = parseInt(document.getElementById("art-input-y").value);
   let d = parseInt(document.getElementById("art-input-z").value);
   if (isNaN(an)) {
-      let outputan = a1 + ((n - 1) * d);
-      document.getElementById("art-input-w").value = outputan;
+    let outputan = a1 + ((n - 1) * d);
+    document.getElementById("art-input-w").value = outputan;
   }
   if (isNaN(a1)) {
-      let outputa1 = an - (( n - 1) * d);
-      document.getElementById("art-input-x").value = outputa1;
+    let outputa1 = an - ((n - 1) * d);
+    document.getElementById("art-input-x").value = outputa1;
   }
   if (isNaN(n)) {
-  let outputn = ((an - a1) / d) + 1;
-  document.getElementById("art-input-y").value = outputn;
+    let outputn = ((an - a1) / d) + 1;
+    document.getElementById("art-input-y").value = outputn;
   }
   if (isNaN(d)) {
-  let outputd = (an - a1) / (n - 1);
-  document.getElementById("art-input-z").value = outputd;
-      }
+    let outputd = (an - a1) / (n - 1);
+    document.getElementById("art-input-z").value = outputd;
+  }
+}
+function squareRootFinder() {
+  var sqrt = 0;
+   sqrt = document.getElementById("srf-input").value;
+  var resqrt = sqrt;
+  const perfectSquares = [];
+  let b = 0;
+  for (let i = 0; i < 50; i++) {
+    if (sqrt >= ((i + 2) ** 2)) {
+      perfectSquares.push((i + 2) ** 2);
+    }
+  }
+  perfectSquares.sort(function (a, b) { return a - b });
+  var big = 1;
+  for (let i = 0; i < perfectSquares.length;) {
+    if (sqrt % perfectSquares[i] == 0) {
+     var outputsqrt = (Math.sqrt(perfectSquares[i])) * big + "√(" + (sqrt / perfectSquares[i]) + ")";
+      sqrt = (sqrt / perfectSquares[i]);
+      big = (Math.sqrt(perfectSquares[i])) * big;
+    } else {
+      i++;
+    }
+  }
+  if(outputsqrt === undefined){
+    document.getElementById("srf-output").placeholder = Math.sqrt(resqrt)
+  }else
+  document.getElementById("srf-output").placeholder = outputsqrt + " or " + Math.sqrt(resqrt);
 }

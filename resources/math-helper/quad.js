@@ -28,16 +28,18 @@ a(3,9,undefined,43);
 var formula = "2*3+3+6";
 var expression = eval(formula);
 console.log(expression);
-var sqrt = 9409;
+var sqrt = 100;
+var hey = sqrt;
 console.log(sqrt);
 const perfectSquares = [];
-for(let i = 0; i < 97; i++){
+let b= 0;
+for(let i = 0; i < 100; i++){
+    if(sqrt >=((i + 2) ** 2)){
     perfectSquares.push((i + 2) ** 2);
+    }
 }
 perfectSquares.sort(function(a, b){return a-b});
 console.log(perfectSquares);
-
-var outputsqrt ;
 var big = 1;
 var p = 2
 for(let i = 0; i < perfectSquares.length; ){
@@ -52,6 +54,14 @@ for(let i = 0; i < perfectSquares.length; ){
 }
 
 console.log(outputsqrt);
-console.log(Math.sqrt(256));
-console.log((4 ** 10) * (3 ** 10));
-console.log(big ** 2);
+const factors = [];
+const refactors = [];
+var num = 100000;
+for (let i = 0; i < num + 1; i++) {
+    factors.push(i);
+}
+for (let i = 0; i < num + 1; i++) {
+    if (num % factors[i] == 0) {
+        refactors.push(factors[i]);
+    }
+}
