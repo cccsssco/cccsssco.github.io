@@ -217,7 +217,9 @@ img{
 .bg:hover {
     padding: 1.5em;
 }
-
+.fb ul{
+    list-style: none;
+}
 .cr-wrap {
     display: flex;
     flex-flow: row-reverse wrap-reverse;
