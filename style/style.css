@@ -190,7 +190,7 @@ main img {
 main img:hover {
     cursor: pointer;
 }
-li{
+#math li{
     list-style: none;
 }
 
