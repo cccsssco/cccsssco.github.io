@@ -477,7 +477,15 @@ footer {
     height: 50px !important;
     animation: spin .2s linear infinite !important;
 }
-
+#record-input{
+    background-color: #038036;
+    padding:0.5em;
+    color: white;
+    font-size: 1.5em;
+    line-height: 20px;
+    border: none;
+    border-radius: 10px;
+}
 @keyframes spin {
     0% {
         transform: rotate(0deg);
