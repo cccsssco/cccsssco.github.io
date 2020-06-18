@@ -193,7 +193,9 @@ main img:hover {
 #math li{
     list-style: none;
 }
-
+img{
+    max-width: 500px;
+}
 .bg {
     background-color: rgb(160, 233, 196);
     width: 80%;
