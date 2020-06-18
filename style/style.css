@@ -158,6 +158,9 @@ a:hover {
 .center {
     text-align: center;
     background-color: inherit;
+    width:95%;
+    min-width:200px;
+    box-sizing: border-box;
 }
 
 .small-image {
@@ -187,16 +190,19 @@ main img {
 main img:hover {
     cursor: pointer;
 }
+li{
+    list-style: none;
+}
 
 .bg {
     background-color: rgb(160, 233, 196);
-    display: inline-block;
     width: 80%;
-    min-width: 300px;
+    min-width: 200px;
     max-width: 500px;
     padding: 1em;
     margin: 2em;
     transition: 0.4s;
+    box-sizing: border-box;
     border-bottom: 1px solid rgb(212, 56, 56);
     border-radius: 10px;
     box-shadow: 10px 10px 2px 2px rgb(221, 220, 220);
