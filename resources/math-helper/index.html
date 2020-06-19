@@ -88,6 +88,7 @@
               <div class="metanav" id="geometrynav">
                 <nav>
                   <ul>
+                    <li><a href="#math">Go Back</a></li>
                     <li><a href="#g1">Area of a Square</a></li>
                     <li><a href="#g2">Perimeter of a Square</a></li>
                     <li><a href="#g3">Volume of a Cube</a></li>
@@ -224,6 +225,7 @@
               <div class="metanav" id="physicsnav">
                 <nav>
                   <ul>
+                    <li><a href="#math">Go Back</a></li>
                     <li><a href="#p1">Average Speed</a></li>
                     <li><a href="#p2">Acceleration</a></li>
                     <li><a href="#p3">Density</a></li>
@@ -400,6 +402,7 @@
               <div class="metanav" id="economicsnav">
                 <nav>
                   <ul>
+                    <li><a href="#math">Go Back</a></li>
                     <li><a href="#e1">Gross Domestic Product
                         ( Expenditure Approach )</a></li>
                     <li><a href="#e2">Gross Domestic Product
@@ -507,12 +510,15 @@
               <div class="metanav" id="algebranav">
                 <nav>
                   <ul>
+                    <li><a href="#math">Go Back</a></li>
                     <li><a href="#a1">Quadratic Formula</a></li>
                     <li><a href="#a2">Arithmetic Sequence</a></li>
                     <li><a href="#a3">Square Root Finder</a></li>
-                    <li><a href="#a4">Factors Finder</a></li>
-                    <li><a href="#a5">Odd Numbers Finder</a></li>
-                    <li><a href="#a6">Prime Numbers Finder</a></li>
+                    <li><a href="#a4">Cube Root Finder</a></li>
+                    <li><a href="#a5">Factors Finder</a></li>
+                    <li><a href="#a6">Odd Numbers Finder</a></li>
+                    <li><a href="#a7">Prime Numbers Finder</a></li>
+                    <li><a href="#a6">Prime Factors Finder</a></li>
                   </ul>
                 </nav>
               </div>
@@ -554,6 +560,14 @@
               </div>
               <div class="bg">
                 <section id="a4">
+                  <h4>Cuber Root Finder<br>( x √y )</h4>
+                  <input type="text" id="crf-input" name="side" placeholder="Input number" />
+                  <button onclick="cubeRootFinder()">Submit</button>
+                  <input id="crf-output" name="side" placeholder="Answer will be shown here" />
+                </section>
+              </div>
+              <div class="bg">
+                <section id="a5">
                   <h4>Factors Finder<br>(up to 1 million only)</h4>
                   <input type="text" id="ff-input" name="side" placeholder="Input number" />
                   <button id="ff" onclick="factorsFinder()">Submit</button>
@@ -561,7 +575,7 @@
                 </section>
               </div>
               <div class="bg">
-                <section id="a5">
+                <section id="a6">
                   <h4>Odd Numbers Finder<br>(up to 1 million only)</h4>
                   <input type="text" id="of-input" name="side" placeholder="Input number" />
                   <button id="of" onclick="oddsFinder()">Submit</button>
@@ -569,7 +583,7 @@
                 </section>
               </div>
               <div class="bg">
-                <section id="a6">
+                <section id="a7">
                   <h4>Prime Numbers Finder<br>(less than 1 million only)</h4>
                   <input type="text" id="pnf-input" name="side" placeholder="Input number" />
                   <button id="pnf" onclick="primeNumbersFinder()">Submit</button>
@@ -577,7 +591,7 @@
                 </section>
               </div>
               <div class="bg">
-                <section id="a7">
+                <section id="a8">
                   <h4>Prime Factors Finder<br>(less than 1 billion only)</h4>
                   <input type="text" id="pff-input" name="side" placeholder="Input number" />
                   <button id="pff" onclick="primeFactorsFinder()">Submit</button>

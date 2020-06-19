@@ -158,7 +158,6 @@ a:hover {
 .center {
     text-align: center;
     background-color: inherit;
-    width:95%;
     min-width:200px;
     box-sizing: border-box;
 }
@@ -217,6 +216,9 @@ img{
 .bg:hover {
     padding: 1.5em;
 }
+.fbcon li{
+    list-style: none;
+}
 .fb ul{
     list-style: none;
 }
@@ -269,8 +271,9 @@ img{
 #caption {
     margin: auto;
     display: block;
-    width: 44%;
-    max-width: 700px;
+    width:95%;
+    min-width:75px;
+    max-width: 500px;
     text-align: center;
     color: #143601;
     background-color: #ccffd4;
@@ -576,14 +579,11 @@ footer {
 
 /* Gallery */
 
-@media only screen and (max-width:400px) {
+@media only screen and (max-width:500px) {
     .image-container img {
         width: 80px;
     }
-    #caption {
-        width: 95%;
-        transition: 2s;
-    }
+   
     #caption:hover {
         width: 95%;
     }
@@ -617,5 +617,11 @@ footer {
         display: flex;
         flex-direction: column;
         margin: auto;
+    }
+    
+}
+@media only screen and (min-width: 600px){
+    #caption {
+        width:75%;
     }
 }

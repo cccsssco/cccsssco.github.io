@@ -487,6 +487,33 @@ function squareRootFinder() {
   } else
     document.getElementById("srf-output").placeholder = outputsqrt + " or " + Math.sqrt(resqrt);
 }
+function cubeRootFinder() {
+  var cbrt = 0;
+  cbrt = document.getElementById("crf-input").value;
+  var recbrt = cbrt;
+  const perfectSquares = [];
+  let b = 0;
+  for (let i = 0; i < 50; i++) {
+    if (cbrt >= ((i + 2) ** 3)) {
+      perfectSquares.push((i + 2) ** 3);
+    }
+  }
+  perfectSquares.sort(function (a, b) { return a - b });
+  var big = 1;
+  for (let i = 0; i < perfectSquares.length;) {
+    if (cbrt % perfectSquares[i] == 0) {
+      var outputsqrt = (Math.cbrt(perfectSquares[i])) * big + "√(" + (cbrt / perfectSquares[i]) + ")";
+      cbrt = (cbrt / perfectSquares[i]);
+      big = (Math.cbrt(perfectSquares[i])) * big;
+    } else {
+      i++;
+    }
+  }
+  if (outputsqrt === undefined) {
+    document.getElementById("crf-output").placeholder = Math.cbrt(recbrt)
+  } else
+    document.getElementById("crf-output").placeholder = outputsqrt + " or " + Math.cbrt(recbrt);
+}
 function factorsFinder() {
   var num = document.getElementById("ff-input").value;
   if (num > 1000000) {
