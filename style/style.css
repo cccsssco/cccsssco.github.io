@@ -1,627 +1,651 @@
 @font-face {
-    font-family: 'Raleway';
-    src: url("../fonts/Raleway-Regular.ttf") format('truetype');
-    font-display: swap;
+  font-family: "Raleway";
+  src: url("../fonts/Raleway-Regular.ttf") format("truetype");
+  font-display: swap;
 }
 
-body, html {
-    font: 1em/1.5em "Raleway", sans-serif;
-    min-width: 300px;
-    background-color: #f6fffa;
-    margin: 0;
-    scroll-behavior: smooth;
-    padding: 0;
+body,
+html {
+  font: 1em/1.5em "Raleway", sans-serif;
+  min-width: 300px;
+  background-color: #f6fffa;
+  margin: 0;
+  scroll-behavior: smooth;
+  padding: 0;
 }
 
 h1 {
-    font-size: 2em;
+  font-size: 2em;
 }
 
 .title {
-    padding: 0 20px 0 20px;
-    display: flex;
+  padding: 0 20px 0 20px;
+  display: flex;
 }
 
 .title h1 {
-    color: #f3e9e3;
-    font-size: 2.2em;
-    letter-spacing: 0.1em;
+  color: #f3e9e3;
+  font-size: 2.2em;
+  letter-spacing: 0.1em;
 }
 
 .title img {
-    width: 50px;
-    height: 50px;
-    align-self: center;
-    margin-left: 10px;
-    opacity: 0.9;
+  width: 50px;
+  height: 50px;
+  align-self: center;
+  margin-left: 10px;
+  opacity: 0.9;
 }
 
 .flex {
-    display: flex;
-    justify-content: space-evenly;
-    min-width: 100px;
-    padding: 1em;
-    box-sizing: content-box;
+  display: flex;
+  justify-content: space-evenly;
+  min-width: 100px;
+  padding: 1em;
+  box-sizing: content-box;
 }
 
 .flex .bg {
-    max-width: 500px;
-    min-width: 200px;
+  max-width: 500px;
+  min-width: 200px;
 }
 
 .row {
-    display: flex;
-    justify-content: space-between;
-    background-color: #1e533b;
+  display: flex;
+  justify-content: space-between;
+  background-color: #1e533b;
 }
 
 .sidebar {
-    width: max-content;
-    display: flex;
-    align-items: center;
-    width: auto;
-    height: 100%;
+  width: max-content;
+  display: flex;
+  align-items: center;
+  width: auto;
+  height: 100%;
 }
 
-.openbtn, .sidebar .closebtn {
-    display: none
+.openbtn,
+.sidebar .closebtn {
+  display: none;
 }
 
 .sidebar a {
-    padding: 0 10px 0 10px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #fafafa;
-    display: flex;
-    align-items: center;
-    transition: 0.3s;
-    height: 100%;
-    box-sizing: border-box;
+  padding: 0 10px 0 10px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #fafafa;
+  display: flex;
+  align-items: center;
+  transition: 0.3s;
+  height: 100%;
+  box-sizing: border-box;
 }
 
 .sidebar a:hover {
-    border-bottom: 10px solid #ff0000;
+  border-bottom: 10px solid #ff0000;
 }
 
 #main {
-    transition: margin-left .5s;
-    padding: 16px;
+  transition: margin-left 0.5s;
+  padding: 16px;
 }
 
 #main .message-container {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    line-height: 2.6em;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  line-height: 2.6em;
 }
 
 .ssco-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .fbcon {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .fb {
-    box-sizing: border-box;
-    min-width: 50px;
-    flex-shrink: 1;
-    flex-basis: 50px;
+  box-sizing: border-box;
+  min-width: 50px;
+  flex-shrink: 1;
+  flex-basis: 50px;
 }
 
 #apps ul {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 #resources .bg {
-    min-width: 200px;
+  min-width: 200px;
 }
 
 #main .bg {
-    max-width: 500px;
-    border-bottom: 1px solid #a33030;
-    flex: 1;
+  max-width: 500px;
+  border-bottom: 1px solid #a33030;
+  flex: 1;
 }
 
 .message h1 {
-    margin: 0.3em;
+  margin: 0.3em;
 }
 
 big {
-    color: #3b6e5c;
-    text-shadow: 1px 1px 3px rgba(26, 85, 35, 0.5);
+  color: #3b6e5c;
+  text-shadow: 1px 1px 3px rgba(26, 85, 35, 0.5);
 }
 
 .message p {
-    font-size: 20px;
-    margin: 0;
-    text-align: center;
-    margin-bottom: 0;
+  font-size: 20px;
+  margin: 0;
+  text-align: center;
+  margin-bottom: 0;
 }
 
 a {
-    color: #a33030;
-    text-decoration-color: #a33030;
+  color: #a33030;
+  text-decoration-color: #a33030;
 }
 
 a:hover {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .center {
-    text-align: center;
-    background-color: inherit;
-    min-width:200px;
-    box-sizing: border-box;
+  text-align: center;
+  background-color: inherit;
+  min-width: 200px;
+  box-sizing: border-box;
 }
 
 .small-image {
-    display: block;
-    margin: auto;
+  display: block;
+  margin: auto;
 }
 
 .list-center {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .doubled-image {
-    display: block;
-    margin: auto;
-    width: 75%;
+  display: block;
+  margin: auto;
+  width: 75%;
 }
 
 main img {
-    border-radius: 5px;
-    -webkit-box-shadow: 0px 0px 31px 11px rgba(0, 0, 0, 0.09);
-    -moz-box-shadow: 0px 0px 31px 11px rgba(0, 0, 0, 0.09);
-    box-shadow: 0px 0px 31px 11px rgba(0, 0, 0, 0.09);
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 31px 11px rgba(0, 0, 0, 0.09);
+  -moz-box-shadow: 0px 0px 31px 11px rgba(0, 0, 0, 0.09);
+  box-shadow: 0px 0px 31px 11px rgba(0, 0, 0, 0.09);
 }
 
 main img:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
-#math li{
-    list-style: none;
+#math li {
+  list-style: none;
 }
-img{
-    max-width: 500px;
+img {
+  max-width: 500px;
 }
 .bg {
-    background-color: rgb(160, 233, 196);
-    width: 80%;
-    min-width: 200px;
-    max-width: 500px;
-    padding: 1em;
-    margin: 2em;
-    transition: 0.4s;
-    box-sizing: border-box;
-    border-bottom: 1px solid rgb(212, 56, 56);
-    border-radius: 10px;
-    box-shadow: 10px 10px 2px 2px rgb(221, 220, 220);
+  background-color: rgb(160, 233, 196);
+  width: 80%;
+  min-width: 200px;
+  max-width: 500px;
+  padding: 1em;
+  margin: 2em;
+  transition: 0.4s;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgb(212, 56, 56);
+  border-radius: 10px;
+  box-shadow: 10px 10px 2px 2px rgb(221, 220, 220);
 }
 
 .bg p {
-    box-sizing: content-box;
+  box-sizing: content-box;
 }
 
 .bg:hover {
-    padding: 1.5em;
+  padding: 1.5em;
 }
-.fbcon li{
-    list-style: none;
+.fbcon li {
+  list-style: none;
 }
-.fb ul{
-    list-style: none;
+.fb ul {
+  list-style: none;
 }
 .cr-wrap {
-    display: flex;
-    flex-flow: row-reverse wrap-reverse;
-    justify-content: center;
+  display: flex;
+  flex-flow: row-reverse wrap-reverse;
+  justify-content: center;
 }
 
 #resources ul {
-    padding: 0;
+  padding: 0;
 }
 
 .modal {
-    display: none;
-    /* Hidden by default */
-    position: fixed;
-    /* Stay in place */
-    z-index: 1;
-    /* Sit on top */
-    padding-top: 10px;
-    /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%;
-    /* Full width */
-    overflow: auto;
-    /* Enable scroll if needed */
-    background-color: rgb(0, 0, 0);
-    /* Fallback color */
-    background-color: rgba(0, 0, 0, 0.9);
-    /* Black w/ opacity */
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 10px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9);
+  /* Black w/ opacity */
 }
 
 /* Modal Content (Image) */
 
 .modal-content {
-    margin: auto;
-    display: block;
-    width: max-content;
-    margin: 0.5em;
+  margin: auto;
+  display: block;
+  width: max-content;
+  margin: 0.5em;
 }
 
 #caption:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 /* Caption of Modal Image (Image Text) - Same Width as the Image */
 
 #caption {
-    margin: auto;
-    display: block;
-    width:95%;
-    min-width:75px;
-    max-width: 500px;
-    text-align: center;
-    color: #143601;
-    background-color: #ccffd4;
-    padding: 0;
-    margin: 0 0 20px 0;
-    overflow: scroll;
-    border-radius: 10px;
-    transition: 0.5s;
+  margin: auto;
+  display: block;
+  width: 95%;
+  min-width: 75px;
+  max-width: 500px;
+  text-align: center;
+  color: #143601;
+  background-color: #ccffd4;
+  padding: 0;
+  margin: 0 0 20px 0;
+  overflow: scroll;
+  border-radius: 10px;
+  transition: 0.5s;
 }
 
 #caption:hover {
-    width: 45%;
+  width: 45%;
 }
 
 /* Add Animation - Zoom in the Modal */
 
-.modal-content, #caption {
-    animation-name: zoom;
-    animation-duration: 0.3s;
+.modal-content,
+#caption {
+  animation-name: zoom;
+  animation-duration: 0.3s;
 }
 
 @keyframes zoom {
-    from {
-        transform: scale(0)
-    }
-    to {
-        transform: scale(1)
-    }
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 
 /* The Close Button */
 
 .close {
-    position: absolute;
-    top: -80px;
-    right: 20px;
-    color: #f1f1f1;
-    font-size: 40px;
-    font-weight: bold;
-    transition: 0.3s;
+  position: absolute;
+  top: -80px;
+  right: 20px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
 }
 
-.close:hover, .close:focus {
-    color: #bbb;
-    text-decoration: none;
-    cursor: pointer;
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .gallery {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .image-container img {
-    width: 200px;
+  width: 200px;
 }
 
 li {
-    text-align: left;
+  text-align: left;
 }
 
 footer {
-    text-align: center
+  text-align: center;
 }
 
 #math {
-    background-color: rgb(75, 126, 94);
-    color: white;
-    max-width: 90%;
-    min-width: 290px;
-    margin: auto;
-    border-radius: 20px;
+  background-color: rgb(75, 126, 94);
+  color: white;
+  max-width: 90%;
+  min-width: 290px;
+  margin: auto;
+  border-radius: 20px;
 }
 
-#math .row div button+input::placeholder {
-    color: red;
+#math .row div button + input::placeholder {
+  color: red;
 }
 
-#math .row div button+input+input::placeholder {
-    color: red;
+#math .row div button + input + input::placeholder {
+  color: red;
 }
 
 #math .bg section {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 #math .bg {
-    background-color: rgb(68, 179, 122);
-    display: inline-block;
-    width: min-content;
-    min-width: 200px;
-    max-width: 500px;
-    padding: 1em;
-    margin: 2em;
-    transition: 1s;
-    border-bottom: 1px solid rgb(212, 56, 56);
-    border-radius: 10px;
-    box-sizing: content-box;
-    box-shadow: 10px 10px 2px 2px rgba(221, 220, 220, 0.205);
+  background-color: rgb(68, 179, 122);
+  display: inline-block;
+  width: min-content;
+  min-width: 200px;
+  max-width: 500px;
+  padding: 1em;
+  margin: 2em;
+  transition: 1s;
+  border-bottom: 1px solid rgb(212, 56, 56);
+  border-radius: 10px;
+  box-sizing: content-box;
+  box-shadow: 10px 10px 2px 2px rgba(221, 220, 220, 0.205);
 }
 
 #math .bg:hover {
-    box-shadow: 10px 10px 2px 2px rgba(0, 255, 221, 0.507);
-    background-color: rgb(60, 170, 113);
+  box-shadow: 10px 10px 2px 2px rgba(0, 255, 221, 0.507);
+  background-color: rgb(60, 170, 113);
 }
 
-#math .bg input:focus, #math .bg button:focus {
-    outline: solid rgb(10, 238, 124) 3px;
+#math .bg input:focus,
+#math .bg button:focus {
+  outline: solid rgb(10, 238, 124) 3px;
 }
 
 #math .row {
-    flex-wrap: wrap;
-    color: white;
-    justify-content: space-evenly;
-    padding: 1em;
-    border-radius: 20px;
-    overflow: hidden;
+  flex-wrap: wrap;
+  color: white;
+  justify-content: space-evenly;
+  padding: 1em;
+  border-radius: 20px;
+  overflow: hidden;
 }
 
-#math .row div button, input {
-    border: none;
-    min-width: 80%;
-    max-width: 80%;
-    border-radius: 5px;
-    padding: 1em;
-    margin: 0.5em 1em 0.5em 1em;
+#math .row div button,
+input {
+  border: none;
+  min-width: 80%;
+  max-width: 80%;
+  border-radius: 5px;
+  padding: 1em;
+  margin: 0.5em 1em 0.5em 1em;
 }
 
 #math .row .bg button {
-    color: white;
-    background-color: #038036;
-    cursor: pointer;
-    align-self: center;
+  color: white;
+  background-color: #038036;
+  cursor: pointer;
+  align-self: center;
 }
 
 .mathcon {
-    background-color: #1E533B;
-    border-radius: 20px;
-    overflow: hidden;
+  background-color: #1e533b;
+  border-radius: 20px;
+  overflow: hidden;
 }
 
 .metanavcon {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    margin-bottom: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin-bottom: 2em;
 }
 
 .metanavbtn {
-    color: rgb(194, 4, 4);
-    background-color: #ffffff;
-    cursor: pointer;
-    border: none;
-    padding: 1.5em;
-    border-radius: 15px;
+  color: rgb(194, 4, 4);
+  background-color: #ffffff;
+  cursor: pointer;
+  border: none;
+  padding: 1.5em;
+  border-radius: 15px;
 }
 
 .metanav {
-    position: relative;
-    display: block;
-    top: 0;
-    border-radius: 20px;
-    background-color: white;
-    overflow: auto;
-    height: 0px;
-    transition: 0.1s;
+  position: relative;
+  display: block;
+  top: 0;
+  border-radius: 20px;
+  background-color: white;
+  overflow: auto;
+  height: 0px;
+  transition: 0.1s;
 }
 
 .metanav ul {
-    margin: 0;
+  margin: 0;
 }
 
 .metanav ul li::before {
-    content: "\2022";
-    /* Add content: \2022 is the CSS Code/unicode for a bullet */
-    color: darkgreen;
-    /* Change the color */
-    font-weight: bold;
-    /* If you want it to be bold */
-    display: inline-block;
-    /* Needed to add space between the bullet and the text */
-    width: 1em;
-    /* Also needed for space (tweak if needed) */
-    margin-left: -2em;
-    /* Also needed for space (tweak if needed) */
+  content: "\2022";
+  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: darkgreen;
+  /* Change the color */
+  font-weight: bold;
+  /* If you want it to be bold */
+  display: inline-block;
+  /* Needed to add space between the bullet and the text */
+  width: 1em;
+  /* Also needed for space (tweak if needed) */
+  margin-left: -2em;
+  /* Also needed for space (tweak if needed) */
 }
 
 .metanav li {
-    list-style: none;
+  list-style: none;
 }
 
 .metanav a {
-    color: red;
-    text-decoration: underline darkgreen;
+  color: red;
+  text-decoration: underline darkgreen;
 }
-#ff:focus{
-    outline: none;
+#ff:focus {
+  outline: none;
 }
 
 .loader {
-    border: 4px solid #f3f3f3 !important;
-    /* Light grey */
-    border-top: 4px solid #3498db !important;
-    border-right: 4px solid #3498db !important;
-    /* Blue */
-    border-radius: 50% !important;
-    width: 50px !important;
-    max-width: 50px !important;
-    min-width: 50px !important;
-    background-color: transparent !important;
-    outline: none !important;
-    height: 50px !important;
-    animation: spin .2s linear infinite !important;
+  border: 4px solid #f3f3f3 !important;
+  /* Light grey */
+  border-top: 4px solid #3498db !important;
+  border-right: 4px solid #3498db !important;
+  /* Blue */
+  border-radius: 50% !important;
+  width: 50px !important;
+  max-width: 50px !important;
+  min-width: 50px !important;
+  background-color: transparent !important;
+  outline: none !important;
+  height: 50px !important;
+  animation: spin 0.2s linear infinite !important;
 }
-#record-input{
-    background-color: #038036;
-    padding:0.5em;
-    color: white;
-    font-size: 1.5em;
-    line-height: 20px;
-    border: none;
-    border-radius: 10px;
+#record-input {
+  background-color: #038036;
+  padding: 0.5em;
+  color: white;
+  font-size: 1.5em;
+  line-height: 20px;
+  border: none;
+  border-radius: 10px;
 }
 @keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @media only screen and (max-width: 850px) {
-    .openbtn, .closebtn {
-        display: block;
-    }
-    .openbtn {
-        font-size: 20px;
-        cursor: pointer;
-        background-color: #195f47;
-        color: #74fff6;
-        margin: 0;
-        padding: 0 2rem 0 2rem;
-        border: none;
-        height: 100%;
-    }
-    .openbtn:hover {
-        background-color: #164938;
-    }
-    .sidebar {
-        height: 100%;
-        width: 0;
-        position: fixed;
-        z-index: 1;
-        top: 0;
-        right: 0;
-        background-color: #039b75;
-        overflow-x: hidden;
-        transition: 0.5s;
-        padding-top: 60px;
-        display: block;
-    }
-    .sidebar a {
-        padding: 15px 30px 15px 15px;
-        height: min-content;
-        box-sizing: content-box;
-        color: white;
-    }
-    .sidebar a:hover {
-        border-left: 5px solid #ff0505;
-        border-bottom: none;
-        padding-left: 1px;
-    }
-    .sidebar .closebtn:hover {
-        border: 0px solid transparent !important;
-        font-size: 3em;
-        color: #ff0505;
-    }
-    nav .sidebar .closebtn {
-        display: block;
-        position: absolute;
-        top: 0;
-        padding-right: 0;
-        padding-bottom: 0;
-        right: 25px;
-        font-size: 36px;
-        margin-left: 50px;
-        margin-right: 10px;
-        text-align: center;
-        border: 0px none transparent
-    }
+  .openbtn,
+  .closebtn {
+    display: block;
+  }
+  .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #195f47;
+    color: #74fff6;
+    margin: 0;
+    padding: 0 2rem 0 2rem;
+    border: none;
+    height: 100%;
+  }
+  .openbtn:hover {
+    background-color: #164938;
+  }
+  .sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #039b75;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    display: block;
+  }
+  .sidebar a {
+    padding: 15px 30px 15px 15px;
+    height: min-content;
+    box-sizing: content-box;
+    color: white;
+  }
+  .sidebar a:hover {
+    border-left: 5px solid #ff0505;
+    border-bottom: none;
+    padding-left: 1px;
+  }
+  .sidebar .closebtn:hover {
+    border: 0px solid transparent !important;
+    font-size: 3em;
+    color: #ff0505;
+  }
+  nav .sidebar .closebtn {
+    display: block;
+    position: absolute;
+    top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    margin-right: 10px;
+    text-align: center;
+    border: 0px none transparent;
+  }
 }
 
 /* 100% Image Width on Smaller Screens */
 
 @media only screen and (max-width: 700px) {
-    .modal-content {
-        width: 95%;
-    }
+  .modal-content {
+    width: 95%;
+  }
 }
 
 /* Gallery */
 
-@media only screen and (max-width:500px) {
-    .image-container img {
-        width: 80px;
-    }
-   
-    #caption:hover {
-        width: 95%;
-    }
-    #caption:active {
-        width: 30%;
-    }
+@media only screen and (max-width: 500px) {
+  .image-container img {
+    width: 80px;
+  }
+
+  #caption:hover {
+    width: 95%;
+  }
+  #caption:active {
+    width: 30%;
+  }
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 
 @media only screen and (max-height: 450px) {
-    .sidebar {
-        padding-top: 15px;
-    }
-    .sidebar a {
-        font-size: 18px;
-    }
-    .modal {
-        min-height: 220px;
-    }
+  .sidebar {
+    padding-top: 15px;
+  }
+  .sidebar a {
+    font-size: 18px;
+  }
+  .modal {
+    min-height: 220px;
+  }
 }
 
 @media only screen and (max-width: 620px) {
-    .smalls {
-        width: 95%;
-    }
+  .smalls {
+    width: 95%;
+  }
 }
 
 @media only screen and (max-width: 640px) {
-    .message h1 {
-        display: flex;
-        flex-direction: column;
-        margin: auto;
-    }
-    
+  .message h1 {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+  }
 }
-@media only screen and (min-width: 600px){
-    #caption {
-        width:75%;
-    }
+@media only screen and (min-width: 600px) {
+  #caption {
+    width: 75%;
+  }
+}
+.container-of-rows {
+  display: flex;
+  flex-wrap: wrap;
+}
+.container-of-rows .bg img {
+  border-radius: 50%;
+  width: 50%;
+}
+.container-of-rows .bg {
+  margin:1em;
+  width:200px;
+  max-width: 200px;
+  min-width: 200px;
+}
+.container-of-rows .bg:hover {
+  margin: 1em;
+  padding:1em;
 }
