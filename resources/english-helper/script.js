@@ -2,7 +2,7 @@ const button = document.querySelector('#record-input');
 const content = document.querySelector('#record-output');
 
 
-const speechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+const speechRecognition = window.webkitSpeechRecognition;
 const recognition  = new speechRecognition;
 
 recognition.onstart = function(){
