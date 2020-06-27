@@ -11,5 +11,3 @@ function triangleArea(a,b,c){
   }
   console.log(output);
 }
-triangleArea(5,6,7);
-triangleArea(3,4,5);

@@ -201,7 +201,7 @@ img {
   background-color: rgb(160, 233, 196);
   width: 80%;
   min-width: 200px;
-  max-width: 500px;
+  max-width: 360px;
   padding: 1em;
   margin: 2em;
   transition: 0.4s;
@@ -210,13 +210,26 @@ img {
   border-radius: 10px;
   box-shadow: 10px 10px 2px 2px rgb(221, 220, 220);
 }
-
+.bg #g1{
+  display: flex;
+  width:100%;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+}
+.bg select{
+  margin: 0px;
+  border: none;
+  padding:1em;
+  border-radius: 5px;
+  background-color: #fff;
+}
 .bg p {
   box-sizing: content-box;
 }
 
 .bg:hover {
-  padding: 1.5em;
+  padding: 1.2em;
 }
 .fbcon li {
   list-style: none;
@@ -399,7 +412,7 @@ footer {
   overflow: hidden;
 }
 
-#math .row div button,
+#math .row div button,.bg #g1 button,
 input {
   border: none;
   min-width: 80%;
@@ -409,7 +422,7 @@ input {
   margin: 0.5em 1em 0.5em 1em;
 }
 
-#math .row .bg button {
+#math .row .bg button ,.bg #g1 button{
   color: white;
   background-color: #038036;
   cursor: pointer;
