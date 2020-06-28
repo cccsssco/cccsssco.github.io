@@ -48,6 +48,7 @@ conversionOptions.addEventListener("change", function () {
     outputOptions.innerHTML = massOptions;
   }
 });
+
 function conversion() {
   let input = document.getElementById("inputConversionInput").value;
   let output = document.getElementById("inputConversionOutput");
@@ -75,6 +76,9 @@ function conversion() {
     }
   }
   if (conversionOptions.value == "measurement") {
+    if(inputOptions.value == outputOptions.value){
+      output.value = input;
+    }
     if (
       inputOptions.value == "nanometers" &&
       outputOptions.value == "micrometers"
@@ -496,6 +500,9 @@ function conversion() {
     }
   }
   if(conversionOptions.value == "mass"){
+    if(inputOptions.value == outputOptions.value){
+      output.value = input;
+    }
     if(inputOptions.value == 'microgram' && outputOptions.value == 'milligram' ){
       output.value = dividedByThousand(input);
     }
@@ -586,216 +593,192 @@ function conversion() {
     if(inputOptions.value == 'ounce' && outputOptions.value == 'imperialTon' ){
       output.value = ounceToImperialTon(input);
     }
+    if(inputOptions.value == 'imperialTon' && outputOptions.value == 'microgram' ){
+      output.value = times1e6(imperialTonToGram(input));
+    }
+    if(inputOptions.value == 'microgram' && outputOptions.value == 'imperialTon' ){
+      output.value = dividedBy1e6(gramToImperialTon(input));
+    }
+    if(inputOptions.value == 'imperialTon' && outputOptions.value == 'milligram' ){
+      output.value = timesThousand(imperialTonToGram(input));
+    }
+    if(inputOptions.value == 'milligram' && outputOptions.value == 'imperialTon' ){
+      output.value = dividedByThousand(gramToImperialTon(input));
+    }
+    if(inputOptions.value == 'imperialTon' && outputOptions.value == 'gram' ){
+      output.value = imperialTonToGram(input);
+    }
+    if(inputOptions.value == 'gram' && outputOptions.value == 'imperialTon' ){
+      output.value = gramToImperialTon(input);
+    }
+    if(inputOptions.value == 'imperialTon' && outputOptions.value == 'kilogram' ){
+      output.value = dividedByThousand(imperialTonToGram(input));
+    }
+    if(inputOptions.value == 'kilogram' && outputOptions.value == 'imperialTon' ){
+      output.value = timesThousand(gramToImperialTon(input));
+    }
+    if(inputOptions.value == 'imperialTon' && outputOptions.value == 'tonne' ){
+      output.value = dividedBy1e6(imperialTonToGram(input));
+    }
+    if(inputOptions.value == 'tonne' && outputOptions.value == 'imperialTon' ){
+      output.value = times1e6(gramToImperialTon(input));
+    }
+    if(inputOptions.value == 'usTon' && outputOptions.value == 'stone' ){
+      output.value = usTonToStone(input);
+    }
+    if(inputOptions.value == 'stone' && outputOptions.value == 'usTon' ){
+      output.value = stoneToUSTon(input);
+    }
+    if(inputOptions.value == 'usTon' && outputOptions.value == 'pound' ){
+      output.value = usTonToPound(input);
+    }
+    if(inputOptions.value == 'pound' && outputOptions.value == 'usTon' ){
+      output.value = poundToUSTon(input);
+    }
+    if(inputOptions.value == 'usTon' && outputOptions.value == 'ounce' ){
+      output.value = usTonToOunce(input);
+    }
+    if(inputOptions.value == 'ounce' && outputOptions.value == 'usTon' ){
+      output.value = ounceToUSTon(input);
+    }
+    if(inputOptions.value == 'usTon' && outputOptions.value == 'microgram' ){
+      output.value = times1e6(usTonToGram(input));
+    }
+    if(inputOptions.value == 'microgram' && outputOptions.value == 'usTon' ){
+      output.value = dividedBy1e6(gramToUSTon(input));
+    }
+    if(inputOptions.value == 'usTon' && outputOptions.value == 'milligram' ){
+      output.value = timesThousand(usTonToGram(input));
+    }
+    if(inputOptions.value == 'milligram' && outputOptions.value == 'usTon' ){
+      output.value = dividedByThousand(gramToUSTon(input));
+    }
+    if(inputOptions.value == 'usTon' && outputOptions.value == 'gram' ){
+      output.value = usTonToGram(input);
+    }
+    if(inputOptions.value == 'gram' && outputOptions.value == 'usTon' ){
+      output.value = gramToUSTon(input);
+    }
+    if(inputOptions.value == 'usTon' && outputOptions.value == 'kilogram' ){
+      output.value = dividedByThousand(usTonToGram(input));
+    }
+    if(inputOptions.value == 'kilogram' && outputOptions.value == 'usTon' ){
+      output.value = timesThousand(gramToUSTon(input));
+    }
+    if(inputOptions.value == 'usTon' && outputOptions.value == 'tonne' ){
+      output.value = dividedBy1e6(usTonToGram(input));
+    }
+    if(inputOptions.value == 'tonne' && outputOptions.value == 'usTon' ){
+      output.value = times1e6(gramToUSTon(input));
+    }
+    if(inputOptions.value == 'stone' && outputOptions.value == 'pound' ){
+      output.value = stoneToPound(input);
+    }
+    if(inputOptions.value == 'pound' && outputOptions.value == 'stone' ){
+      output.value = poundToStone(input);
+    }
+    if(inputOptions.value == 'stone' && outputOptions.value == 'ounce' ){
+      output.value = stoneToOunce(input);
+    }
+    if(inputOptions.value == 'ounce' && outputOptions.value == 'stone' ){
+      output.value = ounceToStone(input);
+    }
+    if(inputOptions.value == 'stone' && outputOptions.value == 'microgram' ){
+      output.value = times1e6(stoneToGram(input));
+    }
+    if(inputOptions.value == 'microgram' && outputOptions.value == 'stone' ){
+      output.value = dividedBy1e6(gramToStone(input));
+    }
+    if(inputOptions.value == 'stone' && outputOptions.value == 'milligram' ){
+      output.value = timesThousand(stoneToGram(input));
+    }
+    if(inputOptions.value == 'milligram' && outputOptions.value == 'stone' ){
+      output.value = dividedByThousand(gramToStone(input));
+    }
+    if(inputOptions.value == 'stone' && outputOptions.value == 'gram' ){
+      output.value = stoneToGram(input);
+    }
+    if(inputOptions.value == 'gram' && outputOptions.value == 'stone' ){
+      output.value = gramToStone(input);
+    }
+    if(inputOptions.value == 'stone' && outputOptions.value == 'kilogram' ){
+      output.value = dividedByThousand(stoneToGram(input));
+    }
+    if(inputOptions.value == 'kilogram' && outputOptions.value == 'stone' ){
+      output.value = timesThousand(gramToStone(input));
+    }
+    if(inputOptions.value == 'stone' && outputOptions.value == 'tonne' ){
+      output.value = dividedBy1e6(stoneToGram(input));
+    }
+    if(inputOptions.value == 'tonne' && outputOptions.value == 'stone' ){
+      output.value = times1e6(gramToStone(input));
+    }
+    if(inputOptions.value == 'pound' && outputOptions.value == 'ounce' ){
+      output.value = poundToOunce(input);
+    }
+    if(inputOptions.value == 'ounce' && outputOptions.value == 'pound' ){
+      output.value = ounceToPound(input);
+    }
+    if(inputOptions.value == 'pound' && outputOptions.value == 'microgram' ){
+      output.value = times1e6(poundToGram(input));
+    }
+    if(inputOptions.value == 'microgram' && outputOptions.value == 'pound' ){
+      output.value = dividedBy1e6(gramToPound(input));
+    }
+    if(inputOptions.value == 'pound' && outputOptions.value == 'milligram' ){
+      output.value = timesThousand(poundToGram(input));
+    }
+    if(inputOptions.value == 'milligram' && outputOptions.value == 'pound' ){
+      output.value = dividedByThousand(gramToPound(input));
+    }
+    if(inputOptions.value == 'pound' && outputOptions.value == 'gram' ){
+      output.value = poundToGram(input);
+    }
+    if(inputOptions.value == 'gram' && outputOptions.value == 'pound' ){
+      output.value = gramToPound(input);
+    }
+    if(inputOptions.value == 'pound' && outputOptions.value == 'kilogram' ){
+      output.value = dividedByThousand(poundToGram(input));
+    }
+    if(inputOptions.value == 'kilogram' && outputOptions.value == 'pound' ){
+      output.value = timesThousand(gramToPound(input));
+    }
+    if(inputOptions.value == 'pound' && outputOptions.value == 'tonne' ){
+      output.value = dividedBy1e6(poundToGram(input));
+    }
+    if(inputOptions.value == 'tonne' && outputOptions.value == 'pound' ){
+      output.value = times1e6(gramToPound(input));
+    }
+    if(inputOptions.value == 'ounce' && outputOptions.value == 'microgram' ){
+      output.value = times1e6(ounceToGram(input));
+    }
+    if(inputOptions.value == 'microgram' && outputOptions.value == 'ounce' ){
+      output.value = dividedBy1e6(gramToOunce(input));
+    }
+    if(inputOptions.value == 'ounce' && outputOptions.value == 'milligram' ){
+      output.value = timesThousand(ounceToGram(input));
+    }
+    if(inputOptions.value == 'milligram' && outputOptions.value == 'ounce' ){
+      output.value = dividedByThousand(gramToOunce(input));
+    }
+    if(inputOptions.value == 'ounce' && outputOptions.value == 'gram' ){
+      output.value = ounceToGram(input);
+    }
+    if(inputOptions.value == 'gram' && outputOptions.value == 'ounce' ){
+      output.value = gramToOunce(input);
+    }
+    if(inputOptions.value == 'ounce' && outputOptions.value == 'kilogram' ){
+      output.value = dividedByThousand(ounceToGram(input));
+    }
+    if(inputOptions.value == 'kilogram' && outputOptions.value == 'ounce' ){
+      output.value = timesThousand(gramToOunce(input));
+    }
+    if(inputOptions.value == 'ounce' && outputOptions.value == 'tonne' ){
+      output.value = dividedBy1e6(ounceToGram(input));
+    }
+    if(inputOptions.value == 'tonne' && outputOptions.value == 'ounce' ){
+      output.value = times1e6(gramToOunce(input));
+    }
   }
 }
-function celciusToFarenheit(celcius) {
-  return celcius * (9 / 5) + 32;
-}
-function farenheitToCelcius(farenheit) {
-  return (farenheit - 32) * (5 / 9);
-}
-function celciusToKelvin(celcius) {
-  return parseFloat(celcius + 273.15);
-}
-function kelvinToCelcius(kelvin) {
-  return kelvin - 273.15;
-}
-function farenheitToKelvin(farenheit) {
-  return farenheitToCelcius(farenheit) + 273.15;
-}
-function kelvinToFarenheit(kelvin) {
-  return celciusToFarenheit(kelvinToCelcius(kelvin));
-}
-function timesTen(input) {
-  return input * 10;
-}
-function dividedByTen(input) {
-  return input / 10;
-}
-function timesHundred(input) {
-  return input * 100;
-}
-function dividedByHundred(input) {
-  return input / 100;
-}
-function timesThousand(input) {
-  return input * 1000;
-}
-function dividedByThousand(input) {
-  return input / 1000;
-}
-function timesTenThousand(input) {
-  return input * 10000;
-}
-
-function dividedByTenThousand(input) {
-  return input / 10000;
-}
-function timesHundredThousand(input) {
-  return input * 100000;
-}
-function dividedByHundredThousand(input) {
-  return input / 100000;
-}
-function times1e6(input) {
-  return input * 1e6;
-}
-function dividedBy1e6(input) {
-  return input / 1e6;
-}
-function times1e7(input) {
-  return input * 1e7;
-}
-function dividedBy1e7(input) {
-  return input / 1e7;
-}
-function times1e9(input) {
-  return input * 1e9;
-}
-function dividedBy1e9(input) {
-  return input / 1e9;
-}
-function times1e12(input) {
-  return input * 1e12;
-}
-function dividedBy1e12(input) {
-  return input / 1e12;
-}
-function mileToYard(mile) {
-  return mile * 1760;
-}
-function yardToMile(yard) {
-  return yard / 1760;
-}
-function mileToFoot(mile) {
-  return mileToYard(mile) * 3;
-}
-function footToMile(foot) {
-  return yardToMile(foot) / 3;
-}
-function mileToInch(mile) {
-  return mileToFoot(mile) * 12;
-}
-function inchToMile(inch) {
-  return footToMile(inch) / 12;
-}
-function mileToNauticalMile(mile) {
-  return mile / 1.151;
-}
-function nauticalMileToMile(nauticalMile) {
-  return nauticalMile * 1.151;
-}
-function yardToFoot(yard) {
-  return yard * 3;
-}
-function footToYard(foot) {
-  return foot / 3;
-}
-function yardToInch(yard) {
-  return yard * 36;
-}
-function inchToYard(inch) {
-  return inch / 36;
-}
-function yardToNauticalMile(yard) {
-  return yard / 2025;
-}
-function nauticalMileToYard(nauticalMile) {
-  return nauticalMile * 2025;
-}
-function footToInch(foot) {
-  return foot * 12;
-}
-function inchToFoot(inch) {
-  return inch / 12;
-}
-function footToNauticalMile(foot) {
-  return foot / 6076;
-}
-function nauticalMileToFoot(nauticalMile) {
-  return nauticalMile * 6076;
-}
-function inchToNauticalMile(inch) {
-  return inch * 72913;
-}
-function nauticalMileToInch(nauticalMile) {
-  return nauticalMile / 72913;
-}
-function mileToCentimeter(mile) {
-  return mile * 160934;
-}
-function centimeterToMile(centimeter) {
-  return centimeter / 160934;
-}
-function yardToCentimeter(yard) {
-  return mileToCentimeter(yardToMile(yard));
-}
-function footToCentimeter(foot) {
-  return mileToCentimeter(footToMile(foot));
-}
-function inchToCentimeter(inch) {
-  return mileToCentimeter(inchToMile(inch));
-}
-function nauticalMileToCentimeter(nauticalMile) {
-  return mileToCentimeter(nauticalMileToMile(nauticalMile));
-}
-function imperialTonToUSTon(imperialTon){
-  return imperialTon * 1.12;
-}
-function usTonToImperialTon(usTon){
-  return usTon / 1.12;
-}
-function imperialTonToStone(imperialTon){
-  return imperialTon * 160;
-}
-function stoneToImperialTon(stone){
-  return stone / 160;
-}
-function stoneToPound(stone){
-  return stone * 14;
-}
-function poundToStone(pound){
-  return pound / 14;
-}
-function imperialTonToPound(imperialTon){
-  return stoneToPound(imperialTonToStone(imperialTon));
-}
-function poundToImperialTon(pound){
-  return poundToStone(stoneToImperialTon(pound));
-}
-function imperialTonToOunce(imperialTon){
-  return imperialTon * 35840;
-}
-function ounceToImperialTon(ounce){
-  return ounce / 35840;
-}
-function usTonToStone(usTon){
-  return usTon * 142.85714286;
-}
-function stoneToUSTon(stone){
-  return stone / 142.85714286;
-}
-function usTonToPound(usTon){
-  return timesThousand(usTon) * 2;
-}
-function poundToUSTon(pound){
-  return dividedByThousand(pound) / 2;
-}
-function usTonToOunce(usTon){
-  return timesThousand(usTon) * 32;
-}
-function ounceToUSTon(ounce){
-  return dividedByThousand(ounce) / 32;
-}
-function stoneToOunce(stone){
-  return stone * 224;
-}
-function ounceToStone(ounce){
-  return ounce / 224;
-}
-function poundToOunce(pound){
-  return pound * 16;
-}
-function ounceToPound(ounce){
-  return ounce / 16;
-}
+function celciusToFarenheit(celcius){return 1.8*celcius+32}function farenheitToCelcius(farenheit){return 5/9*(farenheit-32)}function celciusToKelvin(celcius){return parseFloat(celcius+273.15)}function kelvinToCelcius(kelvin){return kelvin-273.15}function farenheitToKelvin(farenheit){return farenheitToCelcius(farenheit)+273.15}function kelvinToFarenheit(kelvin){return celciusToFarenheit(kelvinToCelcius(kelvin))}function timesTen(input){return 10*input}function dividedByTen(input){return input/10}function timesHundred(input){return 100*input}function dividedByHundred(input){return input/100}function timesThousand(input){return 1e3*input}function dividedByThousand(input){return input/1e3}function timesTenThousand(input){return 1e4*input}function dividedByTenThousand(input){return input/1e4}function timesHundredThousand(input){return 1e5*input}function dividedByHundredThousand(input){return input/1e5}function times1e6(input){return 1e6*input}function dividedBy1e6(input){return input/1e6}function times1e7(input){return 1e7*input}function dividedBy1e7(input){return input/1e7}function times1e9(input){return 1e9*input}function dividedBy1e9(input){return input/1e9}function times1e12(input){return 1e12*input}function dividedBy1e12(input){return input/1e12}function mileToYard(mile){return 1760*mile}function yardToMile(yard){return yard/1760}function mileToFoot(mile){return 3*mileToYard(mile)}function footToMile(foot){return yardToMile(foot)/3}function mileToInch(mile){return 12*mileToFoot(mile)}function inchToMile(inch){return footToMile(inch)/12}function mileToNauticalMile(mile){return mile/1.151}function nauticalMileToMile(nauticalMile){return 1.151*nauticalMile}function yardToFoot(yard){return 3*yard}function footToYard(foot){return foot/3}function yardToInch(yard){return 36*yard}function inchToYard(inch){return inch/36}function yardToNauticalMile(yard){return yard/2025}function nauticalMileToYard(nauticalMile){return 2025*nauticalMile}function footToInch(foot){return 12*foot}function inchToFoot(inch){return inch/12}function footToNauticalMile(foot){return foot/6076}function nauticalMileToFoot(nauticalMile){return 6076*nauticalMile}function inchToNauticalMile(inch){return 72913*inch}function nauticalMileToInch(nauticalMile){return nauticalMile/72913}function mileToCentimeter(mile){return 160934*mile}function centimeterToMile(centimeter){return centimeter/160934}function yardToCentimeter(yard){return mileToCentimeter(yardToMile(yard))}function footToCentimeter(foot){return mileToCentimeter(footToMile(foot))}function inchToCentimeter(inch){return mileToCentimeter(inchToMile(inch))}function nauticalMileToCentimeter(nauticalMile){return mileToCentimeter(nauticalMileToMile(nauticalMile))}function imperialTonToUSTon(imperialTon){return 1.12*imperialTon}function usTonToImperialTon(usTon){return usTon/1.12}function imperialTonToStone(imperialTon){return 160*imperialTon}function stoneToImperialTon(stone){return stone/160}function stoneToPound(stone){return 14*stone}function poundToStone(pound){return pound/14}function imperialTonToPound(imperialTon){return stoneToPound(imperialTonToStone(imperialTon))}function poundToImperialTon(pound){return poundToStone(stoneToImperialTon(pound))}function imperialTonToOunce(imperialTon){return 35840*imperialTon}function ounceToImperialTon(ounce){return ounce/35840}function usTonToStone(usTon){return 142.85714286*usTon}function stoneToUSTon(stone){return stone/142.85714286}function usTonToPound(usTon){return 2*timesThousand(usTon)}function poundToUSTon(pound){return dividedByThousand(pound)/2}function usTonToOunce(usTon){return 32*timesThousand(usTon)}function ounceToUSTon(ounce){return dividedByThousand(ounce)/32}function stoneToOunce(stone){return 224*stone}function ounceToStone(ounce){return ounce/224}function poundToOunce(pound){return 16*pound}function ounceToPound(ounce){return ounce/16}function imperialTonToGram(imperialTon){return 1016046.91*imperialTon}function gramToImperialTon(gram){return gram/1016046.91}function usTonToGram(usTon){return 907184.74*usTon}function gramToUSTon(gram){return gram/907184.74}function stoneToGram(stone){return 6350.29318*stone}function gramToStone(gram){return gram/6350.29318}function poundToGram(pound){return 453.59237*pound}function gramToPound(gram){return gram/453.59237}function ounceToGram(ounce){return 28.34952*ounce}function gramToOunce(gram){return gram/28.34952}
