@@ -18,6 +18,19 @@ let temperatureOptions = `
         <option value="farenheit">Farenheit</option>
         <option value="kelvin">Kelvin</option>
         `;
+let massOptions = `
+        <option value=" " disabled selected>...Choose...</option>
+        <option value="microgram">Microgram</option>
+        <option value="milligram">Milligram</option>
+        <option value="gram">Gram</option>
+        <option value="kilogram">Kilogram</option>
+        <option value="tonne">Tonne</option>
+        <option value="imperialTon">Imperial Ton</option>
+        <option value="usTon">US Ton</option>
+        <option value="stone">Stone</option>
+        <option value="pound">Pound</option>
+        <option value="ounce">Ounce</option>
+        `;
 let conversionOptions = document.getElementById("type-of-conversions");
 let inputOptions = document.getElementById("inputConversion");
 let outputOptions = document.getElementById("outputConversion");
@@ -29,6 +42,10 @@ conversionOptions.addEventListener("change", function () {
   if (conversionOptions.value == "temperature") {
     inputOptions.innerHTML = temperatureOptions;
     outputOptions.innerHTML = temperatureOptions;
+  }
+  if(conversionOptions.value == "mass"){
+    inputOptions.innerHTML = massOptions;
+    outputOptions.innerHTML = massOptions;
   }
 });
 function conversion() {
@@ -478,6 +495,98 @@ function conversion() {
       output.value = timesHundredThousand(centimeterToMile(mileToNauticalMile(input)));
     }
   }
+  if(conversionOptions.value == "mass"){
+    if(inputOptions.value == 'microgram' && outputOptions.value == 'milligram' ){
+      output.value = dividedByThousand(input);
+    }
+    if(inputOptions.value == 'milligram' && outputOptions.value == 'microgram' ){
+      output.value = timesThousand(input);
+    }
+    if(inputOptions.value == 'microgram' && outputOptions.value == 'gram' ){
+      output.value = dividedBy1e6(input);
+    }
+    if(inputOptions.value == 'gram' && outputOptions.value == 'microgram' ){
+      output.value = times1e6(input);
+    }
+    if(inputOptions.value == 'microgram' && outputOptions.value == 'kilogram' ){
+      output.value = dividedBy1e9(input);
+    }
+    if(inputOptions.value == 'kilogram' && outputOptions.value == 'microgram' ){
+      output.value = times1e9(input);
+    }
+    if(inputOptions.value == 'milligram' && outputOptions.value == 'gram' ){
+      output.value = dividedByThousand(input);
+    }
+    if(inputOptions.value == 'gram' && outputOptions.value == 'milligram' ){
+      output.value = timesThousand(input);
+    }
+    if(inputOptions.value == 'milligram' && outputOptions.value == 'kilogram' ){
+      output.value = dividedBy1e6(input);
+    }
+    if(inputOptions.value == 'kilogram' && outputOptions.value == 'microgram' ){
+      output.value = times1e6(input);
+    }
+    if(inputOptions.value == 'gram' && outputOptions.value == 'kilogram' ){
+      output.value = dividedByThousand(input);
+    }
+    if(inputOptions.value == 'kilogram' && outputOptions.value == 'gram' ){
+      output.value = timesThousand(input);
+    }
+    if(inputOptions.value == 'gram' && outputOptions.value == 'tonne' ){
+      output.value = dividedBy1e6(input);
+    }
+    if(inputOptions.value == 'tonne' && outputOptions.value == 'gram' ){
+      output.value = times1e6(input);
+    }
+    if(inputOptions.value == 'microgram' && outputOptions.value == 'tonne' ){
+      output.value = dividedBy1e12(input);
+    }
+    if(inputOptions.value == 'tonne' && outputOptions.value == 'gram' ){
+      output.value = times1e12(input);
+    }
+    if(inputOptions.value == 'milligram' && outputOptions.value == 'tonne' ){
+      output.value = dividedBy1e9(input);
+    }
+    if(inputOptions.value == 'tonne' && outputOptions.value == 'milligram' ){
+      output.value = times1e9(input);
+    }
+    if(inputOptions.value == 'kilogram' && outputOptions.value == 'tonne' ){
+      output.value = dividedByThousand(input);
+    }
+    if(inputOptions.value == 'tonne' && outputOptions.value == 'kilogram' ){
+      output.value = timesThousand(input);
+    }
+    if(inputOptions.value == 'microgram' && outputOptions.value == 'milligram' ){
+      output.value = dividedByThousand(input);
+    }
+    if(inputOptions.value == 'microgram' && outputOptions.value == 'milligram' ){
+      output.value = dividedByThousand(input);
+    }
+    if(inputOptions.value == 'imperialTon' && outputOptions.value == 'usTon' ){
+      output.value = imperialTonToUSTon(input);
+    }
+    if(inputOptions.value == 'usTon' && outputOptions.value == 'imperialTon' ){
+      output.value = usTonToImperialTon(input);
+    }
+    if(inputOptions.value == 'imperialTon' && outputOptions.value == 'stone' ){
+      output.value = imperialTonToStone(input);
+    }
+    if(inputOptions.value == 'stone' && outputOptions.value == 'imperialTon' ){
+      output.value = stoneToImperialTon(input);
+    }
+    if(inputOptions.value == 'imperialTon' && outputOptions.value == 'pound' ){
+      output.value = imperialTonToPound(input);
+    }
+    if(inputOptions.value == 'pound' && outputOptions.value == 'imperialTon' ){
+      output.value = poundToImperialTon(input);
+    }
+    if(inputOptions.value == 'imperialTon' && outputOptions.value == 'ounce' ){
+      output.value = imperialTonToOunce(input);
+    }
+    if(inputOptions.value == 'ounce' && outputOptions.value == 'imperialTon' ){
+      output.value = ounceToImperialTon(input);
+    }
+  }
 }
 function celciusToFarenheit(celcius) {
   return celcius * (9 / 5) + 32;
@@ -629,4 +738,64 @@ function inchToCentimeter(inch) {
 }
 function nauticalMileToCentimeter(nauticalMile) {
   return mileToCentimeter(nauticalMileToMile(nauticalMile));
+}
+function imperialTonToUSTon(imperialTon){
+  return imperialTon * 1.12;
+}
+function usTonToImperialTon(usTon){
+  return usTon / 1.12;
+}
+function imperialTonToStone(imperialTon){
+  return imperialTon * 160;
+}
+function stoneToImperialTon(stone){
+  return stone / 160;
+}
+function stoneToPound(stone){
+  return stone * 14;
+}
+function poundToStone(pound){
+  return pound / 14;
+}
+function imperialTonToPound(imperialTon){
+  return stoneToPound(imperialTonToStone(imperialTon));
+}
+function poundToImperialTon(pound){
+  return poundToStone(stoneToImperialTon(pound));
+}
+function imperialTonToOunce(imperialTon){
+  return imperialTon * 35840;
+}
+function ounceToImperialTon(ounce){
+  return ounce / 35840;
+}
+function usTonToStone(usTon){
+  return usTon * 142.85714286;
+}
+function stoneToUSTon(stone){
+  return stone / 142.85714286;
+}
+function usTonToPound(usTon){
+  return timesThousand(usTon) * 2;
+}
+function poundToUSTon(pound){
+  return dividedByThousand(pound) / 2;
+}
+function usTonToOunce(usTon){
+  return timesThousand(usTon) * 32;
+}
+function ounceToUSTon(ounce){
+  return dividedByThousand(ounce) / 32;
+}
+function stoneToOunce(stone){
+  return stone * 224;
+}
+function ounceToStone(ounce){
+  return ounce / 224;
+}
+function poundToOunce(pound){
+  return pound * 16;
+}
+function ounceToPound(ounce){
+  return ounce / 16;
 }
