@@ -1,8 +1,8 @@
-let i = 1;
-let g = 1;
-let p = 1;
-let e = 1;
-let a = 1;
+var i = 1;
+var g = 1;
+var p = 1;
+var e = 1;
+var a = 1;
 function openMetaNav() {
     let mathnav = document.getElementById("mathnav");
     if (i % 2 == 1) {
