@@ -13,15 +13,9 @@ setInterval(function(){
 
 // media query test returning true
 function closeNav() {
-
   document.getElementById("mySidebar").style.width = "0";
   document.getElementById("main").style.marginLeft = "0";
- 
-  
-
 }
-
-
 var img1 = document.getElementById("profile-photo1");
 var img2 = document.getElementById("profile-photo2");
 var img3 = document.getElementById("profile-photo3");
