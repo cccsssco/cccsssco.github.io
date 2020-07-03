@@ -644,11 +644,31 @@ input {
     width: 75%;
   }
 }
+#gallery .container-of-rows {
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  min-width: 100px;
+}
+#gallery .container-of-rows .bg img {
+  width: 100%;
+}
+#gallery .container-of-rows .bg {
+  margin:1em;
+  box-sizing: border-box;
+  width:300px;
+  max-width: 300px;
+  min-width: 250px;
+}
+#gallery .container-of-rows .bg:hover {
+  margin: 1em;
+  padding:1em;
+}
 .container-of-rows {
   display: flex;
   flex-wrap: wrap;
 }
-.container-of-rows .bg img {
+#members .container-of-rows .bg img {
   border-radius: 50%;
   width: 50%;
 }
