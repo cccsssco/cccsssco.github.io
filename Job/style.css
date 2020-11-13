@@ -1,0 +1,29 @@
+html{
+    background: rgb(60, 160, 153);
+}
+.web{
+    font-size: 10em;
+    margin-left: 0.5em;
+    margin-bottom: 0.15em;
+}
+.and{
+    margin-left: 3em;
+    font-size: 5em;
+    margin-bottom: 0.15em;
+
+}
+.game{
+    font-size: 10em;
+    margin-left: 0.2em;
+}
+.developer{
+    display: flex;
+    position: absolute;
+    top:1em;
+    left: 12em;
+    flex-direction: column;
+    font-size: 4em;
+}
+div{
+    color: aliceblue;
+}
